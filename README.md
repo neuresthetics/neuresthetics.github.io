@@ -42,6 +42,8 @@ aesthetic: (n.) 1798, from German Ästhetisch (mid-18c.) or French esthétique (
 <div class="panel">
   <p>
 
+405-435-0808 | neuresthetics@gmail.com | github.com/neuresthetics
+
 Independent researcher of behavioral applications for brain network theory. Starting with childhood curiosity, evolving into necessitated alleviation from suffering through young adulthood, and continuing today.
 
   <ul>
