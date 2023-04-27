@@ -2,9 +2,6 @@
 
 [gitHub](https://github.com/neuresthetics)
 
-___
-
-<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,11 +33,11 @@ ___
 </head>
 <body>
 
-<h2>Accordion</h2>
+<h2>section</h2>
 
 <button class="accordion">Section 1</button>
 <div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>text</p>
 </div>
 
 <script>
@@ -62,5 +59,3 @@ for (i = 0; i < acc.length; i++) {
 
 </body>
 </html>
-
-<!-->
