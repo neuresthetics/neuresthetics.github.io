@@ -44,7 +44,7 @@ aesthetic: (n.) 1798, from German Ästhetisch (mid-18c.) or French esthétique (
 
 405-435-0808 | neuresthetics@gmail.com | github.com/neuresthetics
 
-Independent researcher of behavioral applications for brain network theory. Starting with childhood curiosity, evolving into necessitated alleviation from suffering through young adulthood, and continuing today.
+Independent researcher of behavioral applications for brain network theory.
 
   <ul>
 
@@ -60,7 +60,13 @@ Independent researcher of behavioral applications for brain network theory. Star
     </ul>
   </li>
 
-  <li>2010-14: Personal Intensive Study Focus
+  <li>2009: Foundational Epiphany
+    <ul>
+        <li>Neuresthetic Neologism</li>
+    </ul>
+  </li>
+
+  <li>2010-14: Goal Driven Intensive Study Focus
     <ul>
       <li>Neurology</li>
       <li>Philosophy</li>
@@ -84,7 +90,7 @@ Independent researcher of behavioral applications for brain network theory. Star
     </ul>
   </li>
 
-  <li>2018-19: Code Fellows Programming
+  <li>2018-19: Programming
     <ul>
       <li>Data Structures</li>
       <li>Algorithms</li>
@@ -93,6 +99,10 @@ Independent researcher of behavioral applications for brain network theory. Star
   </li>
 
   <li>2019-20: Theory Abridgement
+    <ul>
+      <li>Process Refinement</li>
+      <li>Testing</li>
+    </ul>
   </li>
 
   <li>2020-present: Writing
