@@ -1,4 +1,4 @@
-# [neuresthetics.github.io](https://github.com/neuresthetics)
+# [Neuresthetics GitHub](https://github.com/neuresthetics)
 
 ### "Neuresthetic" [🎧](https://translate.google.com/?sl=auto&tl=en&text=neuresthetic&op=translate) - like kinesthetic, for nerves.
 
