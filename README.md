@@ -38,12 +38,12 @@ aesthetic: (n.) 1798, from German Ästhetisch (mid-18c.) or French esthétique (
 </head>
 <body>
 
-___
-
 <button class="accordion">Jason Burns</button>
 <div class="panel">
   <p>
-  
+
+Independent researcher of behavioral applications for brain network theory. Starting with childhood curiosity, evolving into necessitated alleviation from suffering through young adulthood, and continuing today.
+
   <ul>
 
   <li>2000: Grade School Science Fair: Regions of The Brain
