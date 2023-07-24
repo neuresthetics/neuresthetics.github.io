@@ -58,14 +58,9 @@ Independent researcher of behavioral applications for brain network theory.
     </ul>
   </li>
 
-  <li>2009: Foundational Epiphany
+  <li>2010-14: Intensive free time study while in the Army Engineer Corps
     <ul>
-        <li>Neuresthetic Neologism</li>
-    </ul>
-  </li>
-
-  <li>2010-14: Intensive Study
-    <ul>
+      <li>History/Propagnda</li>
       <li>Neurology</li>
       <li>Philosophy</li>
       <li>Sociology</li>
@@ -78,7 +73,7 @@ Independent researcher of behavioral applications for brain network theory.
     <ul>
       <li>Addiction Science</li>
       <li>Behavioral Health</li>
-      <li>Counseling</li>
+      <li>Counseling Practice and Policy</li>
     </ul>
   </li>
 
@@ -88,7 +83,7 @@ Independent researcher of behavioral applications for brain network theory.
     </ul>
   </li>
 
-  <li>2018-19: Code Fellows Programming
+  <li>2018-19: Learning to Code
     <ul>
       <li>Data Structures</li>
       <li>Algorithms</li>
@@ -99,11 +94,11 @@ Independent researcher of behavioral applications for brain network theory.
   <li>2019-20: Theory Abridgement
     <ul>
       <li>Process Refinement</li>
-      <li>Testing</li>
+      <li>Safety & Testing</li>
     </ul>
   </li>
 
-  <li>2020-present: Writing
+  <li>2020-present: Writing & Consulting
   </li>
   
 </ul>
