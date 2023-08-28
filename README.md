@@ -6,8 +6,6 @@ neuro: word-forming element meaning "pertaining to a nerve or nerves or the nerv
 
 aesthetic: (n.) 1798, from German Ästhetisch (mid-18c.) or French esthétique (which is from German), ultimately from Greek aisthetikos "of or for perception by the senses, perceptive," of things, "perceptible"
 
-<!---
-
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -127,6 +125,3 @@ for (i = 0; i < acc.length; i++) {
 
 </body>
 </html>
-
-
---->
