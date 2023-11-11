@@ -1,6 +1,7 @@
 # [neuresthetics.github.io](https://github.com/neuresthetics)
 
 ### "Neuresthetic" [🎧](https://translate.google.com/?sl=auto&tl=en&text=neuresthetic&op=translate) - like kinesthetic, for nerves.
+Schema and education modeling in terms of the way the brain is shaped.
 
 neuro: word-forming element meaning "pertaining to a nerve or nerves or the nervous system," from Greek neura
 
