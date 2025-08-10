@@ -1,26 +1,47 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neuresthetics</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
-            padding: 20px;
-            background-color: #f0f0f0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-        }
-        h1, h2, h3, h4 {
+            padding: 0;
+            background-color: #f4f4f4;
             color: #333;
         }
-        p, li {
-            line-height: 1.6;
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
         }
         table {
             width: 100%;
@@ -35,278 +56,49 @@
         th {
             background-color: #f2f2f2;
         }
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <header>
+        <h1>Neuresthetics</h1>
+        <p>Definition: Analogous to and pronounced like 'kinesthetic', but for nerves.</p>
+    </header>
 
-        <p><a href="https://github.com/neuresthetics/" class="title-link"><strong>Neuresthetics LLC</strong></a></p>
+    <section id="about">
+        <h2>About</h2>
+        <p>Neuresthetics is dedicated to exploring alignment problems and solutions in the context of neural schemas and cognitive engineering. Follow us on X at <a href="https://x.com/neuresthetic" target="_blank">@neuresthetic</a> for updates and discussions.</p>
+    </section>
 
-        <h2>Neuresthetic (adj.): <a href="https://translate.google.com/?sl=auto&tl=en&text=neuresthetic&op=translate" class="audio-link">🎧</a><br></h2>
-        <p>Analogous to and pronounced like 'kinesthetic', but for nerves. Schema engineered/engineering in respect to the shape and function of the brain.</p>
-
-        <h2>15.58x More Likely to Be a Genius: The Impact of Handedness and Pantheism on Cognitive Abilities</h2>
+    <section id="study">
+        <h2>Study: 15.58x More Likely to Be a Genius: The Impact of Handedness and Pantheism on Cognitive Abilities</h2>
+        <p>This study investigates the statistical overrepresentation of left-handed or ambidextrous individuals with pantheistic beliefs among 100 historical and modern geniuses, proposing a link to enhanced cognitive abilities mediated by the Posterior Cingulate Cortex (PCC) and corpus callosum, which together make up the primary structural bottleneck of the higher brain.</p>
         
-        <p>This study has been published on <a href="https://zenodo.org/records/15633811">Zenodo</a>:</p>
-        <a href="https://doi.org/10.5281/zenodo.15633811"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.15633811.svg" alt="DOI"></a>
-
-
-        <h3>Abstract</h3>
-        <p>
-
-            Clarification: This method does not make you 15-16 times smarter. The traits being looked at here have impact on two brain regions which form the central structural bottleneck of the brain; giving the physical capacity to do more mentally, among all other variables and traits.
-
-            This study proposes a novel approach to cognitive enhancement by exploiting an observed statistical overrepresentation of left-handed-enabled(including those who can use both hands/ambidextrous) individuals with pantheistic beliefs. Among a sample of 77 historical and modern geniuses (from 100 selected by AI), where the prevalence of this combination (7.59%) significantly exceeds the expected probability (0.5%). We hypothesize that this pattern reflects an underlying neurocognitive advantage mediated by the Posterior Cingulate Cortex (PCC), a key region divided across the corpus callosum(CC), which acts as a structural bottleneck in brain communication traffic. Drawing on the established "bottleneck hypothesis," we suggest that left-handedness or ambidexterity enhances interhemispheric communication through the corpus callosum size, potentially optimizing information processing in the PCC, a key central hub for integrating sensory, emotional, and cognitive data throug the total self and unified experience of thought. Concurrently, pantheistic beliefs—characterized by a view of divinity as immanent in nature and aligned with scientific inquiry—may foster a cognitive framework that promotes holistic thinking and creativity, further amplifying PCC-mediated connectivity. By intentionally adopting left-handed or ambidextrous practices (e.g., through training) and embracing pantheistic perspectives, individuals may enhance cognitive flexibility and creative problem-solving simply as a matter of physical network economization. We propose experimental designs to test this hypothesis, including neuroimaging studies to examine PCC activity and behavioral interventions to assess the cognitive impacts of handedness training and philosophical orientation. These findings could inform strategies for cognitive optimization in educational and professional settings, leveraging neuroplasticity and belief systems to emulate the cognitive profiles of exceptional thinkers.
-
-        </p>
-
-        <h3>Contents</h3>
+        <h3>Key Points</h3>
         <ul>
-            <li>Data Generation</li>
-            <li>Table of 100 Genii</li>
-            <li>Detection of Pattern</li>
-            <li>Analysis of Pattern</li>
-            <li>High Risk, High Reward, and Monetary Value</li>
+            <li>The traits examined do not make individuals 15-16 times smarter but impact brain regions forming a structural bottleneck, potentially increasing mental capacity.</li>
+            <li>Left-handedness or ambidexterity and pantheistic beliefs enhance interhemispheric communication and cognitive flexibility, respectively, through PCC and corpus callosum functions.</li>
+            <li>Pantheism, viewing divinity as immanent in nature and aligned with science, may foster holistic thinking and creativity.</li>
         </ul>
+        
+        <h3>Methodology</h3>
+        <p>Data was generated using Grok to list the top 100 geniuses, split into two queries of 50 to avoid context window issues, removing human selection bias. A table was created with columns for genius name, handedness (right/left/ambidextrous), spiritual disposition, and % likeness to Pantheism/scientifically literate theology. Analysis focused on 77 individuals with known data (after excluding 23 unknowns), identifying those who were left-handed and had ≥50% likeness to Pantheism. Statistical prevalence was calculated and compared to expected probability (0.5%, based on 10% left-handed/ambidextrous and 5% pantheistic beliefs), using a binomial test for significance.</p>
+        
+        <h3>Results</h3>
+        <p>Six individuals (Albert Einstein, Leonardo da Vinci, Nikola Tesla, Benjamin Franklin, Ludwig van Beethoven, Michelangelo) were both left-handed and ≥50% pantheistic, yielding a prevalence of 7.79% (6/77). This observed prevalence was 15.58 times higher than the expected 0.5%, with a statistically significant difference (p < 0.001) confirmed by binomial test.</p>
+        
+        <h3>Conclusions</h3>
+        <p>The study suggests a significant association between left-handedness/ambidexterity and pantheistic beliefs among geniuses, potentially linked to enhanced PCC-mediated connectivity and cognitive integration. It proposes experimental designs, including neuroimaging and behavioral interventions, to test hypotheses on cognitive enhancement through handedness training and pantheistic perspectives, with potential applications in educational and professional settings.</p>
+        
+        <p>For the full study, visit <a href="https://zenodo.org/records/15633811" target="_blank">Zenodo</a>.</p>
+    </section>
 
-        <h3>Data &amp; Analysis</h3>
-        <p>Given the "top 100 genii of all time" according to public sources using Grok (removal of human selection helps eliminate selection bias) (the sample of 100 was split in two queries of 50 to account for context window given the use of the Deep Search function).</p>
-        <p><strong>Generation:</strong></p>
-        <pre>Generate a table.
-column A: top 50 genius of all time.
-column B: whether each person in A was/is right/left/ambidextrous handed.
-column C: the spiritual disposition of each person.
-column D: the % likeness of C to Pantheism/scientifically literate theology.
-</pre>
-        <p>plus:</p>
-        <pre>Same format, but remarked the next 50 people. No repeats.
-</pre>
-        <p>Lists combined:</p>
-
-        <h4>Table of Top 100 Geniuses with Handedness, Spiritual Disposition, and Pantheism Likeness</h4>
-        <p>Below is a comprehensive table listing 100 individuals widely regarded as geniuses, their handedness, spiritual disposition, and the estimated percentage likeness of their beliefs to Pantheism or scientifically literate theology. The data is compiled from various sources, with assumptions made where information is incomplete. Ambidextrous people are included in the left-handed category for shared purpose; ~10% larger corpus callosum.</p>
-        <table>
-            <tbody><tr>
-                <th>Genius</th>
-                <th>Handedness</th>
-                <th>Spiritual Disposition</th>
-                <th>% Likeness to Pantheism/Scientifically Literate Theology</th>
-            </tr>
-            <tr><td>Albert Einstein</td><td>Left-handed</td><td>Cosmic religion</td><td>80%</td></tr>
-            <tr><td>Leonardo da Vinci</td><td>Left-handed</td><td>Christian</td><td>60%</td></tr>
-            <tr><td>Isaac Newton</td><td>Right-handed</td><td>Christian</td><td>70%</td></tr>
-            <tr><td>Nikola Tesla</td><td>Left-handed</td><td>Spiritual</td><td>50%</td></tr>
-            <tr><td>Marie Curie</td><td>Right-handed</td><td>Atheist</td><td>10%</td></tr>
-            <tr><td>Stephen Hawking</td><td>Left-handed</td><td>Atheist</td><td>5%</td></tr>
-            <tr><td>Charles Darwin</td><td>Right-handed</td><td>Agnostic</td><td>20%</td></tr>
-            <tr><td>Galileo Galilei</td><td>Right-handed</td><td>Catholic</td><td>80%</td></tr>
-            <tr><td>Aristotle</td><td>Right-handed</td><td>Believed in Prime Mover</td><td>70%</td></tr>
-            <tr><td>Plato</td><td>Right-handed</td><td>Believed in Forms</td><td>70%</td></tr>
-            <tr><td>Socrates</td><td>Right-handed</td><td>Believed in gods, questioned traditions</td><td>50%</td></tr>
-            <tr><td>Thomas Edison</td><td>Right-handed</td><td>Agnostic</td><td>20%</td></tr>
-            <tr><td>Benjamin Franklin</td><td>Left-handed</td><td>Deist</td><td>60%</td></tr>
-            <tr><td>Ada Lovelace</td><td>Right-handed</td><td>Christian</td><td>50%</td></tr>
-            <tr><td>Alan Turing</td><td>Right-handed</td><td>Atheist</td><td>10%</td></tr>
-            <tr><td>Johannes Gutenberg</td><td>Right-handed</td><td>Christian</td><td>50%</td></tr>
-            <tr><td>William Shakespeare</td><td>Right-handed</td><td>Christian</td><td>50%</td></tr>
-            <tr><td>Ludwig van Beethoven</td><td>Left-handed</td><td>Christian</td><td>50%</td></tr>
-            <tr><td>Michelangelo</td><td>Left-handed</td><td>Christian</td><td>50%</td></tr>
-            <tr><td>Baruch Spinoza</td><td>Right-handed</td><td>Pantheist</td><td>90%</td></tr>
-            <tr><td>Richard "Rick" Rosner</td><td>Left-handed</td><td>Unknown</td><td>Unknown</td></tr>
-            <tr><td>Marilyn vos Savant</td><td>Left-handed</td><td>Unknown</td><td>Unknown</td></tr>
-            <tr><td>Christopher Langan</td><td>Right-handed</td><td>Unknown</td><td>Unknown</td></tr>
-            <tr><td>Nathan Leopold</td><td>Left-handed</td><td>Unknown</td><td>Unknown</td></tr>
-            <tr><td>Marnen Laibow-Koser</td><td>Left-handed</td><td>Unknown</td><td>Unknown</td></tr>
-            <tr><td>Ainan Cawley</td><td>Right-handed</td><td>Unknown</td><td>Unknown</td></tr>
-            <tr><td>Adragon De Mello</td><td>Right-handed</td><td>Unknown</td><td>Unknown</td></tr>
-            <tr><td>Michael Kearney</td><td>Right-handed</td><td>Unknown</td><td>Unknown</td></tr>
-            <tr><td>Nadia Camukova</td><td>Right-handed</td><td>Unknown</td><td>Unknown</td></tr>
-            <tr><td>Michael Grost</td><td>Right-handed</td><td>Unknown</td><td>Unknown</td></tr>
-            <tr><td>Sho Yano</td><td>Right-handed</td><td>Unknown</td><td>Unknown</td></tr>
-            <tr><td>Dylan Jones</td><td>Right-handed</td><td>Unknown</td><td>Unknown</td></tr>
-            <tr><td>Edith Stern</td><td>Right-handed</td><td>Unknown</td><td>Unknown</td></tr>
-            <tr><td>Kim Ung-Yong</td><td>Right-handed</td><td>Unknown</td><td>Unknown</td></tr>
-            <tr><td>Francis Galton</td><td>Right-handed</td><td>Unknown</td><td>Unknown</td></tr>
-            <tr><td>Thomas Wolsey</td><td>Right-handed</td><td>Catholic</td><td>50%</td></tr>
-            <tr><td>Hugo Grotius</td><td>Right-handed</td><td>Christian</td><td>50%</td></tr>
-            <tr><td>Hypatia</td><td>Right-handed</td><td>Pagan, philosopher</td><td>60%</td></tr>
-            <tr><td>John Stuart Mill</td><td>Right-handed</td><td>Agnostic</td><td>30%</td></tr>
-            <tr><td>Blaise Pascal</td><td>Right-handed</td><td>Christian, Jansenist</td><td>70%</td></tr>
-            <tr><td>Gottfried Wilhelm Leibniz</td><td>Right-handed</td><td>Christian, philosopher</td><td>70%</td></tr>
-            <tr><td>Confucius</td><td>Right-handed</td><td>Confucianism</td><td>40%</td></tr>
-            <tr><td>Buddha</td><td>Right-handed</td><td>Buddhism</td><td>80%</td></tr>
-            <tr><td>Jesus Christ</td><td>Right-handed</td><td>Christianity</td><td>100% (theological, not scientific)</td></tr>
-            <tr><td>Muhammad</td><td>Right-handed</td><td>Islam</td><td>50%</td></tr>
-            <tr><td>Johannes Kepler</td><td>Right-handed</td><td>Christian, saw astronomy as divine</td><td>80%</td></tr>
-            <tr><td>Carl Friedrich Gauss</td><td>Right-handed</td><td>Christian</td><td>50%</td></tr>
-            <tr><td>Michael Faraday</td><td>Right-handed</td><td>Christian</td><td>70%</td></tr>
-            <tr><td>James Clerk Maxwell</td><td>Right-handed</td><td>Christian</td><td>70%</td></tr>
-            <tr><td>Niels Bohr</td><td>Right-handed</td><td>Jewish, not religious</td><td>30%</td></tr>
-            <tr><td>Katherine Johnson</td><td>Unknown</td><td>Unknown</td><td>Unknown</td></tr>
-            <tr><td>John Locke</td><td>Right-handed</td><td>Christian</td><td>70%</td></tr>
-            <tr><td>Immanuel Kant</td><td>Right-handed</td><td>Theist, rational theology</td><td>60%</td></tr>
-            <tr><td>Rene Descartes</td><td>Right-handed</td><td>Theist, rationalist</td><td>50%</td></tr>
-            <tr><td>Desiderius Erasmus</td><td>Right-handed</td><td>Christian humanist</td><td>60%</td></tr>
-            <tr><td>Raphael</td><td>Right-handed</td><td>Christian</td><td>50%</td></tr>
-            <tr><td>Charles Dickens</td><td>Right-handed</td><td>Christian</td><td>40%</td></tr>
-            <tr><td>Richard Wagner</td><td>Right-handed</td><td>Germanic paganism</td><td>30%</td></tr>
-            <tr><td>Wolfgang Amadeus Mozart</td><td>Right-handed</td><td>Catholic</td><td>50%</td></tr>
-            <tr><td>Steve Jobs</td><td>Left-handed</td><td>Zen Buddhism</td><td>40%</td></tr>
-            <tr><td>Alexander Graham Bell</td><td>Right-handed</td><td>Presbyterian</td><td>50%</td></tr>
-            <tr><td>Wernher von Braun</td><td>Right-handed</td><td>Lutheran</td><td>60%</td></tr>
-            <tr><td>Mohandas Gandhi</td><td>Right-handed</td><td>Hindu</td><td>70%</td></tr>
-            <tr><td>Friedrich Nietzsche</td><td>Right-handed</td><td>Atheist</td><td>20%</td></tr>
-            <tr><td>Vincent van Gogh</td><td>Right-handed</td><td>Christian with doubts</td><td>30%</td></tr>
-            <tr><td>Stendhal</td><td>Right-handed</td><td>Agnostic</td><td>30%</td></tr>
-            <tr><td>Lewis Carroll</td><td>Right-handed</td><td>Anglican</td><td>40%</td></tr>
-            <tr><td>Ralph Ellison</td><td>Right-handed</td><td>Unknown</td><td>Unknown</td></tr>
-            <tr><td>Marcel Proust</td><td>Right-handed</td><td>Jewish</td><td>50%</td></tr>
-            <tr><td>Italo Calvino</td><td>Right-handed</td><td>Agnostic</td><td>30%</td></tr>
-            <tr><td>The Yahwist</td><td>Unknown</td><td>Monotheistic</td><td>80%</td></tr>
-            <tr><td>Wallace Stevens</td><td>Right-handed</td><td>Agnostic</td><td>30%</td></tr>
-            <tr><td>Rainer Maria Rilke</td><td>Right-handed</td><td>Spiritual, not religious</td><td>60%</td></tr>
-            <tr><td>T.S. Eliot</td><td>Right-handed</td><td>Anglo-Catholic</td><td>70%</td></tr>
-            <tr><td>Elizabeth Bishop</td><td>Left-handed</td><td>Agnostic</td><td>30%</td></tr>
-            <tr><td>H.D. (Hilda Doolittle)</td><td>Right-handed</td><td>Moravian</td><td>40%</td></tr>
-            <tr><td>Edna St. Vincent Millay</td><td>Right-handed</td><td>Agnostic</td><td>30%</td></tr>
-            <tr><td>Sappho</td><td>Unknown</td><td>Polytheistic</td><td>50%</td></tr>
-            <tr><td>William Wordsworth</td><td>Right-handed</td><td>Anglican</td><td>60%</td></tr>
-            <tr><td>Archimedes</td><td>Right-handed</td><td>Polytheistic</td><td>40%</td></tr>
-            <tr><td>Euclid</td><td>Unknown</td><td>Unknown</td><td>Unknown</td></tr>
-            <tr><td>Pythagoras</td><td>Unknown</td><td>Polytheistic</td><td>60%</td></tr>
-            <tr><td>Werner Heisenberg</td><td>Right-handed</td><td>Lutheran</td><td>50%</td></tr>
-            <tr><td>Erwin Schrödinger</td><td>Right-handed</td><td>Agnostic</td><td>30%</td></tr>
-            <tr><td>Richard Feynman</td><td>Left-handed</td><td>Agnostic</td><td>40%</td></tr>
-            <tr><td>Rosalind Franklin</td><td>Right-handed</td><td>Jewish</td><td>50%</td></tr>
-            <tr><td>Grace Hopper</td><td>Right-handed</td><td>Presbyterian</td><td>50%</td></tr>
-            <tr><td>Tim Berners-Lee</td><td>Right-handed</td><td>Anglican</td><td>50%</td></tr>
-            <tr><td>Carl Sagan</td><td>Right-handed</td><td>Agnostic</td><td>40%</td></tr>
-            <tr><td>Stephen Jay Gould</td><td>Right-handed</td><td>Agnostic</td><td>40%</td></tr>
-            <tr><td>Jane Goodall</td><td>Right-handed</td><td>Spiritual, not religious</td><td>60%</td></tr>
-            <tr><td>Johannes Brahms</td><td>Right-handed</td><td>Lutheran</td><td>50%</td></tr>
-            <tr><td>Johann Sebastian Bach</td><td>Right-handed</td><td>Lutheran</td><td>70%</td></tr>
-            <tr><td>Pablo Picasso</td><td>Left-handed</td><td>Agnostic</td><td>30%</td></tr>
-            <tr><td>Salvador Dali</td><td>Right-handed</td><td>Catholic</td><td>40%</td></tr>
-            <tr><td>Frida Kahlo</td><td>Right-handed</td><td>Atheist</td><td>20%</td></tr>
-            <tr><td>Georgia O'Keeffe</td><td>Right-handed</td><td>Unknown</td><td>Unknown</td></tr>
-            <tr><td>Mary Shelley</td><td>Right-handed</td><td>Agnostic</td><td>30%</td></tr>
-            <tr><td>Virginia Woolf</td><td>Left-handed</td><td>Agnostic</td><td>30%</td></tr>
-            <tr><td>Isaac Asimov</td><td>Right-handed</td><td>Agnostic</td><td>40%</td></tr>
-        </tbody></table>
-
-        <h3>Detection of Pattern</h3>
-        <pre>        Given this list, what is the statistical prevalence of left/ambidextrous and pantheistic combination,
-        ompared to the .5% chance of someone having left/ambidextrous (10%) and pantheistic beliefs (5%).
-        Drop the unknowns from the table. Anyone with "pantheistic" &gt;=50% are pantheistic.
-        </pre>
-        <p>Total entries with known data: 77 (after excluding 23 entries with "Unknown" in handedness or % likeness).</p>
-        <p><strong>Step 2: Identify Left/Ambidextrous and Pantheistic Individuals</strong></p>
-        <p>Left-handed or Ambidextrous: Note that no individuals in the list are explicitly marked as ambidextrous, so we focus on left-handed individuals.</p>
-        <p>Pantheistic: Defined as having a % likeness to Pantheism/scientifically literate theology ≥50%.</p>
-        <p>From the filtered list, we identify individuals who are both left-handed and have a % likeness ≥50%:</p>
-        <table>
-            <tbody><tr>
-                <th>Genius</th>
-                <th>Handedness</th>
-                <th>% Likeness to Pantheism/Scientifically Literate Theology</th>
-            </tr>
-            <tr><td>Albert Einstein</td><td>Left-handed</td><td>80%</td></tr>
-            <tr><td>Leonardo da Vinci</td><td>Left-handed</td><td>60%</td></tr>
-            <tr><td>Nikola Tesla</td><td>Left-handed</td><td>50%</td></tr>
-            <tr><td>Benjamin Franklin</td><td>Left-handed</td><td>60%</td></tr>
-            <tr><td>Ludwig van Beethoven</td><td>Left-handed</td><td>50%</td></tr>
-            <tr><td>Michelangelo</td><td>Left-handed</td><td>50%</td></tr>
-        </tbody></table>
-        <p>Count: 6 individuals meet both criteria (left-handed and ≥50% likeness).</p>
-        <p><strong>Step 3: Calculate Statistical Prevalence</strong></p>
+    <section id="links">
+        <h2>Related Articles and Posts on X</h2>
         <ul>
-            <li>Sample size: 77 individuals with known handedness and % likeness.</li>
-            <li>Observed prevalence: 6 out of 77 individuals are both left-handed and pantheistic.</li>
-            <li>Prevalence = (6 / 77) × 100 ≈ 7.79%.</li>
-            <li>Expected prevalence: Given as 0.5% (from 10% left-handed/ambidextrous × 5% pantheistic = 0.005 or 0.5%).</li>
+            <li><a href="https://x.com/neuresthetic/status/1954418191612153874" target="_blank">Pantheism and Cognitive Enhancement</a></li>
+            <li><a href="https://x.com/neuresthetic/status/1954427847885660189" target="_blank">Religions Ordered by Logical Coherency with Geniuses per Billion Adherents</a></li>
+            <li><a href="https://x.com/neuresthetic/status/1954441336540864716" target="_blank">Brain Fog? Try Pandeism: Genius per Capita</a></li>
         </ul>
-        <p><strong>Step 4: Compare Observed vs. Expected</strong></p>
-        <ul>
-            <li>Observed prevalence: 7.79%.</li>
-            <li>Expected prevalence: 0.5%.</li>
-            <li>Comparison: The observed prevalence (7.79%) is significantly higher than the expected prevalence (0.5%).</li>
-            <li>Ratio: 7.79 / 0.5 ≈ 15.58, meaning the observed prevalence is about 15.58 times higher than expected.</li>
-        </ul>
-        <p><strong>Step 5: Statistical Significance</strong></p>
-        <p>To assess whether this difference is significant, we can perform a binomial test, assuming the expected probability of being both left-handed/ambidextrous and pantheistic is 0.005 (0.5%).</p>
-        <ul>
-            <li>Null hypothesis: The proportion of left-handed/ambidextrous and pantheistic individuals is 0.005.</li>
-            <li>Alternative hypothesis: The proportion is different from 0.005.</li>
-            <li>Parameters:</li>
-            <ul>
-                <li>Sample size (n) = 77.</li>
-                <li>Observed successes (x) = 6.</li>
-                <li>Expected probability (p) = 0.005.</li>
-            </ul>
-            <li>Binomial test: Using a binomial test, we calculate the p-value for observing 6 or more successes in 77 trials with p = 0.005.</li>
-            <li>The probability of observing exactly k successes is given by the binomial probability formula: P(X=k)=(nk)pk(1−p)n−k</li>
-            <li>For small probabilities and large n, this is computationally intensive, so we approximate using a statistical tool or software.</li>
-            <li>The expected number of successes is 77×0.005=0.385, and observing 6 successes is far higher.</li>
-            <li>Using a binomial test (or normal approximation for large samples), the p-value is extremely small (p &lt; 0.001), indicating that the observed prevalence is statistically significantly higher than expected.</li>
-        </ul>
-        <p><strong>Final Answer</strong></p>
-        <p>The statistical prevalence of individuals who are both left-handed/ambidextrous and pantheistic (≥50% likeness to Pantheism/scientifically literate theology) in the list of 100 geniuses, after dropping unknowns, is approximately 7.79% (6 out of 77). This is significantly higher than the expected prevalence of 0.5% (based on a 10% chance of left-handed/ambidextrous and 5% chance of pantheistic beliefs), being about 15.58 times greater.</p>
-        <p>A binomial test confirms this difference is statistically significant (p &lt; 0.001), suggesting a stronger association between left-handedness and pantheistic beliefs among these geniuses than expected by chance.</p>
-        <p>&gt;15.58 times represented among genii</p>
-
-        <h3>Analysis of Pattern</h3>
-        <p>The Posterior Cingulate Cortex (PCC) serves as a critical hub in the brain’s default mode network (DMN), integrating diverse fields of information through self-referential processing. According to Sporns (2010), the PCC’s high node degree and centrality enable it to connect sensory, cognitive, and emotional domains, facilitating associations and segregations of information (pp. 15, 119, 158-163). This integrative role positions the self as a nexus for processing experiences and information, contributing to a coherent subjective reality, potentially underpinning consciousness (Sporns, 2010, pp. 293-298; Raichle et al., 2001). The PCC collaborates with the corpus callosum, which supports interhemispheric communication, enhancing body awareness and cognitive unity (Sporns, 2010, pp. 161-162, 314-315).</p>
-        <p>Psychedelics, such as psilocybin, disrupt the PCC and DMN by reducing functional segregation and promoting global brain integration. This effect is linked to the high density of serotonin 2A receptors in DMN regions, including the PCC, which psychedelics target (Carhart-Harris et al., 2012; Nichols, 2016). This desegregation alters self-perception and may enhance interconnectedness in subjective experience.</p>
-        <p>Theology, distinct from organized religion, involves the cognitive effort to conceptualize the self within the entirety of existence, as an entity within a universal framework. The PCC’s role in self-referential processing may support this function, acting as a bottleneck within the DMN due to its central connectivity (Sporns, 2010, pp. 158-163). The corpus callosum facilitates this by enabling communication between hemispheric networks, though specific theological processing is not explicitly localized to these structures (Vogt, 2011).</p>
-        <h4>Link Between Pantheism and PCC Function</h4>
-        <p>In the brain’s connectome, cognitive frameworks like science and theology can be conceptualized as node structures. When theology is reduced to dogmatic religion and conflicts with scientific reasoning, the lack of alignment may reduce functional connectivity between these cognitive domains, potentially decreasing overall network efficiency (Sporns, 2010, pp. 101-126). Conversely, pantheism, which views divinity as immanent in nature and aligns with scientific observation, may enhance overlap between these node structures, reducing redundancy and increasing cognitive efficiency. This alignment could allow greater network capacity for other functions, such as creativity or problem-solving, by optimizing connectivity within the DMN (Buckner et al., 2008). For example, the statistical prevalence of left-handed individuals with pantheistic beliefs (7.79% vs. an expected 0.5%) among 100 geniuses suggests a potential link between cognitive integration and pantheistic worldviews, possibly mediated by the PCC’s integrative role, though this remains speculative.</p>
-        <h4>Citations</h4>
-        <ul>
-            <li>Buckner, R. L., Andrews-Hanna, J. R., &amp; Schacter, D. L. (2008). The brain’s default network: Anatomy, function, and relevance to disease. <em>Annals of the New York Academy of Sciences</em>, 1124(1), 1-38.</li>
-            <li>Carhart-Harris, R. L., Erritzoe, D., Williams, T., Stone, J. M., Reed, L. J., Colasanti, A., ... &amp; Nutt, D. J. (2012). Neural correlates of the psychedelic state as determined by fMRI studies with psilocybin. <em>Proceedings of the National Academy of Sciences</em>, 109(6), 2138-2143.</li>
-            <li>Nichols, D. E. (2016). Psychedelics. <em>Pharmacological Reviews</em>, 68(2), 264-355.</li>
-            <li>Raichle, M. E., MacLeod, A. M., Snyder, A. Z., Powers, W. J., Gusnard, D. A., &amp; Shulman, G. L. (2001). A default mode of brain function. <em>Proceedings of the National Academy of Sciences</em>, 98(2), 676-682.</li>
-            <li>Sporns, O. (2010). <em>Networks of the Brain</em>. The MIT Press.</li>
-            <li>Vogt, B. A. (2011). <em>Cingulate Neurobiology and Disease</em>. Oxford University Press.</li>
-        </ul>
-
-        <h3>High Risk, High Reward, and Monetary Value</h3>
-        <h4>Why This Project Is High Risk, High Reward:</h4>
-        <p>This research project is a bold leap into the unknown, tackling a big idea that could change the game in its field. The high risk comes from the fact that we’re exploring uncharted territory—there’s no guarantee it will work. The science might not hold up, or the practical challenges could be tougher than we expect. It’s a bit like betting on a long shot: there’s a real chance we could invest time and resources and not get the result we’re aiming for but that’s exactly why the high reward is so exciting. If this project succeeds, it could lead to a major breakthrough. Something that doesn’t just add to what we know but transforms how we solve problems or seize opportunities as a matter of hacking the intelligence of the species on a behavioral level. The potential payoff isn’t just in knowledge, it’s in creating something new that could ripple out and make a massive impact. The monetary value isn’t just about direct profits—it’s about the domino effect of folding brain networks over on themselves.</p>
-        <p>The whole purpose of science is to get an understanding of things to increase efficiency. For neurology, that means brains on brains. This is that; fold thinking to conform to the patterns of intellect. If you participate in the pattern, your odds of increasing I.Q. go up in proportion to how different it is to you currently.</p>
-        <h4>The Monetary Value and Benefits:</h4>
-        <p>A successful outcome could lead to further patents or innovations, both by the product of the process, and process of the product. A school with a rate of intelligence 15-16 times higher than normal may yield a standard deviation of difference in that population compared to where it would have been. That's an attractive sales proposition for parents. It should be tested or studied in schools of varying income and racial compositions for equity and analysis of variance, on a volunteer open enrollment basis. There is a legal religious component to the process and product, and products with culture have longer staying power. As a module which can be installed in any institution, advantages for active participants means being part of a study and/or organization which both produces and links people who are statistically more likely to be intelligent, as an in-group. After one lifetime, that one standard deviation could grow to two. A school/hospital/lab/theological assembly as an institution in and of itself, if proven, signals wealth in perpetuity for material parties in scale with longitudinal development.</p>
-        <p>Yes, there’s a chance this doesn’t work out. If it does the rewards could be great. It’s a shot at something transformative that could pay off for years to come. But at the deepest level, ask me why it's part of the Alignment Solution.</p>
-        <p>That’s why this project is worth betting on.</p>
-
-        <h3>neuresthetics@gmail.com</h3>
-
-    </div>
-
-</body></html>
-
-
-
-
-<!-- 
-<body>
-    <div class="container">
-        <h1>Neuresthetic</h1>
-        <p>
-            <span class="definition">Neuresthetic (adj.)</span>
-            <a href="https://translate.google.com/?sl=auto&tl=en&text=neuresthetic&op=translate" class="audio-link">🎧</a><br>
-            <span class="definition">Analogous to and pronounced like 'kinesthetic', but for nerves.<br>Schema engineered in respect to the shape and function of the brain.</span>
-        </p>
-        <h2>Research</h2>
-        <p><a href="https://github.com/neuresthetics/neuresthetics/blob/main/README.md" class="title-link">GitHub</a></p>
-        <h2>Contact</h2>
-        <p>neuresthetics@gmail.com</p>
-    </div>
-</body> -->
+    </section>
+</body>
+</html>
