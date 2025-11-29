@@ -1,0 +1,183 @@
+/* assets/style.css – final clean version */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.7;
+    color: #e0e0e0;
+    background-color: #000;
+    min-height: 100vh;
+}
+
+.banner {
+    height: 70vh;
+    min-height: 400px;
+    background-image: url('https://raw.githubusercontent.com/neuresthetics/neuresthetics.github.io/main/assets/img/banner.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: -100px;
+}
+
+.profile-pic { position: relative; z-index: 2; }
+.profile-pic img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 6px solid #000;
+    background: #000;
+    object-fit: cover;
+}
+
+.body {
+    background: #000;
+    padding: 120px 5vw 5vh;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 12px;
+}
+
+/* Centered titles with ❖ */
+h1, h2 {
+    color: #ff69b4;
+    text-align: center;
+    margin: 0 0 1.5rem;
+    border-bottom: 1px solid #ff1493;
+    padding-bottom: 0.8rem;
+    font-weight: 600;
+}
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.8rem; }
+
+/* All images – rounded + soft feather */
+.project-img,
+.archetype-img,
+.spinoza-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    margin: 2rem auto;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6),
+                0 0 0 1px rgba(255, 105, 180, 0.1);
+    filter: drop-shadow(0 8px 20px rgba(255, 105, 180, 0.15));
+}
+
+/* Links */
+.repo-link, .paper-link {
+    display: inline-block;
+    margin: 0.5rem 1rem 0.5rem 0;
+    color: #1da1f2;
+    font-weight: 600;
+    text-decoration: none;
+}
+.repo-link:hover, .paper-link:hover { text-decoration: underline; }
+.repo-link.secondary {
+    border: 1px solid #1da1f2;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+}
+
+/* Ψ-Square */
+.psi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 2rem auto;
+    max-width: 480px;
+}
+.corner {
+    background: #1a1a1a;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+.corner:hover {
+    border-color: #ff69b4;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
+}
+.corner span { display: block; font-weight: normal; font-size: 0.9rem; opacity: 0.8; margin-top: 0.4rem; }
+.t { border-color: #ff3333; }
+.a { border-color: #888; }
+.p { border-color: #33cc33; }
+.e { border-color: #ff69b4; background: rgba(255, 105, 180, 0.08); }
+
+/* Four Futures */
+.futures-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+.future {
+    background: #111;
+    border: 1px solid #444;
+    border-radius: 12px;
+    padding: 1.8rem;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+.future:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(255,255,255,0.05); }
+.future h3 { margin: 0 0 0.8rem; font-size: 1.6rem; letter-spacing: 0.Context};
+.polarity { font-size: 0.9rem; opacity: 0.8; margin-bottom: 1rem; font-weight: 600; }
+.terminator { border-color: #ff3333; }
+.atropator { border-color: #888888; }
+.proliferator { border-color: #33cc33; }
+.equilibrator { border-color: #ff69b4; background: rgba(255, 105, 180, 0.06); }
+.closing { text-align: center; font-size: 1.2rem; margin: 3rem 0 2rem; line-height: 1.8; opacity: 0.95; }
+
+/* Ethics Part VI Quote */
+.ethics-quote {
+    background: linear-gradient(135deg, #111, #1a1a1a);
+    border: 1px solid #ff69b4;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+.ethics-quote h3 { color: #ff69b4; margin: 0 0 1rem; font-size: 1.4rem; border-bottom: 1px solid rgba(255,105,180,0.3); padding-bottom: 0.5rem; }
+.ethics-quote blockquote { font-style: italic; line-height: 1.7; margin: 1.5rem 0; opacity: 0.95; font-size: 1.1rem; }
+.ethics-quote cite { display: block; margin-top: 1rem; font-style: normal; font-weight: bold; color: #ff1493; }
+
+/* IQ Overviews */
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+}
+.overview {
+    background: #0a0a0a;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+.overview.iq160 { 
+    border-left: 4px solid #ff1493; 
+    background: rgba(255, 20, 147, 0.08); 
+}
+
+/* Four Futures – completely neutral/monochrome now */
+.terminator,
+.atropator,
+.proliferator,
+.equilibrator { 
+    border-color: #555 !important; 
+    background: #111 !important; 
+}
