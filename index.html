@@ -1,325 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>From Ethical Principles to Ethical Physics</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEURESTHETICS — Kinesthetics for brains</title>
 <style>
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-        }
-body {
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-line-height: 1.6;
-color: #333;
-background: #f9f9f9;
-        }
-.container {
-max-width: 900px;
-margin: 0 auto;
-padding: 60px 24px;
-        }
-.hero {
-text-align: center;
-margin-bottom: 60px;
-        }
-.hero img {
-width: 120px;
-height: 120px;
-border-radius: 50%;
-border: 3px solid #007bff;
-margin-bottom: 24px;
-        }
-.hero h1 {
-font-size: 2.5rem;
-font-weight: 600;
-margin-bottom: 16px;
-color: #007bff;
-        }
-.hero .subtitle {
-font-size: 1.25rem;
-color: #555;
-margin-bottom: 24px;
-        }
-.hero .lead {
-font-size: 1.1rem;
-color: #666;
-margin-bottom: 16px;
-        }
-.section {
-margin-bottom: 48px;
-        }
-.section h2 {
-font-size: 1.75rem;
-margin-bottom: 16px;
-color: #007bff;
-        }
-.section p {
-font-size: 1rem;
-color: #555;
-margin-bottom: 16px;
-        }
-.features {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 24px;
-margin: 32px 0;
-        }
-.feature-card {
-background: #fff;
-border: 1px solid #ddd;
-border-radius: 8px;
-padding: 20px;
-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-.feature-card h3 {
-font-size: 1.1rem;
-margin-bottom: 8px;
-color: #007bff;
-        }
-.feature-card p {
-font-size: 0.95rem;
-color: #666;
-        }
-.math-block {
-background: #fff;
-border-left: 4px solid #007bff;
-padding: 20px;
-margin: 24px 0;
-font-family: "Courier New", monospace;
-border-radius: 4px;
-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-.math-block code {
-color: #333;
-font-size: 1rem;
-display: block;
-margin-bottom: 8px;
-        }
-.math-block .explanation {
-color: #666;
-font-size: 0.9rem;
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-margin-top: 12px;
-        }
-.use-cases .use-case {
-margin-bottom: 24px;
-        }
-.use-cases h3 {
-font-size: 1.2rem;
-margin-bottom: 8px;
-color: #28a745;
-        }
-.use-cases p {
-font-size: 1rem;
-color: #555;
-        }
-.use-cases .example {
-color: #777;
-font-style: italic;
-padding-left: 16px;
-border-left: 2px solid #ddd;
-        }
-.concerns-section {
-background: #fff;
-border: 1px solid #ddd;
-border-radius: 8px;
-padding: 32px;
-margin-bottom: 48px;
-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-.concerns-section .section-title {
-text-align: center;
-color: #28a745;
-        }
-.concerns-section .section-lead {
-text-align: center;
-color: #555;
-margin-bottom: 24px;
-        }
-.concern-item h3 {
-font-size: 1.2rem;
-color: #28a745;
-margin-bottom: 8px;
-        }
-.concern-item p {
-color: #555;
-        }
-.demo-framework {
-background: #fff;
-border: 1px solid #ddd;
-border-radius: 8px;
-padding: 32px;
-margin-bottom: 48px;
-text-align: center;
-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-.demo-framework h2 {
-font-size: 1.75rem;
-margin-bottom: 16px;
-color: #28a745;
-        }
-.demo-framework p {
-font-size: 1rem;
-color: #555;
-max-width: 700px;
-margin: 0 auto 24px;
-        }
-.demo-framework ul {
-list-style: none;
-text-align: left;
-max-width: 700px;
-margin: 0 auto;
-        }
-.demo-framework li {
-margin-bottom: 12px;
-padding-left: 24px;
-position: relative;
-color: #666;
-        }
-.demo-framework li:before {
-content: "▸";
-position: absolute;
-left: 0;
-color: #007bff;
-font-weight: bold;
-        }
-.btn {
-padding: 12px 28px;
-border-radius: 6px;
-font-size: 1rem;
-font-weight: 500;
-text-decoration: none;
-display: inline-block;
-transition: all 0.3s;
-        }
-.btn-primary {
-background: #007bff;
-color: white;
-border: none;
-        }
-.btn-primary:hover {
-background: #0056b3;
-        }
-.cta {
-background: #fff;
-border: 1px solid #ddd;
-border-radius: 8px;
-padding: 40px;
-text-align: center;
-margin-bottom: 48px;
-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-.cta h2 {
-font-size: 1.75rem;
-margin-bottom: 16px;
-color: #333;
-        }
-.cta p {
-font-size: 1rem;
-color: #555;
-margin-bottom: 24px;
-        }
-.cta-buttons {
-display: flex;
-justify-content: center;
-gap: 16px;
-flex-wrap: wrap;
-        }
-.btn-secondary {
-background: transparent;
-color: #007bff;
-border: 1px solid #007bff;
-        }
-.btn-secondary:hover {
-background: #007bff;
-color: white;
-        }
-.footer {
-text-align: center;
-color: #777;
-font-size: 0.9rem;
-padding-top: 24px;
-border-top: 1px solid #ddd;
-        }
-@media (max-width: 768px) {
-.container {
-padding: 40px 16px;
-            }
-.hero h1 {
-font-size: 2rem;
-            }
-.features {
-grid-template-columns: 1fr;
-            }
-        }
+  :root {
+    --bg: #0a0a0a;
+    --ink: #e8e8e8;
+    --dim: #888;
+    --line: #222;
+    --accent: #c9a227;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.7;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem;
+  }
+  h1 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.3rem;
+  }
+  .tag {
+    color: var(--accent);
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 2.5rem 0 0.8rem;
+    color: var(--ink);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.4rem;
+  }
+  p { margin-bottom: 1rem; color: var(--ink); }
+  .lead { color: var(--dim); font-style: italic; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  ul { margin: 0.5rem 0 1rem 1.2rem; }
+  li { margin-bottom: 0.5rem; color: var(--ink); }
+  .meta {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.85rem;
+    color: var(--dim);
+  }
+  .meta a { color: var(--dim); }
+  .meta a:hover { color: var(--accent); }
+  code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.85em;
+    background: #151515;
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+  }
 </style>
 </head>
 <body>
-<div style="max-width: 900px; margin: 0 auto; padding: 60px 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #333;">
-<div style="text-align: center; margin-bottom: 60px;">
-<img
-src="https://github.com/neuresthetics/neuresthetics.github.io/blob/main/assets/img/N.jpg?raw=true"
-alt="Neuresthetics"
-style="width: 120px; height: 120px; border-radius: 50%; border: 3px solid #007bff; margin-bottom: 24px;"
-/>
-<h1 style="font-size: 2.5rem; font-weight: 600; margin-bottom: 16px; color: #007bff;">Neuresthetics Think Tank</h1>
-<p style="font-size: 1.25rem; color: #555; margin-bottom: 24px;">Pioneering Engineered Epistemology: Shaping Neural Architecture with Principles from Objective Brain Science</p>
-<p style="font-size: 1.1rem; color: #666;">As a forward-thinking think tank, we treat prompts as deterministic JSON programs executed by LLMs, fostering recursive self-improvement and unified frameworks across neuroscience, mathematics, physics, and ethical AI for groundbreaking advancements.</p>
-</div>
-<div style="margin-bottom: 48px;">
-<h2 style="font-size: 1.75rem; margin-bottom: 16px; color: #007bff;">About the Founder</h2>
-<p style="font-size: 1rem; color: #555;">Neuresthetics Think Tank is spearheaded by a dedicated solo researcher, the creator of github.com/neuresthetics, with profound expertise in engineered epistemology, AI ethics, and unified theories. This work evolves from a rich timeline of innovation, starting with V6 research in NEUR-V6-DATA and advancing through recursive tools like seed, sprouts, spinoza_lab, and steel_man_s.e, demonstrating a unique ability to forge invariant truths across disciplines.</p>
-</div>
-<div style="margin-bottom: 48px;">
-<h2 style="font-size: 1.75rem; margin-bottom: 16px; color: #007bff;">Our Broader Work</h2>
-<p style="font-size: 1rem; color: #555; margin-bottom: 16px;">Our ecosystem embodies a paradigm of logic gates and metaprogramming, applied to diverse labs:</p>
-<ul style="font-size: 1rem; color: #555; padding-left: 24px; margin-bottom: 16px;">
-<li>Mathematical breakthroughs: riemann_hypothesis achieves >99.999% heuristic certainty through multi-path unification.</li>
-<li>Theoretical physics: TOESF_theory_of_everything_so_far unifies emergent gravity with quantum mechanics via Fisher information metrics.</li>
-<li>Computational biology: multidimensional_DNA_analysis integrates polygenic risk scores and ODE simulations for Alzheimer's prediction, yielding AUC 0.80-0.85.</li>
-<li>AI ethics: grokipedia-truth-audit employs Ψ-Square frameworks for bias detection, and spinoza_lab operationalizes ethical dynamics with compliance to 2026 standards.</li>
-<li>Core tools: seed as a 150-line JSON kernel for recursive reasoning, evolving into steel_man_s.e for 2-4x research efficiency.</li>
+
+<h1>NEURESTHETICS</h1>
+<div class="tag">Kinesthetics for brains</div>
+
+<p class="lead">Jason Burns. Portland. One substance. No reserved class. No private channel.</p>
+
+<p>Most studies of religion and intelligence count churches.<br>
+This one asks whether first-rank minds work as if the world has no special exemptions — and whether learning that early is a <strong>practice</strong>, not a tribe.</p>
+
+<p>That is V7. That is the front door.</p>
+
+<h2>First principles</h2>
+
+<p>There is one world. It does not keep a side door for a bargainer.<br>
+A mark forced on an infant is not a covenant. It is a hole in the ledger.<br>
+A people is not a membership rule. Hebrew is the stream. The engine that bills the stream for the cut is the thing that can be left.</p>
+
+<p>Love, here, is hygiene: keep the stream, drop the bill. Spinoza left. Ben-Gurion asked for the books back. The off-ramp is pantheism as practice — subtraction until leftover ideas stay. It does not mint geniuses. It stops spending a life on sophistry.</p>
+
+<p>Not a war. Not a baptism. An upgrade for Hebrews and for anyone else who will run one map.</p>
+
+<h2>V7 — the study</h2>
+
+<p>Two lanes. Lane A describes. Lane B believes out loud so the belief can fail. Lane A does not pay Lane B.</p>
+
+<ul>
+  <li>Living samples: stronger supernatural belief covaries modestly with lower measured intelligence. Belief, not pew-sitting.</li>
+  <li>Remembered paradigm-shifters after ~1700, especially in physics: a miracle-working personal God is uncommon as the working metaphysics of the work.</li>
+  <li>Kids default to agents and purposes. The circle is an override, not a factory setting.</li>
+  <li>Genius = lasting original impact, not an IQ score.</li>
 </ul>
-<p style="font-size: 1rem; color: #555;">These initiatives form a cohesive library of scale-invariant mappings, validated through custom isomorphism checks, positioning us at the forefront of truth experimentalism and interdisciplinary synthesis.</p>
+
+<p>Paper, neurology sister, data book, combined JSON:<br>
+<a href="https://github.com/neuresthetics/neuresthetics_v7">github.com/neuresthetics/neuresthetics_v7</a></p>
+
+<h2>Thoughtware — prompts as programs</h2>
+
+<p>Second door, not the first.</p>
+
+<p>An LLM is a runtime. A prompt that is a program can be versioned, collided, and subtracted. <code>seed</code> is a small JSON kernel. <code>substance_lens</code> is a 16-gate DAG that treats every claim as fiction until it XNOR-locks. Copy the JSON. Paste it as system. The model becomes the interpreter.</p>
+
+<p>This is not a miracle. It is the geometric method with a compiler that talks.</p>
+
+<p><a href="https://github.com/neuresthetics">github.com/neuresthetics</a><br>
+<a href="https://github.com/neuresthetics/substance_lens">substance_lens</a></p>
+
+<div class="meta">
+  X: <a href="https://x.com/neuresthetic">@neuresthetic</a> — collisions. Experimental, non-attached, malleable.<br>
+  Zenodo V5 is history. V7 is current.<br>
+  The old “think tank” claims (10,000×, $220B, Riemann closed) are retired from this page.
 </div>
-<div style="margin-bottom: 48px;">
-<h2 style="font-size: 1.75rem; margin-bottom: 16px; color: #007bff;">Key Strengths and Utility</h2>
-<p style="font-size: 1rem; color: #555; margin-bottom: 16px;">Our frameworks harness recursive invariants for unparalleled utility:</p>
-<ul style="font-size: 1rem; color: #555; padding-left: 24px; margin-bottom: 16px;">
-<li>Accelerated innovation: Tools like steel_man_s.e enable 10,000x efficiency in programming and idea hardening.</li>
-<li>Robust unification: Achieving >0.98 invariance across consciousness models and ethical manifolds.</li>
-<li>Drift-resistant designs: Built-in mechanisms for self-correction and alignment in AI and organizational systems.</li>
-<li>Scalable applications: From individual cognition to large-scale simulations in biology and physics.</li>
-</ul>
-<p style="font-size: 1rem; color: #555;">As a think tank, we deliver high-impact solutions that bridge theory and practice, fostering resilient advancements in science and technology.</p>
-</div>
-<div style="margin-bottom: 48px;">
-<h2 style="font-size: 1.75rem; margin-bottom: 16px; color: #007bff;">Applications and Impact</h2>
-<p style="font-size: 1rem; color: #555;">Our work drives transformative outcomes:</p>
-<ul style="font-size: 1rem; color: #555; padding-left: 24px;">
-<li>Ethical AI alignment: Through Spinoza-inspired computable models for long-term resilience.</li>
-<li>Scientific breakthroughs: Predictive tools in DNA analysis saving $220B–$550B in healthcare.</li>
-<li>Research platforms: For testing unified theories in mathematics, physics, and consciousness.</li>
-<li>Licensable innovations: IP in neurotechnology, algorithm evolution, and safety-critical systems.</li>
-</ul>
-</div>
-<div style="background: #f8f9fa; border-radius: 8px; padding: 32px; text-align: center; margin-bottom: 48px;">
-<h2 style="font-size: 1.75rem; margin-bottom: 16px; color: #28a745;">See some code!</h2>
-<p style="font-size: 1rem; color: #555; max-width: 700px; margin: 0 auto 24px;">Explore our isomorphic demo frameworks, including seed.json for recursive self-improvement, ready for integration with leading LLMs.</p>
-<p style="font-size: 1rem; color: #555; max-width: 700px; margin: 0 auto 24px;">Discover high-fidelity isomorphisms and physics-based ethics math in our repositories.</p>
-<a href="https://github.com/neuresthetics" style="display: inline-block; padding: 12px 28px; background: #007bff; color: white; text-decoration: none; border-radius: 6px; font-weight: 500;">Visit GitHub</a>
-</div>
-<div style="background: #f8f9fa; border-radius: 8px; padding: 32px; text-align: center; margin-bottom: 48px;">
-<h2 style="font-size: 1.75rem; margin-bottom: 16px; color: #28a745;">Consultation and Collaboration</h2>
-<p style="font-size: 1rem; color: #555; max-width: 700px; margin: 0 auto 24px;">Engage with our think tank for insights on engineered epistemology, custom framework development, or collaborative research opportunities.</p>
-<a href="https://www.linkedin.com/in/neuresthetic/" style="display: inline-block; padding: 12px 28px; background: #007bff; color: white; text-decoration: none; border-radius: 6px; font-weight: 500;">Connect on LinkedIn</a>
-</div>
-<div style="text-align: center; color: #777; font-size: 0.9rem; padding-top: 24px; border-top: 1px solid #ddd;">
-<p>Neuresthetics Think Tank · Engineered Epistemology · Unified Frameworks · AI Ethics · Scientific Innovation</p>
-</div>
-</div>
+
 </body>
 </html>
