@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANOVA Language · Jason Burns · Neuresthetics</title>
+<meta name="description" content="ANOVA Language is a free, offline AAC word board web app for iPad and other tablets.">
+<meta name="author" content="Jason Burns">
+<meta name="theme-color" content="#0a0a0a">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://neuresthetics.github.io/anova/">
+<meta property="og:title" content="ANOVA Language · Neuresthetics">
+<meta property="og:description" content="ANOVA Language is a free, offline AAC word board web app for iPad and other tablets.">
+<meta property="og:image" content="https://neuresthetics.github.io/assets/img/N.jpg">
+<meta property="og:image:alt" content="Neuresthetics logo">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/jpeg" href="../assets/img/logo-192.jpg">
+<link rel="apple-touch-icon" href="../assets/img/logo-192.jpg">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/img/logo-192.jpg" alt="" width="28" height="28">NEURESTHETICS</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="../">Home</a></li>
+        <li><a href="../restokit/">RestoKit</a></li>
+        <li><a href="../anova/" aria-current="page">ANOVA Language</a></li>
+        <li><a href="../tech-philosophy/">Tech &amp; Philosophy</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <h1>ANOVA Language</h1>
+    <p class="tag">App · AAC word board</p>
+    <p class="lead">A free word board for AAC (augmentative and alternative communication). It's a web app for iPad and other tablets, and it works offline once it's installed.</p>
+
+    <div class="split">
+      <div>
+        <h2>What it does</h2>
+        <ul>
+          <li>A core word board with fixed button positions. Tapping a word speaks it and adds it to the message bar.</li>
+          <li>Word levels: Starter, Middle, Full, or Custom. A hidden word leaves an empty cell, so buttons never move as more words are shown.</li>
+          <li>A spelling keyboard (A to Z in order) with word prediction.</li>
+          <li>Simple read-along stories with photos or emoji. Turning a page never speaks; tapping a word or "read" does.</li>
+          <li>Buttons are color-coded by word type, using a modified Fitzgerald key.</li>
+          <li>An optional usage log. It's off by default, and it stays on the device.</li>
+        </ul>
+      </div>
+      <figure>
+        <img src="../assets/img/anova-board.jpg" width="560" height="806" loading="lazy"
+             alt="The generic starter board on an iPad: a message bar with speak, delete, and clear buttons, tabs for home, abc, and stories, and a grid of color-coded word buttons such as I, want, help, more, yes, and no.">
+        <figcaption>The generic starter board.</figcaption>
+      </figure>
+    </div>
+
+    <h2>How it's built</h2>
+    <p>Plain HTML, CSS, and JavaScript. No build step, no frameworks, no ads, no analytics, and no network calls.</p>
+    <p>The repo holds a generic app shell with a starter board and two sample stories. Personal words, stories, photos, and recordings go in a pack. The pack is imported on the device and stays there.</p>
+
+    <h2>About the name</h2>
+    <p>ANOVA is a nod to analysis of variance, the statistics term. Language learning varies a lot from person to person. The board is built to adapt to that: adjustable word levels, custom packs, and buttons that stay put. The app itself doesn't do any statistics.</p>
+
+    <h2>Please note</h2>
+    <div class="note">
+      <p>It's a free option to use at home. It is not a replacement for an evaluation by a speech-language pathologist, and it is not a medical device.</p>
+      <p>No license file has been added yet. The code is public to read and try.</p>
+      <p><a href="https://github.com/neuresthetics/anova_language_dev_public">Repo and setup guide: neuresthetics/anova_language_dev_public</a></p>
+      <!-- JASON: once GitHub Pages is on for anova_language_dev_public, uncomment this line:
+      <p><a href="https://neuresthetics.github.io/anova_language_dev_public/">Try the app: neuresthetics.github.io/anova_language_dev_public</a></p>
+      -->
+    </div>
+    <p class="back"><a href="../">← Back to home</a></p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Neuresthetics LLC · Portland, OR · neuresthetic.net<br>
+    <a href="https://github.com/neuresthetics">GitHub</a> · <a href="https://x.com/neuresthetic">X</a></p>
+  </div>
+</footer>
+</body>
+</html>
