@@ -243,6 +243,7 @@ figcaption { color: var(--dim); font-size: 0.9rem; margin-top: 0.5rem; }
 .site-footer .wrap { padding-top: 1.5rem; padding-bottom: 2.5rem; }
 .site-footer a { color: var(--dim); }
 .site-footer a:hover { color: var(--accent); }
+.site-footer .x-note { display: block; font-size: 0.85em; font-style: italic; margin-top: 0.25rem; }
 
 @media (max-width: 640px) {
   body { font-size: 1rem; }
