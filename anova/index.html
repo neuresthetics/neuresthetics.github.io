@@ -6,7 +6,7 @@
 <title>ANOVA Language · Jason Burns · Neuresthetics</title>
 <meta name="description" content="ANOVA Language is a free, offline AAC word board web app for iPad and other tablets.">
 <meta name="author" content="Jason Burns">
-<meta name="theme-color" content="#0a0a0a">
+<meta name="theme-color" content="#1b1b1b">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://neuresthetics.github.io/anova/">
 <meta property="og:title" content="ANOVA Language · Neuresthetics">
@@ -17,8 +17,9 @@
 <link rel="icon" type="image/jpeg" href="../assets/img/logo-192.jpg">
 <link rel="apple-touch-icon" href="../assets/img/logo-192.jpg">
 <link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/board.css">
 </head>
-<body>
+<body class="theme-board">
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="site-header">
@@ -43,7 +44,7 @@
 
     <div class="split">
       <div>
-        <h2>What it does</h2>
+        <h2 class="t-verb">What it does</h2>
         <ul>
           <li>A core word board with fixed button positions. Tapping a word speaks it and adds it to the message bar.</li>
           <li>Word levels: Starter, Middle, Full, or Custom. A hidden word leaves an empty cell, so buttons never move as more words are shown.</li>
@@ -60,19 +61,19 @@
       </figure>
     </div>
 
-    <h2>How it's built</h2>
+    <h2 class="t-descriptor">How it's built</h2>
     <p>Plain HTML, CSS, and JavaScript. No build step, no frameworks, no ads, no analytics, and no network calls.</p>
     <p>The repo holds a generic app shell with a starter board and two sample stories. Personal words, stories, photos, and recordings go in a pack. The pack is imported on the device and stays there.</p>
 
-    <h2>About the name</h2>
+    <h2 class="t-noun">About the name</h2>
     <p>ANOVA is a nod to analysis of variance, the statistics term. Language learning varies a lot from person to person. The board is built to adapt to that: adjustable word levels, custom packs, and buttons that stay put. The app itself doesn't do any statistics.</p>
 
-    <h2>Please note</h2>
+    <h2 class="t-social">Please note</h2>
     <div class="note">
       <p>It's a free option to use at home. It is not a replacement for an evaluation by a speech-language pathologist, and it is not a medical device.</p>
       <p>Open source under the MIT license.</p>
-      <p><a href="https://github.com/neuresthetics/anova_language_dev_public">Repo and setup guide: neuresthetics/anova_language_dev_public</a></p>
-      <p><a href="https://neuresthetics.github.io/anova_language_dev_public/">Try the app: neuresthetics.github.io/anova_language_dev_public</a></p>
+      <p><a class="btn" href="https://github.com/neuresthetics/anova_language_dev_public">Repo and setup guide: neuresthetics/anova_language_dev_public</a></p>
+      <p><a class="btn speak" href="https://neuresthetics.github.io/anova_language_dev_public/">Try the app: neuresthetics.github.io/anova_language_dev_public</a></p>
     </div>
     <p class="back"><a href="../">← Back to home</a></p>
   </div>

@@ -1,0 +1,68 @@
+/* ANOVA Language theme: the word-board look of the app. Loaded after style.css on that page only. */
+.theme-board {
+  --bg: #1b1b1b;
+  --panel: #2d2d2d;
+  --ink: #f2f2f2;
+  --dim: #b8b8b8;
+  --line: #3a3a3a;
+  --accent: #00bb55;       /* the speak button */
+  --accent-soft: #3fdc85;
+  --people: #FFE14D; --verb: #7FD67F; --descriptor: #86BDFF;
+  --noun: #FFB057; --social: #FF9FD0; --negation: #FF7B7B;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, "SF Pro Rounded", system-ui, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+}
+.theme-board .site-header, .theme-board .site-footer { background: #141414; border-color: var(--line); }
+.theme-board .site-nav a { font-weight: 600; }
+.theme-board a { color: var(--accent-soft); }
+
+/* Title row: big word plus tab pills, like the app's top bar */
+.theme-board h1 { font-weight: 800; font-size: 2.3rem; letter-spacing: -0.01em; }
+.theme-board .tag {
+  display: inline-block; text-transform: none; letter-spacing: 0; font-weight: 700; font-size: 0.95rem;
+  background: #fff; color: #000; border: 2px solid #fff; border-radius: 12px; padding: 0.2rem 0.85rem;
+}
+/* The lead as the message bar */
+.theme-board .lead {
+  background: #fff; color: #111; border-radius: 14px; padding: 1rem 1.25rem;
+  font-size: 1.1rem; font-weight: 500; box-shadow: inset 0 -3px 0 #ddd;
+}
+
+/* Section headings as word buttons, colored by the Fitzgerald key */
+.theme-board h2 {
+  display: inline-block; border: 3px solid #000; border-radius: 14px;
+  outline: 2px solid #444; padding: 0.35rem 1rem; margin: 2.5rem 0 1rem;
+  color: #000; font-weight: 800; font-size: 1.2rem; background: #fff;
+}
+.theme-board h2.t-people { background: var(--people); }
+.theme-board h2.t-verb { background: var(--verb); }
+.theme-board h2.t-descriptor { background: var(--descriptor); }
+.theme-board h2.t-noun { background: var(--noun); }
+.theme-board h2.t-social { background: var(--social); }
+.theme-board h2.t-negation { background: var(--negation); }
+
+/* Feature list as tiles with a colored edge */
+.theme-board .split ul { list-style: none; padding: 0; }
+.theme-board .split li {
+  background: var(--panel); border-radius: 12px; padding: 0.65rem 0.9rem 0.65rem 1.1rem;
+  border-left: 8px solid var(--verb); margin-bottom: 0.6rem;
+}
+.theme-board .split li:nth-child(6n+2) { border-left-color: var(--descriptor); }
+.theme-board .split li:nth-child(6n+3) { border-left-color: var(--noun); }
+.theme-board .split li:nth-child(6n+4) { border-left-color: var(--social); }
+.theme-board .split li:nth-child(6n+5) { border-left-color: var(--people); }
+.theme-board .split li:nth-child(6n+6) { border-left-color: var(--negation); }
+
+.theme-board figure img { border: 3px solid #000; outline: 2px solid #444; border-radius: 16px; }
+
+/* Note as an empty board cell, links as buttons */
+.theme-board .note { background: transparent; border: 2px dashed #444; border-radius: 16px; color: var(--dim); }
+.theme-board .note .btn {
+  display: inline-block; font-weight: 700; border-radius: 12px; padding: 0.45rem 1rem;
+  background: var(--panel); color: #fff; border: 2px solid #777; text-decoration: none;
+}
+.theme-board .note .btn.speak { background: #00bb55; color: #000; border-color: #000; outline: 3px solid #fff; outline-offset: -1px; }
+.theme-board .note .btn:hover { background: #fff; color: #000; }
+.theme-board .back a, .theme-board .site-footer a { color: var(--dim); }
