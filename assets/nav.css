@@ -33,4 +33,5 @@ html body .site-header .site-nav a {
   font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: normal;
+  white-space: nowrap; /* each item stays whole; the list wraps between items */
 }
