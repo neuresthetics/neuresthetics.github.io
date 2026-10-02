@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jason Burns · Neuresthetics</title>
-<meta name="description" content="Jason Burns runs Neuresthetics LLC in Portland, OR. Projects: RestoKit, ANOVA Language, and the Neuresthetics research.">
+<meta name="description" content="Jason Burns runs Neuresthetics LLC in Portland, OR. Projects: RestoKit, ANOVA Language, Freedom of Necessity, the Genius Study, Grokipedia Truth Audit, and Graphtacular.">
 <meta name="author" content="Jason Burns">
-<meta name="theme-color" content="#0a0a0a">
+<meta name="theme-color" content="#ffffff">
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://neuresthetics.github.io/">
+<meta property="og:url" content="https://neuresthetic.net/">
 <meta property="og:title" content="Jason Burns · Neuresthetics">
-<meta property="og:description" content="Neuresthetics LLC, Portland, OR. RestoKit, ANOVA Language, and the Neuresthetics research.">
+<meta property="og:description" content="Neuresthetics LLC, Portland, OR. RestoKit, ANOVA Language, Freedom of Necessity, the Genius Study, Grokipedia Truth Audit, and Graphtacular.">
 <meta property="og:image" content="https://neuresthetics.github.io/assets/img/N.jpg">
 <meta property="og:image:alt" content="Neuresthetics logo">
 <meta name="twitter:card" content="summary">
@@ -19,8 +19,9 @@
 <link rel="icon" type="image/jpeg" href="assets/img/logo-192.jpg">
 <link rel="apple-touch-icon" href="assets/img/logo-192.jpg">
 <link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/home.css">
 </head>
-<body>
+<body class="theme-home">
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="site-header">
@@ -47,9 +48,10 @@
         <p class="tag">Neuresthetics LLC · Portland, OR</p>
         <p>I run Neuresthetics LLC in Portland, Oregon. I formed it in 2017.</p>
         <p>Neuresthetics is also the name of my research. I started it before AI tools were around, and it's still going. AI is one of the tools I use in that work. It isn't the subject.</p>
-        <p>I also build practical tools. Below are the main projects. Each one has a short page and a link to its public repo.</p>
+        <p>I also build practical tools. Below are the main projects, each with a link to its page or public repo.</p>
         <!-- JASON: optional extra bio line goes here (see suggestions in the report) -->
         <ul class="links">
+          <li><a href="https://neuresthetic.net">neuresthetic.net</a></li>
           <li><a href="https://github.com/neuresthetics">GitHub: neuresthetics</a></li>
         </ul>
       </div>
@@ -57,25 +59,74 @@
 
     <section aria-labelledby="projects-title">
       <h2 id="projects-title">Projects</h2>
-      <ul class="cards">
-        <li class="card">
-          <p class="kicker">Field tool</p>
-          <h3><a href="restokit/">RestoKit</a></h3>
-          <p>A restoration kit for water, mold, and crawlspace jobs, built for any level from tech to PM and estimator. It walks a job through in order, from first response to closeout.</p>
-          <span class="more" aria-hidden="true">Read more →</span>
+      <ul class="pcards">
+
+        <li class="pc pc-resto">
+          <a class="pc-img" href="restokit/" tabindex="-1" aria-hidden="true"><img src="assets/img/cards/card-restokit.jpg" alt="" width="900" height="450" loading="lazy"></a>
+          <div class="pc-bar" aria-hidden="true"><span>S500 · S520</span></div>
+          <div class="pc-body">
+            <p class="pc-badge"><span class="k">field tool</span><span class="v">water · mold · crawlspace</span></p>
+            <h3><a href="restokit/">RestoKit</a></h3>
+            <p class="pc-desc">A restoration kit for any level, from tech to PM and estimator, grounded in IICRC S500 and S520. It holds the job flow and the rare edge cases.</p>
+            <p class="pc-links"><a href="restokit/">page</a><a href="https://github.com/neuresthetics/resto_kit_public">public repo</a></p>
+          </div>
         </li>
-        <li class="card">
-          <p class="kicker">App</p>
-          <h3><a href="anova/">ANOVA Language</a></h3>
-          <p>A free word board for AAC (augmentative and alternative communication). It runs in the browser on an iPad and works offline.</p>
-          <span class="more" aria-hidden="true">Read more →</span>
+
+        <li class="pc pc-anova">
+          <a class="pc-img" href="anova/" tabindex="-1" aria-hidden="true"><img src="assets/img/cards/card-anova.jpg" alt="" width="900" height="450" loading="lazy"></a>
+          <div class="pc-bar" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b><b></b><span>speak</span></div>
+          <div class="pc-body">
+            <p class="pc-badge"><span class="k">app</span><span class="v">AAC word board</span></p>
+            <h3><a href="anova/">ANOVA Language</a></h3>
+            <p class="pc-desc">A free, offline AAC word board for iPad and tablets. Buttons stay put while word levels grow. MIT licensed.</p>
+            <p class="pc-links"><a href="anova/">page</a><a href="https://neuresthetics.github.io/anova_language_dev_public/">try the app</a><a href="https://github.com/neuresthetics/anova_language_dev_public">repo</a></p>
+          </div>
         </li>
-        <li class="card">
-          <p class="kicker">Writing and tools</p>
-          <h3><a href="tech-philosophy/">Tech &amp; Philosophy</a></h3>
-          <p>A book in progress, the Genius Study, and a few smaller tools for working through arguments.</p>
-          <span class="more" aria-hidden="true">Read more →</span>
+
+        <li class="pc pc-book">
+          <a class="pc-img" href="https://github.com/neuresthetics/freedom_of_necessity" tabindex="-1" aria-hidden="true"><img src="assets/img/cards/card-book.jpg" alt="" width="900" height="450" loading="lazy"></a>
+          <div class="pc-bar" aria-hidden="true"><span>freedom_of_necessity / README.md</span></div>
+          <div class="pc-body">
+            <p class="pc-badge"><span class="k">book</span><span class="v">axiom by axiom</span></p>
+            <h3><a href="https://github.com/neuresthetics/freedom_of_necessity">Freedom of Necessity</a></h3>
+            <p class="pc-desc">A book written axiom by axiom in the geometric style of Spinoza's Ethics. A local model checks each entry against what it cites.</p>
+            <p class="pc-links"><a href="tech-philosophy/">page</a><a href="https://github.com/neuresthetics/freedom_of_necessity">repo</a></p>
+          </div>
         </li>
+
+        <li class="pc pc-study">
+          <a class="pc-img" href="https://github.com/neuresthetics/neuresthetics_genius_study" tabindex="-1" aria-hidden="true"><img src="assets/img/cards/card-v7.jpg" alt="" width="900" height="450" loading="lazy"></a>
+          <div class="pc-bar" aria-hidden="true"><i></i><i></i><i></i><span>~/neuresthetics_genius_study</span></div>
+          <div class="pc-body">
+            <p class="pc-badge"><span class="k">study</span><span class="v">v8 in progress</span></p>
+            <h3><a href="https://github.com/neuresthetics/neuresthetics_genius_study">Genius Study</a></h3>
+            <p class="pc-desc">The Neuresthetics study of lawful order and remembered genius, with one home for every version. Lane A describes the public record. Lane B states a belief so it can fail.</p>
+            <p class="pc-links"><a href="tech-philosophy/">page</a><a href="https://github.com/neuresthetics/neuresthetics_genius_study">repo</a></p>
+          </div>
+        </li>
+
+        <li class="pc pc-grok">
+          <a class="pc-img" href="https://github.com/neuresthetics/grokipedia-truth-audit" tabindex="-1" aria-hidden="true"><img src="assets/img/cards/card-grokipedia.jpg" alt="" width="900" height="450" loading="lazy"></a>
+          <div class="pc-bar" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><circle cx="6.5" cy="6.5" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 10l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>saved snapshots · data · scripts</span></div>
+          <div class="pc-body">
+            <p class="pc-badge"><span class="k">audit</span><span class="v">fallacy · citation checks</span></p>
+            <h3><a href="https://github.com/neuresthetics/grokipedia-truth-audit">Grokipedia Truth Audit</a></h3>
+            <p class="pc-desc">Reproducible audits of Grokipedia articles, done on saved snapshots with the data and scripts to check them. So far: 58 circumcision-related articles and the Spinoza article.</p>
+            <p class="pc-links"><a href="https://github.com/neuresthetics/grokipedia-truth-audit">repo</a></p>
+          </div>
+        </li>
+
+        <li class="pc pc-graph">
+          <a class="pc-img" href="https://github.com/neuresthetics/graphtacular" tabindex="-1" aria-hidden="true"><img src="assets/img/cards/card-graphtacular.jpg" alt="" width="900" height="450" loading="lazy"></a>
+          <div class="pc-bar" aria-hidden="true"><span>Graph › Vertex › Kernel › Strand</span></div>
+          <div class="pc-body">
+            <p class="pc-badge"><span class="k">early code</span><span class="v">C# · 2019</span></p>
+            <h3><a href="https://github.com/neuresthetics/graphtacular">Graphtacular</a></h3>
+            <p class="pc-desc">A C# graph engine from 2019 where each vertex grows the graph from a shared instruction list, like a genome. Rendered in Gephi. Built before AI.</p>
+            <p class="pc-links"><a href="https://github.com/neuresthetics/graphtacular">repo</a></p>
+          </div>
+        </li>
+
       </ul>
     </section>
 
@@ -84,7 +135,7 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <p>Neuresthetics LLC · Portland, OR · neuresthetic.net<br>
+    <p>Neuresthetics LLC · Portland, OR · <a href="https://neuresthetic.net">neuresthetic.net</a><br>
     <a href="https://github.com/neuresthetics">GitHub</a> · <a href="https://x.com/neuresthetic">X: @neuresthetic</a> <span class="x-note">Where I think out loud, unpolished. Dev notes and tech threads are in there too.</span></p>
   </div>
 </footer>
