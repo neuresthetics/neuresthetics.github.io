@@ -26,6 +26,7 @@
 }
 .theme-field .site-header { background: var(--teal); border-bottom: 3px solid var(--copper); }
 .theme-field .site-header .brand { color: var(--bone); }
+.theme-field .site-header a { text-decoration: none; }
 .theme-field .site-header .site-nav a { color: rgba(231, 216, 181, 0.85); }
 .theme-field .site-header .site-nav a:hover,
 .theme-field .site-header .site-nav a[aria-current="page"] { color: #fff; text-decoration: underline; text-decoration-color: var(--copper-lt); text-decoration-thickness: 2px; text-underline-offset: 0.35em; }
