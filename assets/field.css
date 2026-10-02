@@ -1,94 +1,101 @@
-/* RestoKit theme (/restokit/): the "Dry-out" brand palette, dark. Charcoal page, bone body text,
-   sand highlights, deep teal panels and header, copper accents. Copper is lightened to #ea8a3c
-   wherever it carries text or thin lines (6.9:1 on #18181b, 5.8:1 on #27272a, WCAG AA);
-   brand copper #b45309 is kept for larger fills. Page-scoped. */
+/* RestoKit theme (/restokit/): the "Signal" brand palette on dark. Ink Navy page, Poly White text,
+   Signal Blue links and buttons, Amber accents and indicators, Wave Cyan support (dark only).
+   Signal Blue is lightened to #5b9be6 where it is text (6.0:1 on #0C1B2E, 5.3:1 on panels, WCAG AA);
+   full Signal Blue #1D69C6 is used for fills, with white text on it (5.4:1). Page-scoped.
+   Nav font metrics come from nav.css; only colors are set here. */
 .theme-field {
-  --teal: #134e4a;
-  --teal-deep: #0f3d3a;
-  --copper: #b45309;
-  --copper-lt: #ea8a3c;
-  --sand: #e7d8b5;
-  --charcoal: #27272a;
-  --bone: #fafaf9;
-  --bg: #18181b;
-  --panel: #27272a;
-  --ink: var(--bone);
-  --dim: #d6d3d1;
-  --line: #3f3f46;
-  --accent: var(--copper-lt);
-  --accent-soft: #f0a060;
+  --navy: #0C1B2E;
+  --navy-deep: #081321;
+  --blue: #1D69C6;
+  --blue-text: #5b9be6;
+  --amber: #F08A24;
+  --white: #EEF3F9;
+  --cyan: #3CC4F2;
+  --bg: var(--navy);
+  --panel: #13263E;
+  --ink: var(--white);
+  --dim: #b8c4d4;
+  --line: #223a5a;
+  --accent: var(--amber);
+  --accent-soft: #f6a95c;
   background:
-    radial-gradient(ellipse 70% 35% at 50% 0%, rgba(19, 78, 74, 0.55), transparent 70%),
+    radial-gradient(ellipse 70% 32% at 50% 0%, rgba(29, 105, 198, 0.28), transparent 70%),
     var(--bg);
-  color: var(--bone);
+  color: var(--white);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.7;
 }
-.theme-field .site-header { background: var(--teal); border-bottom: 3px solid var(--copper); }
-.theme-field .site-header .brand { color: var(--bone); }
+.theme-field .site-header { background: var(--navy-deep); border-bottom: 3px solid var(--blue); }
+.theme-field .site-header .brand { color: var(--white); }
 .theme-field .site-header a { text-decoration: none; }
-.theme-field .site-header .site-nav a { color: rgba(231, 216, 181, 0.85); }
+.theme-field .site-header .site-nav a { color: var(--dim); }
 .theme-field .site-header .site-nav a:hover,
-.theme-field .site-header .site-nav a[aria-current="page"] { color: #fff; text-decoration: underline; text-decoration-color: var(--copper-lt); text-decoration-thickness: 2px; text-underline-offset: 0.35em; }
-.theme-field a { color: var(--sand); text-decoration: underline; text-decoration-color: rgba(234, 138, 60, 0.6); text-underline-offset: 0.18em; }
-.theme-field a:hover { color: var(--copper-lt); }
+.theme-field .site-header .site-nav a[aria-current="page"] { color: var(--white); text-decoration: underline; text-decoration-color: var(--amber); text-decoration-thickness: 2px; text-underline-offset: 0.35em; }
+.theme-field a { color: var(--blue-text); text-decoration: underline; text-decoration-color: rgba(91, 155, 230, 0.5); text-underline-offset: 0.18em; }
+.theme-field a:hover { color: var(--cyan); }
 
-/* Logo at the top (it carries its own teal plate), then the banner */
-.theme-field .rk-logo { margin: 0 0 1.4rem; line-height: 0; }
-.theme-field .rk-logo img { display: block; width: 100%; max-width: 21rem; height: auto; border-radius: 10px; box-shadow: 0 0 0 1px rgba(231, 216, 181, 0.18), 0 10px 28px rgba(0, 0, 0, 0.45); }
+/* Dark lockup at the top (transparent), then the banner */
+.theme-field .rk-logo { margin: 0 0 1.2rem; line-height: 0; }
+.theme-field .rk-logo img { display: block; width: 100%; max-width: 20rem; height: auto; }
 .theme-field .banner { border: 0; border-radius: 10px; box-shadow: 0 0 0 1px var(--line), 0 14px 40px rgba(0, 0, 0, 0.5); }
 
+/* Tag as an amber badge with ink text */
 .theme-field .tag {
-  display: inline-block; color: var(--sand); background: var(--teal); padding: 0.3rem 0.7rem; border-radius: 4px;
-  font-weight: 700; font-size: 0.75rem; letter-spacing: 0.12em; box-shadow: inset 0 0 0 1px rgba(231, 216, 181, 0.25);
+  display: inline-block; color: var(--navy); background: var(--amber); padding: 0.3rem 0.7rem; border-radius: 4px;
+  font-weight: 800; font-size: 0.75rem; letter-spacing: 0.12em;
 }
-.theme-field .lead { color: var(--bone); font-size: 1.15rem; }
-.theme-field main p, .theme-field main li { color: var(--bone); }
-.theme-field .runs { font-size: 0.85rem; color: var(--dim) !important; border-left: 3px solid var(--copper-lt); padding-left: 0.75rem; }
-.theme-field .runs b { color: var(--sand); }
+.theme-field .lead { color: var(--white); font-size: 1.15rem; }
+.theme-field main p, .theme-field main li { color: var(--white); }
+.theme-field .runs { font-size: 0.85rem; color: var(--dim) !important; border-left: 3px solid var(--amber); padding-left: 0.75rem; }
+.theme-field .runs b { color: var(--cyan); }
 
-/* Section headings: sand caps with a copper tick */
+/* Section headings: Poly White caps with an amber indicator */
 .theme-field h2 {
   font-weight: 800; font-size: 0.95rem; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--sand); border-bottom: 1px solid var(--line);
+  color: var(--white); border-bottom: 1px solid var(--line);
 }
-.theme-field h2::before { content: ""; display: inline-block; width: 0.6em; height: 0.6em; margin-right: 0.6em; background: var(--copper-lt); border-radius: 2px; vertical-align: 0.05em; }
-.theme-field strong { color: var(--sand); }
-.theme-field ul li::marker { color: var(--copper-lt); }
+.theme-field h2::before { content: ""; display: inline-block; width: 0.6em; height: 0.6em; margin-right: 0.6em; background: var(--amber); border-radius: 50%; box-shadow: 0 0 8px rgba(240, 138, 36, 0.6); vertical-align: 0.05em; }
+.theme-field strong { color: var(--cyan); }
+.theme-field ul li::marker { color: var(--amber); }
 
 /* The job flow as phase cards */
 .theme-field ol { list-style: none; padding: 0; counter-reset: phase -1; }
 .theme-field ol li {
   counter-increment: phase; margin-bottom: 0.75rem;
-  background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--teal);
+  background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--blue);
   border-radius: 8px; padding: 0.7rem 1rem;
 }
 .theme-field ol li::before {
   content: "PHASE " counter(phase); display: block; font-weight: 800;
-  font-size: 0.72rem; letter-spacing: 0.14em; color: var(--copper-lt);
+  font-size: 0.72rem; letter-spacing: 0.14em; color: var(--amber);
 }
 
-/* Short answer: a deep teal card with a teal label */
+/* Short answer card: Signal Blue label bar */
 .theme-field blockquote {
-  background: var(--teal-deep); border: 1px solid rgba(231, 216, 181, 0.16); border-left: 4px solid var(--copper-lt);
-  border-radius: 8px; padding: 0 1.1rem 0.9rem; overflow: hidden; color: var(--bone);
+  background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--amber);
+  border-radius: 8px; padding: 0 1.1rem 0.9rem; overflow: hidden; color: var(--white);
 }
 .theme-field blockquote::before {
   content: "QUICK LINE"; display: block; margin: 0 -1.1rem 0.75rem; padding: 0.35rem 1.1rem;
-  font-size: 0.72rem; font-weight: 800; letter-spacing: 0.16em; color: var(--sand); background: var(--teal);
+  font-size: 0.72rem; font-weight: 800; letter-spacing: 0.16em; color: #fff; background: var(--blue);
 }
 .theme-field blockquote p { font-style: italic; }
 
-/* Status note */
+/* Status note: a meter-style stripe on top, the repo link as a Signal Blue button */
 .theme-field .note {
-  background: var(--panel); border: 1px solid var(--line); border-radius: 8px; color: var(--bone);
+  background: var(--panel); border: 1px solid var(--line); border-radius: 8px; color: var(--white);
   padding-top: 1.4rem; position: relative; overflow: hidden;
 }
 .theme-field .note::before {
   content: ""; position: absolute; top: 0; left: 0; right: 0; height: 6px;
-  background: linear-gradient(90deg, var(--teal) 0 70%, var(--copper) 70% 100%);
+  background: linear-gradient(90deg, var(--amber) 0 45%, var(--blue) 45% 100%);
 }
-.theme-field .back a { color: var(--sand); }
-.theme-field .site-footer { background: #111113; color: var(--dim); border-top: 3px solid var(--teal); }
-.theme-field .site-footer a { color: var(--sand); }
-.theme-field .site-footer a:hover { color: #fff; }
+.theme-field .note a {
+  display: inline-block; background: var(--blue); color: #fff; text-decoration: none;
+  padding: 0.5rem 0.95rem; border-radius: 6px; font-weight: 600;
+}
+.theme-field .note a:hover { background: #2577d8; color: #fff; }
+.theme-field .back a { color: var(--blue-text); }
+.theme-field .site-footer { background: var(--navy-deep); color: var(--dim); border-top: 3px solid var(--blue); }
+.theme-field .site-footer a { color: var(--blue-text); }
+.theme-field .site-footer a:hover { color: var(--cyan); }
