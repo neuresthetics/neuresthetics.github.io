@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jason Burns · Neuresthetics</title>
-<meta name="description" content="Jason Burns runs Neuresthetics LLC in Portland, OR. Projects: RestoKit, ANOVA Language, Freedom of Necessity, the Genius Study, Grokipedia Truth Audit, and Graphtacular.">
+<meta name="description" content="Jason Burns, Neuresthetics, Portland, OR. Real-world products: RestoKit, ANOVA Language, Grokipedia Truth Audit, substance_lens. Brand project: the Genius Study, Freedom of Necessity and split_load_sim.">
 <meta name="author" content="Jason Burns">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#0b0b0d">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://neuresthetics.github.io/">
 <meta property="og:title" content="Jason Burns · Neuresthetics">
-<meta property="og:description" content="Neuresthetics LLC, Portland, OR. RestoKit, ANOVA Language, Freedom of Necessity, the Genius Study, Grokipedia Truth Audit, and Graphtacular.">
+<meta property="og:description" content="Neuresthetics, Portland, OR. RestoKit, ANOVA Language, Grokipedia Truth Audit, substance_lens, the Genius Study, Freedom of Necessity and split_load_sim.">
 <meta property="og:image" content="https://neuresthetics.github.io/assets/img/N.jpg">
 <meta property="og:image:alt" content="Neuresthetics logo">
 <meta name="twitter:card" content="summary">
@@ -32,10 +32,11 @@
         <li><a href="./" aria-current="page">Home</a></li>
         <li><a href="restokit/">RestoKit</a></li>
         <li><a href="anova/">ANOVA Language</a></li>
-        <li><a href="book/">Book</a></li>
-        <li><a href="study/">Study</a></li>
         <li><a href="grokipedia/">Grokipedia Audit</a></li>
-        <li><a href="graphtacular/">Graphtacular</a></li>
+        <li><a href="substance-lens/">substance_lens</a></li>
+        <li><a href="study/">Study</a></li>
+        <li><a href="book/">Book</a></li>
+        <li><a href="split-load-sim/">split_load_sim</a></li>
       </ul>
     </nav>
   </div>
@@ -44,93 +45,106 @@
 <main id="main">
   <div class="wrap">
 
-    <section class="intro" aria-labelledby="about-title">
+    <section class="hero" aria-labelledby="top-title">
       <img class="logo" src="assets/img/logo-192.jpg" alt="Neuresthetics logo: four white rings on a magenta square" width="88" height="88">
-      <div>
-        <h1 id="about-title">Jason Burns</h1>
-        <p class="tag">Neuresthetics LLC · Portland, OR</p>
-        <p>I run Neuresthetics LLC in Portland, Oregon. I formed it in 2017.</p>
-        <p>Neuresthetics is also the name of my research. I started it before AI tools were around, and it's still going. AI is one of the tools I use in that work. It isn't the subject.</p>
-        <p>I also build practical tools. Below are the main projects, each with a link to its page or public repo.</p>
-        <!-- JASON: optional extra bio line goes here (see suggestions in the report) -->
-        <ul class="links">
-          <li><a href="https://neuresthetic.net">neuresthetic.net</a></li>
-          <li><a href="https://github.com/neuresthetics">GitHub: neuresthetics</a></li>
-        </ul>
+      <h1 id="top-title"><span aria-hidden="true">🧠 </span>Neuresthetics</h1>
+      <p class="who"><b>Jason Burns</b> · 📍 Portland, OR · 🌐 <a href="https://neuresthetic.net">neuresthetic.net</a></p>
+      <p class="chips"><a class="chip gold" href="https://neuresthetic.net">neuresthetic.net</a><span class="chip">builder · tools + research</span><span class="chip blue">since 2017</span></p>
+      <blockquote class="define"><p><strong>Neuresthetics</strong> is <em>kinesthetics for brains</em>: spelled with "eu," never "neuroesthetics." Plural, it's the practice: shaping how a mind is organized, on purpose. Singular, a <strong>neuresthetic</strong> is a result of that practice.</p></blockquote>
+      <p class="intro-text">I build tools for people who work with their hands and their heads: 🛠️ field kits for restoration techs, 🗣️ a word board for kids learning to talk, and 📜 long-running research on how minds put order on the world. Neuresthetics started before AI. AI is one of the tools now, not the point.</p>
+      <!-- JASON: optional extra bio line goes here (see suggestions in the report) -->
+    </section>
+
+    <section class="sec" aria-labelledby="products-title">
+      <h2 id="products-title"><span aria-hidden="true">🛠️ </span>"REAL WORLD" PRODUCTS</h2>
+      <p class="sub">Made to be useful to other people.</p>
+
+      <article class="card">
+        <a class="card-img" href="restokit/" tabindex="-1" aria-hidden="true"><img src="assets/img/cards/wide-restokit-brand.jpg" alt="" width="900" height="300" loading="lazy"></a>
+        <div class="card-body">
+          <h3><span aria-hidden="true">💧 </span><a href="restokit/">RestoKit</a></h3>
+          <p>A restoration kit for water, mold, and crawlspace jobs, built for any level from tech to PM and estimator. Grounded in IICRC S500 and S520, it walks a job in order and holds the rare edge cases.</p>
+          <p class="runs"><span aria-hidden="true">⚙️ </span><b>Runs on:</b> Commercial cloud models · loaded into the Grok app or a Grok Bot</p>
+          <p class="links"><a href="restokit/"><span aria-hidden="true">🌐 </span>page</a><a href="https://github.com/neuresthetics/resto_kit_public"><span aria-hidden="true">📂 </span>repo</a></p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card-img" href="anova/" tabindex="-1" aria-hidden="true"><img src="assets/img/cards/wide-anova-hands.jpg" alt="" width="900" height="300" loading="lazy"></a>
+        <div class="card-body">
+          <h3><span aria-hidden="true">🗣️ </span><a href="anova/">ANOVA Language</a></h3>
+          <p>A free, offline AAC word board for iPad and other tablets. Buttons stay put as word levels grow. MIT licensed.</p>
+          <p class="runs"><span aria-hidden="true">⚙️ </span><b>Runs on:</b> No model · plain HTML, CSS and JavaScript, offline, no network calls</p>
+          <p class="links"><a href="anova/"><span aria-hidden="true">🌐 </span>page</a><a href="https://github.com/neuresthetics/anova_language_dev_public"><span aria-hidden="true">📂 </span>repo</a></p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card-img" href="grokipedia/" tabindex="-1" aria-hidden="true"><img src="assets/img/cards/wide-grokipedia.jpg" alt="" width="900" height="300" loading="lazy"></a>
+        <div class="card-body">
+          <h3><span aria-hidden="true">🔎 </span><a href="grokipedia/">Grokipedia Truth Audit</a></h3>
+          <p>Reproducible audits of Grokipedia articles on saved snapshots: fallacy scans and citation checks, with the data and scripts to check them. So far: 58 circumcision-related articles and the Spinoza article.</p>
+          <p class="runs"><span aria-hidden="true">⚙️ </span><b>Runs on:</b> Grok · a model reads saved snapshots against the substance_lens fallacy catalogue; scripts verify quotes and citations</p>
+          <p class="links"><a href="grokipedia/"><span aria-hidden="true">🌐 </span>page</a><a href="https://github.com/neuresthetics/grokipedia-truth-audit"><span aria-hidden="true">📂 </span>repo</a></p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card-img" href="substance-lens/" tabindex="-1" aria-hidden="true"><img src="assets/img/cards/wide-substance-lens.jpg" alt="" width="900" height="300" loading="lazy"></a>
+        <div class="card-body">
+          <h3><span aria-hidden="true">🔍 </span><a href="substance-lens/">substance_lens</a></h3>
+          <p>A JSON prompt spec: paste it into a chat model, give it a claim, and it checks the argument step by step and scans both the claim and its strongest counter-case for 67 fallacies. Flags are judgments to verify, not proofs.</p>
+          <p class="runs"><span aria-hidden="true">⚙️ </span><b>Runs on:</b> Any capable chat model · a prompt spec, built with Grok in mind; no code ships</p>
+          <p class="links"><a href="substance-lens/"><span aria-hidden="true">🌐 </span>page</a><a href="https://github.com/neuresthetics/substance_lens"><span aria-hidden="true">📂 </span>repo</a></p>
+        </div>
+      </article>
+    </section>
+
+    <section class="sec" aria-labelledby="brand-title">
+      <h2 id="brand-title"><span aria-hidden="true">🧠 </span>BRAND PROJECT</h2>
+      <p class="sub">The Neuresthetics project itself: one inquiry, in three parts.</p>
+      <p>The study, the book and split_load_sim are the three sides of the Neuresthetics project. The Genius Study (v8) collects sourced records of remembered geniuses and states a labeled belief model about how early lawful form might pay off; the book builds, axiom by axiom, the one order (God or Nature) to which the brain and its society belong. split_load_sim is how we go between them. None of the three comes first; each draws on the other two, circling one goal. split_load_sim grows graphs as models of how a mind's maps could be structured, drawing on the book's axioms and testing whether the study's Lane B assumptions produce the effect they claim inside the model. Its results are model outputs, not findings, and the study has no results yet. The book in turn tries to key in on what makes v8 go around, and findings in any one can send the others back to work.</p>
+      <figure class="map">
+        <img src="assets/img/cards/side-projects-map.png" width="1800" height="1120" loading="lazy" alt="Map of the side projects: an equilateral triangle with the Neuresthetics Genius Study (v8, no results yet), split_load_sim (graph-growth models, model outputs, not findings) and Freedom of Necessity (the book) at the corners, each joined to the other two and to a circle at the centre that reads 'one goal: the order of the mind'">
+      </figure>
+
+      <div class="brand-cards">
+        <article class="card short">
+          <a class="card-img" href="study/" tabindex="-1" aria-hidden="true"><img src="assets/img/cards/short-study-faces.jpg" alt="" width="900" height="180" loading="lazy"></a>
+          <div class="card-body">
+            <h3><span aria-hidden="true">🔬 </span><a href="study/">Neuresthetics Genius Study</a></h3>
+            <p><b>The study.</b> Where remembered genius sits on a scale of lawful, non-intervening order, with a labeled belief model. v8 is in progress; no results yet.</p>
+            <p class="runs"><span aria-hidden="true">⚙️ </span><b>Runs on:</b> Grok · Grok Bot agents draft person records from web search and the cited pages (unreviewed)</p>
+            <p class="links"><a href="study/"><span aria-hidden="true">🌐 </span>page</a><a href="https://github.com/neuresthetics/neuresthetics_genius_study"><span aria-hidden="true">📂 </span>repo</a><a href="credits/#study-portraits"><span aria-hidden="true">🖼️ </span>portrait credits</a></p>
+          </div>
+        </article>
+
+        <article class="card short">
+          <a class="card-img" href="book/" tabindex="-1" aria-hidden="true"><img src="assets/img/cards/short-book-graph.jpg" alt="" width="900" height="180" loading="lazy"></a>
+          <div class="card-body">
+            <h3><span aria-hidden="true">📖 </span><a href="book/">Freedom of Necessity</a></h3>
+            <p><b>The book.</b> A Spinoza-style geometric book on one order, God or Nature, to which the brain and its society belong.</p>
+            <p class="runs"><span aria-hidden="true">⚙️ </span><b>Runs on:</b> Local Qwen 27B · checks each entry against what it cites; argument harness in progress</p>
+            <p class="links"><a href="book/"><span aria-hidden="true">🌐 </span>page</a><a href="https://github.com/neuresthetics/freedom_of_necessity"><span aria-hidden="true">📂 </span>repo</a><a href="credits/#book-image"><span aria-hidden="true">🖼️ </span>image credit</a></p>
+          </div>
+        </article>
+
+        <article class="card short">
+          <a class="card-img" href="split-load-sim/" tabindex="-1" aria-hidden="true"><img src="assets/img/cards/short-split-load-sim.jpg" alt="" width="900" height="180" loading="lazy"></a>
+          <div class="card-body">
+            <h3><span aria-hidden="true">🧬 </span><a href="split-load-sim/">split_load_sim</a></h3>
+            <p><b>The bridge.</b> Graph-growth models that connect the study and the book, descended from <a href="graphtacular/">graphtacular</a> (2019). Model outputs, not findings.</p>
+            <p class="runs"><span aria-hidden="true">⚙️ </span><b>Runs on:</b> No model · seeded Python graph models</p>
+            <p class="links"><a href="split-load-sim/"><span aria-hidden="true">🌐 </span>page</a><a href="https://github.com/neuresthetics/split_load_sim"><span aria-hidden="true">📂 </span>repo</a></p>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section aria-labelledby="projects-title">
-      <h2 id="projects-title">Projects</h2>
-      <ul class="pcards">
-
-        <li class="pc pc-resto">
-          <a class="pc-img" href="restokit/" tabindex="-1" aria-hidden="true"><img src="assets/img/cards/card-restokit.jpg" alt="" width="900" height="450" loading="lazy"></a>
-          <div class="pc-bar" aria-hidden="true"><span>S500 · S520</span></div>
-          <div class="pc-body">
-            <p class="pc-badge"><span class="k">field tool</span><span class="v">water · mold · crawlspace</span></p>
-            <h3><a href="restokit/">RestoKit</a></h3>
-            <p class="pc-desc">A restoration kit for any level, from tech to PM and estimator, grounded in IICRC S500 and S520. It holds the job flow and the rare edge cases.</p>
-            <p class="pc-links"><a href="restokit/">page</a><a href="https://github.com/neuresthetics/resto_kit_public">public repo</a></p>
-          </div>
-        </li>
-
-        <li class="pc pc-anova">
-          <a class="pc-img" href="anova/" tabindex="-1" aria-hidden="true"><img src="assets/img/cards/card-anova.jpg" alt="" width="900" height="450" loading="lazy"></a>
-          <div class="pc-bar" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b><b></b><span>speak</span></div>
-          <div class="pc-body">
-            <p class="pc-badge"><span class="k">app</span><span class="v">AAC word board</span></p>
-            <h3><a href="anova/">ANOVA Language</a></h3>
-            <p class="pc-desc">A free, offline AAC word board for iPad and tablets. Buttons stay put while word levels grow. MIT licensed.</p>
-            <p class="pc-links"><a href="anova/">page</a><a href="https://neuresthetics.github.io/anova_language_dev_public/">try the app</a><a href="https://github.com/neuresthetics/anova_language_dev_public">repo</a></p>
-          </div>
-        </li>
-
-        <li class="pc pc-book">
-          <a class="pc-img" href="book/" tabindex="-1" aria-hidden="true"><img src="assets/img/cards/card-book.jpg" alt="" width="900" height="450" loading="lazy"></a>
-          <div class="pc-bar" aria-hidden="true"><span>freedom_of_necessity / README.md</span></div>
-          <div class="pc-body">
-            <p class="pc-badge"><span class="k">book</span><span class="v">axiom by axiom</span></p>
-            <h3><a href="book/">Freedom of Necessity</a></h3>
-            <p class="pc-desc">A book written axiom by axiom in the geometric style of Spinoza's Ethics. A local model checks each entry against what it cites.</p>
-            <p class="pc-links"><a href="book/">page</a><a href="https://github.com/neuresthetics/freedom_of_necessity">repo</a></p>
-          </div>
-        </li>
-
-        <li class="pc pc-study">
-          <a class="pc-img" href="study/" tabindex="-1" aria-hidden="true"><img src="assets/img/cards/card-v7.jpg" alt="" width="900" height="450" loading="lazy"></a>
-          <div class="pc-bar" aria-hidden="true"><i></i><i></i><i></i><span>~/neuresthetics_genius_study</span></div>
-          <div class="pc-body">
-            <p class="pc-badge"><span class="k">study</span><span class="v">v8 in progress</span></p>
-            <h3><a href="study/">Genius Study</a></h3>
-            <p class="pc-desc">The Neuresthetics study of lawful order and remembered genius, with one home for every version. Lane A describes the public record. Lane B states a belief so it can fail.</p>
-            <p class="pc-links"><a href="study/">page</a><a href="https://github.com/neuresthetics/neuresthetics_genius_study">repo</a></p>
-          </div>
-        </li>
-
-        <li class="pc pc-grok">
-          <a class="pc-img" href="grokipedia/" tabindex="-1" aria-hidden="true"><img src="assets/img/cards/card-grokipedia.jpg" alt="" width="900" height="450" loading="lazy"></a>
-          <div class="pc-bar" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><circle cx="6.5" cy="6.5" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 10l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>saved snapshots · data · scripts</span></div>
-          <div class="pc-body">
-            <p class="pc-badge"><span class="k">audit</span><span class="v">fallacy · citation checks</span></p>
-            <h3><a href="grokipedia/">Grokipedia Truth Audit</a></h3>
-            <p class="pc-desc">Reproducible audits of Grokipedia articles, done on saved snapshots with the data and scripts to check them. So far: 58 circumcision-related articles and the Spinoza article.</p>
-            <p class="pc-links"><a href="grokipedia/">page</a><a href="https://github.com/neuresthetics/grokipedia-truth-audit">repo</a></p>
-          </div>
-        </li>
-
-        <li class="pc pc-graph">
-          <a class="pc-img" href="graphtacular/" tabindex="-1" aria-hidden="true"><img src="assets/img/cards/card-graphtacular.jpg" alt="" width="900" height="450" loading="lazy"></a>
-          <div class="pc-bar" aria-hidden="true"><span>Graph › Vertex › Kernel › Strand</span></div>
-          <div class="pc-body">
-            <p class="pc-badge"><span class="k">early code</span><span class="v">C# · 2019</span></p>
-            <h3><a href="graphtacular/">Graphtacular</a></h3>
-            <p class="pc-desc">A C# graph engine from 2019 where each vertex grows the graph from a shared instruction list, like a genome. Rendered in Gephi. Built before AI.</p>
-            <p class="pc-links"><a href="graphtacular/">page</a><a href="https://github.com/neuresthetics/graphtacular">repo</a></p>
-          </div>
-        </li>
-
-      </ul>
+    <section class="sec" aria-labelledby="built-title">
+      <h2 id="built-title"><span aria-hidden="true">⚙️ </span>HOW IT'S BUILT</h2>
+      <p><strong>Local models.</strong> A Linux tower with a 20 GB GPU and 64 GB RAM runs Ollama with Qwen 27B, in a standard and an uncensored build, at 16K context. A stock 14B is being added for model-swap runs. The tower works through unattended job queues, for days if needed, for an adversarial argument harness: the models draft the strongest case for each side, code checks every cite against word-for-word source excerpts, and runs are rescored and repeated across seeds and model swaps to see how much of a result comes from the model.</p>
+      <p><strong>Grok.</strong> Grok Bot (an xAI assistant) runs a set of project bots for coding, audits, writing support, and fetching the word-for-word sources those cite checks use.</p>
     </section>
 
   </div>

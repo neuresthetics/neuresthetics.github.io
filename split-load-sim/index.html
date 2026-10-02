@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>split_load_sim · Jason Burns · Neuresthetics</title>
+<meta name="description" content="Graph-growth models connecting the Neuresthetics Genius Study (v8) and Freedom of Necessity, descended from graphtacular (2019). Model outputs, not findings.">
+<meta name="author" content="Jason Burns">
+<meta name="theme-color" content="#0a1020">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://neuresthetics.github.io/split-load-sim/">
+<meta property="og:title" content="split_load_sim · Neuresthetics">
+<meta property="og:description" content="Graph-growth models connecting the Neuresthetics Genius Study (v8) and Freedom of Necessity, descended from graphtacular (2019). Model outputs, not findings.">
+<meta property="og:image" content="https://neuresthetics.github.io/assets/img/N.jpg">
+<meta property="og:image:alt" content="Neuresthetics logo">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/jpeg" href="../assets/img/logo-192.jpg">
+<link rel="apple-touch-icon" href="../assets/img/logo-192.jpg">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/sim.css">
+</head>
+<body class="theme-sim">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/img/logo-192.jpg" alt="" width="28" height="28">NEURESTHETICS</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="../">Home</a></li>
+        <li><a href="../restokit/">RestoKit</a></li>
+        <li><a href="../anova/">ANOVA Language</a></li>
+        <li><a href="../grokipedia/">Grokipedia Audit</a></li>
+        <li><a href="../substance-lens/">substance_lens</a></li>
+        <li><a href="../study/">Study</a></li>
+        <li><a href="../book/">Book</a></li>
+        <li><a href="../split-load-sim/" aria-current="page">split_load_sim</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <img class="banner" src="../assets/img/cards/wide-split-load-sim.jpg" width="900" height="300" alt="An exception_prior run from split_load_sim: a teal main map joined to an amber reserved map by one bottleneck edge">
+    <div class="sim-bar" aria-hidden="true"><i class="t"></i><span>main map</span><b></b><span>bottleneck</span><b></b><i class="a"></i><span>reserved map</span></div>
+    <h1>split_load_sim</h1>
+    <p class="tag"><span class="k">graph models</span><span class="v">working name</span></p>
+    <p class="lead">Graph-growth models that connect the study and the book, descended from <a href="../graphtacular/">graphtacular</a> (2019). Model outputs, not findings.</p>
+    <p class="runs"><b>Runs on:</b> No model · seeded Python graph models</p>
+
+    <h2>What it is</h2>
+    <p>split_load_sim uses graph theory as a model of the structure of the brain and mind, to connect two projects: the <a href="../study/">Neuresthetics Genius Study (v8)</a>, which collects sourced records of remembered geniuses (Lane A) and states a labeled belief model (Lane B), and the book <a href="../book/"><em>Freedom of Necessity</em></a>, whose axiom A2 says the organization of the body's cells produces the mind.</p>
+    <p>The graphs are models of how a mind's maps could be structured and how they grow. They are not brain data, they are not neuroscience findings, and a vertex is not a neuron.</p>
+
+    <h2>First use: Lane B inside a model</h2>
+    <p>Lane B (H1, cultivation) says early exposure to the circle (Deus sive Natura) plus geometric form reduces <em>split-model load</em>. The repo asks two questions:</p>
+    <ul>
+      <li>If you build Lane B's assumptions into a growth model, do they produce the effect Lane B claims, inside the model?</li>
+      <li>Could the data Lane A collects tell H1 apart from H2 (selection) and H3 (attractor)?</li>
+    </ul>
+    <div class="note">
+      <p>It does not test whether H1 is true of real people. Results are model outputs, not findings. Everything is synthetic: no real Lane A record is read. The exception-prior strand is built with a reserved map joined by one edge, so some of its "split" measures differ from H1 by construction.</p>
+    </div>
+
+    <h2>How growth works</h2>
+    <p>One seed vertex starts at step 1 of a shared instruction list, the <em>strand</em>. Each round, every running vertex runs its current instruction: <code>branch</code> (definition → consequence), <code>complete_cluster</code>, <code>close</code>, <code>link_region</code>, <code>fork_reserved</code> (a second map joined by a bottleneck edge) or <code>bridge_regions</code> (late merging). Randomness is seeded, so the same strand and seed always give the same graph. Results are compared against null models.</p>
+
+    <h2>Where the strand idea comes from</h2>
+    <p>The strand comes from <a href="../graphtacular/">graphtacular</a>, a C# engine from 2019 where every vertex runs a shared, numbered instruction list, like a genome. split_load_sim keeps the idea and fixes its weak points: typed, validated instructions instead of string matching, one kernel rule for every vertex, and exports only to a directory you choose.</p>
+
+    <h2>Status</h2>
+    <ul>
+      <li>The candidate measures of split-model load are <strong>provisional</strong>. The study names split-model load but doesn't define a measure for it.</li>
+      <li>The H2 and H3 models and the discrimination analysis are <strong>proposed</strong> and synthetic. They depend on mappings and parameter ranges Jason has not signed off.</li>
+      <li>Open decisions are tracked in <a href="https://github.com/neuresthetics/split_load_sim/blob/main/docs/OPEN_QUESTIONS.md">docs/OPEN_QUESTIONS.md</a>.</li>
+    </ul>
+
+    <p><a class="sim-link" href="https://github.com/neuresthetics/split_load_sim">Repo: neuresthetics/split_load_sim</a></p>
+    <p class="small">MIT licensed. Python, run with uv.</p>
+    <p class="back"><a href="../">← Back to home</a></p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Neuresthetics LLC · Portland, OR · neuresthetic.net<br>
+    <a href="https://github.com/neuresthetics">GitHub</a> · <a href="https://x.com/neuresthetic">X: @neuresthetic</a> <span class="x-note">Where I think out loud, unpolished. Dev notes and tech threads are in there too.</span></p>
+  </div>
+</footer>
+</body>
+</html>

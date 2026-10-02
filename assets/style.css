@@ -205,3 +205,5 @@ figcaption { color: var(--dim); font-size: 0.9rem; margin-top: 0.5rem; }
   * { transition: none !important; }
 }
 .banner { display: block; width: 100%; height: auto; border-radius: 8px; border: 1px solid #2a2a2a; margin: 0 0 1.5rem; }
+/* Eight nav items: give the header row more room than the text column so the nav stays on one line on desktop */
+.site-header .wrap { max-width: 64rem; }

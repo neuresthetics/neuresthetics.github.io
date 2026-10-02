@@ -1,0 +1,59 @@
+/* substance_lens theme (/substance-lens/): the card's look. Near-black glass, gold for what
+   survives, a muted brick red for what is cut, and a lens rim around the header image. Page-scoped. */
+.theme-sublens {
+  --bg: #0b0b0c;
+  --panel: #121212;
+  --ink: #ebe4d2;
+  --dim: #b5ad9a;
+  --line: rgba(222, 182, 96, 0.24);
+  --accent: #deb660;
+  --accent-soft: #fadb8c;
+  --cut: #ba7864;
+  background:
+    radial-gradient(circle at 50% 12rem, rgba(222, 182, 96, 0.08), transparent 32rem),
+    var(--bg);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+}
+.theme-sublens .site-header, .theme-sublens .site-footer { background: rgba(11, 11, 12, 0.92); border-color: var(--line); }
+.theme-sublens .site-nav a[aria-current="page"], .theme-sublens .site-nav a:hover { color: var(--accent-soft); }
+.theme-sublens a { color: var(--accent); }
+.theme-sublens a:hover { color: var(--accent-soft); }
+.theme-sublens .banner {
+  border: 0; border-radius: 14px; margin: 0.4rem 0 0;
+  box-shadow: 0 0 0 1px rgba(222, 182, 96, 0.7), 0 0 0 6px #050505, 0 0 0 7px rgba(222, 182, 96, 0.25), 0 20px 60px rgba(222, 182, 96, 0.12);
+}
+.theme-sublens .sl-bar {
+  display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; margin: 1.6rem 0 2rem; padding: 0.45rem 0;
+  border-top: 1px solid rgba(222, 182, 96, 0.5); border-bottom: 1px solid rgba(222, 182, 96, 0.18);
+  color: var(--accent); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.7rem;
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+}
+.theme-sublens .sl-bar span::before { content: "\25CF  "; white-space: pre; }
+.theme-sublens .sl-bar span:last-child::before { content: "\2715  "; color: var(--cut); }
+.theme-sublens h1 { color: var(--accent-soft); font-size: 2.3rem; font-family: ui-monospace, Menlo, Consolas, monospace; font-weight: 400; letter-spacing: -0.01em; }
+.theme-sublens .tag { display: inline-flex; margin: 0.3rem 0 1.4rem; font-size: 0.68rem; line-height: 1; letter-spacing: 0.12em; box-shadow: inset 0 0 0 1px var(--accent); }
+.theme-sublens .tag span { padding: 0.36rem 0.6rem; }
+.theme-sublens .tag .k { color: var(--accent); }
+.theme-sublens .tag .v { background: var(--accent); color: #0b0b0c; font-weight: 700; }
+.theme-sublens .lead { color: var(--ink); font-size: 1.15rem; font-style: italic; }
+.theme-sublens .runs { font-family: system-ui, sans-serif; font-size: 0.82rem; color: var(--dim); border-left: 2px solid var(--accent); padding-left: 0.75rem; }
+.theme-sublens .runs b { color: var(--ink); }
+.theme-sublens h2 { color: var(--accent); font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; border-bottom: 1px solid var(--line); margin-top: 2.5rem; }
+.theme-sublens main p, .theme-sublens main li { color: #ddd5c1; }
+.theme-sublens ul li::marker { color: var(--accent); }
+.theme-sublens ol.steps { list-style: none; padding: 0; counter-reset: step; }
+.theme-sublens ol.steps li { counter-increment: step; position: relative; padding: 0.7rem 1rem 0.7rem 3rem; margin-bottom: 0.6rem; background: var(--panel); box-shadow: inset 0 0 0 1px var(--line); border-radius: 8px; }
+.theme-sublens ol.steps li::before {
+  content: counter(step); position: absolute; left: 0.85rem; top: 0.75rem; width: 1.5rem; height: 1.5rem; border-radius: 50%;
+  display: grid; place-items: center; font-size: 0.8rem; font-family: ui-monospace, Menlo, monospace;
+  color: #0b0b0c; background: var(--accent); box-shadow: 0 0 10px rgba(222, 182, 96, 0.45);
+}
+.theme-sublens code { background: #1b1a17; color: #f0dfb4; }
+.theme-sublens .note { background: var(--panel); border: 0; border-left: 2px solid var(--cut); border-radius: 0; }
+.theme-sublens .note p { color: var(--dim); }
+.theme-sublens .gold-link { display: inline-block; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.8rem; border-bottom: 1px solid rgba(222, 182, 96, 0.6); padding-bottom: 0.2rem; margin-top: 1.5rem; }
+.theme-sublens .gold-link::after { content: "  \2192"; white-space: pre; }
+.theme-sublens .gold-link:hover { text-decoration: none; border-color: var(--accent-soft); }
+.theme-sublens .back a, .theme-sublens .site-footer a { color: var(--dim); }
+@media (max-width: 640px) { .theme-sublens h1 { font-size: 1.8rem; } }

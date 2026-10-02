@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>substance_lens · Jason Burns · Neuresthetics</title>
+<meta name="description" content="A JSON prompt spec that has a chat model check an argument step by step and scan both the claim and its strongest counter-case for 67 fallacies. Flags are judgments to verify, not proofs.">
+<meta name="author" content="Jason Burns">
+<meta name="theme-color" content="#0b0b0c">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://neuresthetics.github.io/substance-lens/">
+<meta property="og:title" content="substance_lens · Neuresthetics">
+<meta property="og:description" content="A JSON prompt spec that has a chat model check an argument step by step and scan both the claim and its strongest counter-case for 67 fallacies. Flags are judgments to verify, not proofs.">
+<meta property="og:image" content="https://neuresthetics.github.io/assets/img/N.jpg">
+<meta property="og:image:alt" content="Neuresthetics logo">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/jpeg" href="../assets/img/logo-192.jpg">
+<link rel="apple-touch-icon" href="../assets/img/logo-192.jpg">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/sublens.css">
+</head>
+<body class="theme-sublens">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/img/logo-192.jpg" alt="" width="28" height="28">NEURESTHETICS</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="../">Home</a></li>
+        <li><a href="../restokit/">RestoKit</a></li>
+        <li><a href="../anova/">ANOVA Language</a></li>
+        <li><a href="../grokipedia/">Grokipedia Audit</a></li>
+        <li><a href="../substance-lens/" aria-current="page">substance_lens</a></li>
+        <li><a href="../study/">Study</a></li>
+        <li><a href="../book/">Book</a></li>
+        <li><a href="../split-load-sim/">split_load_sim</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <img class="banner" src="../assets/img/cards/wide-substance-lens.jpg" width="900" height="300" alt="A lens over an argument graph: surviving steps glow gold, cut steps are struck out with fallacy codes">
+    <div class="sl-bar" aria-hidden="true"><span>prompt spec</span><span>67 fallacies</span><span>both sides</span></div>
+    <h1>substance_lens</h1>
+    <p class="tag"><span class="k">prompt spec</span><span class="v">v0.5.9</span></p>
+    <p class="lead">A JSON prompt spec you give a chat model so it checks an argument step by step and scans it for 67 fallacies, on both the claim and its strongest counter-case. Flags are judgments to verify, not proofs.</p>
+    <p class="runs"><b>Runs on:</b> Any capable chat model · a prompt spec, built with Grok in mind; no code ships</p>
+
+    <h2>How to use it</h2>
+    <ol class="steps">
+      <li><strong>Load the spec.</strong> Open <a href="https://github.com/neuresthetics/substance_lens/blob/main/substance_lens_0.5.9.json"><code>substance_lens_0.5.9.json</code></a> and paste the whole file into a new chat, or attach it.</li>
+      <li><strong>Give it something to check.</strong> In the same chat, paste the text and say what you want, for example <code>run full pipeline on &lt;claim&gt;</code>.</li>
+      <li><strong>Check what comes back.</strong> Each flag should name the side it was found on, the fallacy ID, the quoted span, the check type and the repair. Check every quote against the source yourself. To have the model audit its own answer, reply <code>lens that response</code>.</li>
+    </ol>
+    <p>It was written with Grok in mind. Any chat model can read the file, but the consistency numbers below come from a single model family.</p>
+
+    <h2>What it does</h2>
+    <p>The spec gives the model a fixed order of work:</p>
+    <ul>
+      <li><strong>Define terms first,</strong> so a word can't quietly change meaning later.</li>
+      <li><strong>Write down the claims,</strong> each read in at least two ways.</li>
+      <li><strong>Map the argument</strong> as a graph of which claims depend on which.</li>
+      <li><strong>Fallacy scan.</strong> Every inference step is checked against the 67-entry catalog, for the claim and for the strongest good-faith counter-case, with the same effort. A scan that covers only one side has to say so.</li>
+      <li><strong>Find conflicts, then resolve or merge</strong> what can be reconciled.</li>
+      <li><strong>Check against evidence.</strong> Branches without outside grounding are cut.</li>
+      <li><strong>Reduce</strong> to the smallest set of claims that survived, valid only within the premises it started from.</li>
+    </ul>
+    <p>A fallacy flag withdraws support from one step. It does not show the conclusion is false. Repairs must be stated, never made silently.</p>
+
+    <h2>What it doesn't do</h2>
+    <ul>
+      <li><strong>No code ships.</strong> No program here checks arguments. Of the 67 entries, 9 could be decided by code once an argument is in formal shape, 10 have a partial mechanical sub-check, and 48 are judgment only. Every flag is a model's (or a person's) judgment.</li>
+      <li><strong>It doesn't fact-check.</strong> A flag points to a weak step in the reasoning, not to a false fact.</li>
+      <li><strong>It can't enforce itself.</strong> Models drift in a long chat, so a person has to check the output.</li>
+    </ul>
+    <div class="note">
+      <p><strong>Measured consistency.</strong> The Grokipedia Truth Audit ran the v0.5.9 fallacy scan three times over the same saved snapshots. From run 2 to run 3, 60% of the flagged sentences were flagged again; on the shared sentences, 79% got the same fallacy ID and 97% the same side. All runs used one model family and one framework, so this shows the method is consistent. It does not show the method is correct. Treat each single flag as a lead to check by hand.</p>
+    </div>
+
+    <h2>Where it's used</h2>
+    <ul>
+      <li><a href="../grokipedia/">Grokipedia Truth Audit</a>: fallacy scans of 58 circumcision-related Grokipedia articles, and the fallacy and framing pass in the Spinoza article audit.</li>
+      <li><a href="../book/">Freedom of Necessity</a>: the verse fallacy audit of <em>Axioms of Necessity</em>.</li>
+      <li><a href="../study/">Neuresthetics Genius Study</a>: blind claim audits of the study's records.</li>
+    </ul>
+
+    <p><a class="gold-link" href="https://github.com/neuresthetics/substance_lens">Repo: neuresthetics/substance_lens</a></p>
+    <p class="small">MIT licensed. Older spec versions are kept in the repo's <code>history/</code> folder as a record.</p>
+    <p class="back"><a href="../">← Back to home</a></p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Neuresthetics LLC · Portland, OR · neuresthetic.net<br>
+    <a href="https://github.com/neuresthetics">GitHub</a> · <a href="https://x.com/neuresthetic">X: @neuresthetic</a> <span class="x-note">Where I think out loud, unpolished. Dev notes and tech threads are in there too.</span></p>
+  </div>
+</footer>
+</body>
+</html>
