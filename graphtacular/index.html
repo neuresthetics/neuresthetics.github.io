@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graphtacular · Jason Burns · Neuresthetics</title>
+<meta name="description" content="Graphtacular is a C# graph engine from 2019 where each vertex grows the graph from a shared instruction list, like a genome. Rendered in Gephi. Built before AI.">
+<meta name="author" content="Jason Burns">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://neuresthetics.github.io/graphtacular/">
+<meta property="og:title" content="Graphtacular · Neuresthetics">
+<meta property="og:description" content="Graphtacular is a C# graph engine from 2019 where each vertex grows the graph from a shared instruction list, like a genome. Rendered in Gephi. Built before AI.">
+<meta property="og:image" content="https://neuresthetics.github.io/assets/img/N.jpg">
+<meta property="og:image:alt" content="Neuresthetics logo">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/jpeg" href="../assets/img/logo-192.jpg">
+<link rel="apple-touch-icon" href="../assets/img/logo-192.jpg">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/gephi.css">
+</head>
+<body class="theme-gephi">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/img/logo-192.jpg" alt="" width="28" height="28">NEURESTHETICS</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="../">Home</a></li>
+        <li><a href="../restokit/">RestoKit</a></li>
+        <li><a href="../anova/">ANOVA Language</a></li>
+        <li><a href="../book/">Book</a></li>
+        <li><a href="../study/">Study</a></li>
+        <li><a href="../grokipedia/">Grokipedia Audit</a></li>
+        <li><a href="../graphtacular/" aria-current="page">Graphtacular</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <img class="banner" src="../assets/img/graphtacular/gephi-ring.jpg" width="1400" height="700" alt="A Gephi render on black: a round field of white vertices with purple clusters spread through it">
+    <div class="g-bar" aria-hidden="true"><span>Graph › Vertex › Kernel › Strand</span></div>
+    <h1>Graphtacular</h1>
+    <p class="tag"><span class="k">early code</span><span class="v">C# · 2019</span></p>
+    <p class="lead">A C# console app I wrote in 2019, before AI tools were around. A graph grows itself from one seed vertex by following a shared list of instructions, like a genome.</p>
+
+    <h2>How it grows</h2>
+    <ul>
+      <li><strong>Vertex and kernel.</strong> Each vertex holds a kernel. The kernel can act on its own vertex and on the graph the vertex is in.</li>
+      <li><strong>Strand.</strong> A strand is a numbered list of instructions that every vertex shares. One step looks like <code>{"KbranchUndirected",1,1}</code>: add one child on an undirected edge of weight 1.</li>
+      <li><strong>Growth.</strong> The seed vertex runs the first step. Each vertex it makes runs the next step, and so on down the strand, so the whole graph grows from one seed.</li>
+      <li><strong>Cap.</strong> Growth stops at 3,828 vertices.</li>
+    </ul>
+<pre><code><span class="c">// StrandLib.cs: the Flower strand</span>
+<span class="n"> 1</span>  {<span class="s">"KcompleteCluster"</span>, 8, 1}
+<span class="n"> 2</span>  {<span class="s">"KbranchUndirected"</span>, 1, 1}
+<span class="n">..</span>  <span class="c">// 3 to 6: the same branch</span>
+<span class="n"> 7</span>  {<span class="s">"KcompleteCluster"</span>, 8, 1}
+<span class="n">..</span>  <span class="c">// the pattern twice more</span>
+<span class="n">19</span>  {null}</code></pre>
+    <p><code>KcompleteCluster</code> with 8 adds eight children that are all joined to each other. <code>KbranchUndirected</code> with 1 adds one child on an edge. <code>null</code> ends the strand.</p>
+
+    <h2>Renders</h2>
+    <p>Graphs are exported as GEXF files and rendered in Gephi.</p>
+    <div class="renders">
+      <figure>
+        <img src="../assets/img/graphtacular/fibonacci.jpg" width="724" height="549" loading="lazy" alt="A Gephi render on white: a dense central cluster with eight arms, each ending in smaller clusters of pale green vertices">
+        <figcaption>Fibonacci</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/img/graphtacular/flower-fractal.jpg" width="1227" height="788" loading="lazy" alt="A Gephi render on white: a small central cluster with four long branches, each ending in a cluster that branches again">
+        <figcaption>Flower fractal</figcaption>
+      </figure>
+    </div>
+
+    <h2>The Graph class</h2>
+    <p>Besides growing graphs, the Graph class measures them:</p>
+    <ul>
+      <li>degree (in, out, and mutual edges)</li>
+      <li>neighbors, and neighbors within k steps</li>
+      <li>islands (disconnected pieces)</li>
+      <li>clustering coefficient</li>
+    </ul>
+
+    <h2>Build</h2>
+    <ul class="stats">
+      <li><b>C#</b> console app</li>
+      <li><b>.NET Core 2.2</b></li>
+      <li><b>89</b> xUnit tests</li>
+      <li>export: <b>GEXF</b></li>
+    </ul>
+    <p><a class="pill" href="https://github.com/neuresthetics/graphtacular">Repo: neuresthetics/graphtacular</a></p>
+    <p class="back"><a href="../">← Back to home</a></p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Neuresthetics LLC · Portland, OR · neuresthetic.net<br>
+    <a href="https://github.com/neuresthetics">GitHub</a> · <a href="https://x.com/neuresthetic">X: @neuresthetic</a> <span class="x-note">Where I think out loud, unpolished. Dev notes and tech threads are in there too.</span></p>
+  </div>
+</footer>
+</body>
+</html>

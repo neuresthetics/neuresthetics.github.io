@@ -1,18 +1,18 @@
-/* Tech & Philosophy theme: editor and terminal look. Loaded after style.css on that page only. */
+/* Book theme (/book/): the editor pane from the homepage card. Slate, monospace,
+   magenta accent, yellow headings. Loaded after style.css on that page only. */
 .theme-code {
   --bg: #1b1d23;
   --panel: #23262e;
-  --panel-bar: #2c2f38;
+  --panel-bar: #16181d;
   --ink: #c8ccd4;
   --dim: #7f848e;
   --line: #333743;
-  --accent: #d94fa3;      /* magenta, like the terminal pane */
+  --accent: #d94fa3;      /* magenta */
   --accent-soft: #e88bc4;
   --key: #e06c75;         /* yaml keys */
   --str: #d19a66;         /* strings */
-  --fn: #e5c07b;          /* titles */
+  --fn: #e5c07b;          /* headings */
   --link: #56b6c2;        /* links */
-  --ok: #98c379;          /* prompt */
   --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
   background: var(--bg);
   color: var(--ink);
@@ -22,68 +22,80 @@
 }
 
 .theme-code .site-header,
-.theme-code .site-footer { background: #16181d; border-color: var(--line); }
+.theme-code .site-footer { background: var(--panel-bar); border-color: var(--line); }
 .theme-code .site-nav a[aria-current="page"],
 .theme-code .site-nav a:hover { color: var(--accent); }
 
-.theme-code a { color: var(--link); text-decoration-color: rgba(86, 182, 194, 0.4); }
+.theme-code a { color: var(--link); }
 .theme-code a:hover { color: var(--accent-soft); }
 
-/* Photo: a little editor window frame */
-.theme-code .banner { border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 0 0 4px #16181d, 0 12px 40px rgba(217, 79, 163, 0.12); }
+/* Photo above the editor pane */
+.theme-code .banner { border: 1px solid var(--line); border-radius: 10px 10px 0 0; margin: 0; border-bottom: 0; }
 
-/* Title as a shell prompt */
-.theme-code h1 { font-family: var(--mono); font-weight: 600; color: var(--fn); font-size: 1.9rem; letter-spacing: -0.01em; }
-.theme-code h1::before { content: "~/neuresthetics $ "; color: var(--ok); font-weight: 400; font-size: 0.55em; display: block; letter-spacing: 0; }
-.theme-code h1::after { content: "\2588"; color: var(--accent); margin-left: 0.15em; font-weight: 400; animation: blink 1.1s steps(1) infinite; }
-@keyframes blink { 50% { opacity: 0; } }
-@media (prefers-reduced-motion: reduce) { .theme-code h1::after { animation: none; } }
-
-.theme-code .tag { color: var(--dim); font-size: 0.85rem; font-family: var(--mono); letter-spacing: 0; text-transform: none; }
-.theme-code .tag::before { content: "# "; }
-.theme-code .lead { color: var(--ink); border-left: 3px solid var(--accent); padding-left: 1rem; }
-
-/* Section headings as markdown */
-.theme-code h2 { font-family: var(--mono); color: var(--accent-soft); font-weight: 600; font-size: 1.15rem; border-bottom: 1px dashed var(--line); }
-.theme-code h2::before { content: "## "; color: var(--accent); }
-
-/* Cards as code blocks with a file-name bar */
-.theme-code .card {
-  background: var(--panel);
+/* Editor pane: a tab bar with the open file, then the text with a magenta rule */
+.theme-code .pane {
+  background: var(--bg);
   border: 1px solid var(--line);
-  border-left: 3px solid var(--accent);
-  border-radius: 8px;
-  padding: 0 1.25rem 1rem;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 14px 40px rgba(217, 79, 163, 0.10);
+  margin-bottom: 1rem;
+}
+.theme-code .tabs {
+  display: flex;
+  height: 2.1rem;
+  background: var(--panel-bar);
+  border-bottom: 1px solid var(--line);
+  font-size: 0.78rem;
+  white-space: nowrap;
   overflow: hidden;
 }
-.theme-code .card[data-file]::before {
-  content: attr(data-file);
-  display: block;
-  margin: 0 -1.25rem 0.9rem;
-  padding: 0.35rem 1.25rem;
-  background: var(--panel-bar);
-  color: var(--dim);
-  font-size: 0.78rem;
-  letter-spacing: 0.04em;
-  border-bottom: 1px solid var(--line);
-}
-.theme-code .kicker { color: var(--dim); font-style: italic; font-size: 0.82rem; text-transform: none; letter-spacing: 0; font-family: var(--mono); }
-.theme-code .kicker::before { content: "# "; }
-.theme-code .card h3 { font-family: var(--mono); font-size: 1.05rem; }
-.theme-code .card h3::before { content: "title: "; color: var(--key); font-weight: 400; }
-.theme-code .card h3 a { color: var(--fn); text-decoration: none; }
-.theme-code .card h3 a:hover { text-decoration: underline; }
-.theme-code .card p { color: var(--ink); }
-.theme-code .card .more { border-top: 1px dashed var(--line); padding-top: 0.6rem; }
+.theme-code .tabs span { display: flex; align-items: center; padding: 0 1.25rem; color: var(--dim); box-shadow: 1px 0 0 var(--line); }
+.theme-code .tabs .on { background: var(--bg); color: var(--ink); box-shadow: inset 0 2px 0 var(--accent), 1px 0 0 var(--line); }
+.theme-code .pane-body { padding: 1.75rem 1.75rem 1.25rem; box-shadow: inset 3px 0 0 var(--accent); }
 
-/* Smaller tools as a file tree */
-.theme-code .repo-list { list-style: none; padding: 1rem 1.25rem; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
-.theme-code .repo-list::before { content: "$ ls ~/neuresthetics/tools"; display: block; color: var(--ok); margin-bottom: 0.5rem; }
-.theme-code .repo-list li { position: relative; padding-left: 1.6rem; margin: 0.5rem 0; }
-.theme-code .repo-list li::before { content: "\251C\2500"; position: absolute; left: 0; color: var(--dim); }
-.theme-code .repo-list li:last-child::before { content: "\2514\2500"; }
-.theme-code .repo-list a { color: var(--str); }
-.theme-code .repo-list span { display: block; color: var(--dim); }
+/* Headings as markdown */
+.theme-code h1 { font-family: var(--mono); font-weight: 600; color: var(--fn); font-size: 1.8rem; letter-spacing: -0.01em; }
+.theme-code h1::before { content: "# "; color: var(--accent); }
+.theme-code h2 { font-family: var(--mono); color: var(--fn); font-weight: 600; font-size: 1.1rem; border-bottom: 1px dashed var(--line); margin-top: 2.25rem; }
+.theme-code h2::before { content: "## "; color: var(--accent); }
+
+/* Badge, like the card's */
+.theme-code .tag { display: inline-flex; margin: 0 0 1.25rem; font-size: 0.75rem; line-height: 1; letter-spacing: 0; text-transform: none; border-radius: 4px; overflow: hidden; }
+.theme-code .tag span { padding: 0.35rem 0.6rem; }
+.theme-code .tag .k { background: #2c2f38; color: var(--key); }
+.theme-code .tag .v { background: var(--accent); color: #fff; }
+
+.theme-code .lead { color: var(--ink); font-size: 1rem; }
+.theme-code .lead em { color: var(--str); font-style: normal; }
+
+/* An entry shown as a small yaml block */
+.theme-code pre {
+  margin: 0 0 1rem;
+  padding: 0.8rem 1rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+.theme-code pre code { background: none; padding: 0; font-size: inherit; }
+.theme-code pre .k { color: var(--key); }
+.theme-code pre .s { color: var(--str); }
+.theme-code pre .c { color: var(--dim); font-style: italic; }
+
+/* Links written like markdown links */
+.theme-code .md-links { list-style: none; padding: 0; margin: 0; }
+.theme-code .md-links li { margin: 0 0 0.3rem; }
+.theme-code .md-links a::before { content: "["; color: var(--dim); }
+.theme-code .md-links a::after { content: "](\2026)"; color: var(--dim); }
+
+.theme-code .note { background: var(--panel); border-color: var(--line); border-left: 3px solid var(--accent); border-radius: 6px; color: var(--ink); }
 
 .theme-code .back a, .theme-code .site-footer a { color: var(--dim); }
 .theme-code .x-note { color: var(--dim); }
+
+@media (max-width: 640px) {
+  .theme-code .pane-body { padding: 1.25rem 1.1rem 1rem; }
+  .theme-code h1 { font-size: 1.45rem; }
+}

@@ -1,0 +1,113 @@
+/* Study theme (/study/): the terminal pane from the homepage card. Near-black,
+   window dots, green $ prompt, blue accent. Loaded after style.css on that page only. */
+.theme-term {
+  --bg: #08090c;
+  --panel: #0e1014;
+  --bar: #23262e;
+  --ink: #c8ccd4;
+  --dim: #7f848e;
+  --line: #2a2e38;
+  --accent: #3aa0ff;      /* blue */
+  --accent-soft: #7cc0ff;
+  --ok: #98c379;          /* prompt green */
+  --hi: #e6e6e6;
+  --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+.theme-term .site-header, .theme-term .site-footer { background: #050608; border-color: var(--line); }
+.theme-term .site-nav a[aria-current="page"], .theme-term .site-nav a:hover { color: var(--accent); }
+.theme-term a { color: var(--accent); }
+.theme-term a:hover { color: var(--ok); }
+
+.theme-term .banner { border: 1px solid var(--line); border-radius: 10px; margin-bottom: 1.75rem; }
+
+/* The terminal window */
+.theme-term .term {
+  background: var(--panel);
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px var(--line), 0 14px 40px rgba(58, 160, 255, 0.10);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.theme-term .term-bar {
+  display: flex; align-items: center; gap: 0.45rem;
+  height: 2.1rem; padding: 0 1rem;
+  background: var(--bar); color: var(--dim);
+  font-size: 0.78rem; white-space: nowrap; overflow: hidden;
+}
+.theme-term .term-bar i { width: 11px; height: 11px; border-radius: 50%; background: #ff5f56; flex: none; }
+.theme-term .term-bar i:nth-child(2) { background: #ffbd2e; }
+.theme-term .term-bar i:nth-child(3) { background: #27c93f; }
+.theme-term .term-bar span { margin: 0 auto; padding-right: 3rem; }
+.theme-term .term-body { padding: 1.6rem 1.75rem 1.25rem; }
+
+/* Title as a prompt with a cursor */
+.theme-term h1 { font-family: var(--mono); font-weight: 600; color: var(--hi); font-size: 1.8rem; letter-spacing: -0.01em; }
+.theme-term h1::before { content: "$ "; color: var(--ok); }
+.theme-term h1::after { content: "\2588"; color: var(--accent); margin-left: 0.2em; font-weight: 400; animation: blink 1.1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .theme-term h1::after { animation: none; } }
+
+/* Section headings as commands */
+.theme-term h2 { font-family: var(--mono); color: var(--hi); font-weight: 600; font-size: 1.05rem; border-bottom: 1px dashed var(--line); margin-top: 2.1rem; }
+.theme-term h2::before { content: "\276F  "; color: var(--ok); white-space: pre; }
+
+/* Badge, like the card's */
+.theme-term .tag { display: inline-flex; margin: 0 0 1.25rem; font-size: 0.75rem; line-height: 1; letter-spacing: 0; text-transform: none; border-radius: 2px; overflow: hidden; }
+.theme-term .tag span { padding: 0.35rem 0.6rem; }
+.theme-term .tag .k { background: #1d2027; color: var(--ok); }
+.theme-term .tag .v { background: var(--accent); color: #04121f; font-weight: 700; }
+
+.theme-term .lead { color: var(--ink); font-size: 1rem; }
+.theme-term strong { color: var(--hi); }
+
+/* Status as command output: key, value */
+.theme-term .out { margin: 0 0 1rem; padding: 0.9rem 1rem; background: #08090c; border: 1px solid var(--line); border-radius: 6px; font-size: 0.88rem; }
+.theme-term .out dl { display: grid; grid-template-columns: max-content 1fr; gap: 0.2rem 1.5rem; margin: 0; }
+.theme-term .out dt { color: var(--dim); }
+.theme-term .out dd { margin: 0; color: var(--ink); }
+.theme-term .out .no { color: #ff7b72; font-weight: 700; }
+.theme-term .out .yes { color: var(--ok); }
+.theme-term .out-cmd { margin: 0 0 0.5rem; color: var(--hi); }
+.theme-term .out-cmd::before { content: "$ "; color: var(--ok); }
+.theme-term .out-note { margin: 0.6rem 0 0; color: var(--dim); font-size: 0.8rem; }
+.theme-term .out dl { margin-top: 0.5rem; grid-template-columns: 13.5rem 1fr; gap: 0.2rem 1rem; }
+
+/* Progress readout: label, bar, count */
+.theme-term .prog { list-style: none; padding: 0; margin: 0; }
+.theme-term .prog li { display: grid; grid-template-columns: 13.5rem 1fr 4.5rem; align-items: center; gap: 1rem; margin: 0 0 0.2rem; }
+.theme-term .pk { color: var(--dim); }
+.theme-term .pv { color: var(--ink); text-align: right; font-variant-numeric: tabular-nums; }
+.theme-term .pbar { display: block; height: 0.7rem; background: repeating-linear-gradient(90deg, #1d2027 0 6px, transparent 6px 8px); border-radius: 1px; overflow: hidden; }
+.theme-term .pbar span { display: block; height: 100%; min-width: 4px; background: repeating-linear-gradient(90deg, var(--accent) 0 6px, transparent 6px 8px); }
+.theme-term .pbar.full span { background: repeating-linear-gradient(90deg, var(--ok) 0 6px, transparent 6px 8px); }
+
+/* Descriptive figures: white charts in a thin frame */
+.theme-term .fig { margin: 1rem 0 1.5rem; }
+.theme-term .fig img { width: 100%; height: auto; background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 0.4rem; }
+.theme-term .fig figcaption { color: var(--dim); font-size: 0.82rem; }
+.theme-term .fig figcaption::before { content: "# "; color: var(--ok); }
+
+.theme-term .note { margin: 0 0 1rem; background: #08090c; border: 1px solid var(--line); border-left: 3px solid #ffbd2e; border-radius: 6px; color: var(--ink); }
+
+/* Links as prompt lines */
+.theme-term .cmd-links { list-style: none; padding: 0; margin: 0; }
+.theme-term .cmd-links li { margin: 0 0 0.3rem; }
+.theme-term .cmd-links li::before { content: "\276F  "; color: var(--ok); white-space: pre; }
+.theme-term .cmd-links span { color: var(--dim); }
+
+.theme-term .back a, .theme-term .site-footer a { color: var(--dim); }
+.theme-term .x-note { color: var(--dim); }
+
+@media (max-width: 640px) {
+  .theme-term .term-body { padding: 1.25rem 1.1rem 1rem; }
+  .theme-term h1 { font-size: 1.45rem; }
+  .theme-term .out dl { grid-template-columns: 1fr; gap: 0; }
+  .theme-term .out dd { margin-bottom: 0.4rem; }
+  .theme-term .prog li { grid-template-columns: 1fr 4.5rem; gap: 0.15rem 0.75rem; margin-bottom: 0.6rem; }
+  .theme-term .prog .pk { grid-column: 1 / -1; }
+}

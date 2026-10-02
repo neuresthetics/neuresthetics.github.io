@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grokipedia Truth Audit · Jason Burns · Neuresthetics</title>
+<meta name="description" content="Reproducible audits of Grokipedia articles, done on saved snapshots with the data and scripts to check them. So far: 58 circumcision-related articles and the Baruch Spinoza article.">
+<meta name="author" content="Jason Burns">
+<meta name="theme-color" content="#0b0b0c">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://neuresthetics.github.io/grokipedia/">
+<meta property="og:title" content="Grokipedia Truth Audit · Neuresthetics">
+<meta property="og:description" content="Reproducible audits of Grokipedia articles, done on saved snapshots with the data and scripts to check them. So far: 58 circumcision-related articles and the Baruch Spinoza article.">
+<meta property="og:image" content="https://neuresthetics.github.io/assets/img/N.jpg">
+<meta property="og:image:alt" content="Neuresthetics logo">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/jpeg" href="../assets/img/logo-192.jpg">
+<link rel="apple-touch-icon" href="../assets/img/logo-192.jpg">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/lens.css">
+</head>
+<body class="theme-lens">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/img/logo-192.jpg" alt="" width="28" height="28">NEURESTHETICS</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="../">Home</a></li>
+        <li><a href="../restokit/">RestoKit</a></li>
+        <li><a href="../anova/">ANOVA Language</a></li>
+        <li><a href="../book/">Book</a></li>
+        <li><a href="../study/">Study</a></li>
+        <li><a href="../grokipedia/" aria-current="page">Grokipedia Audit</a></li>
+        <li><a href="../graphtacular/">Graphtacular</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <img class="banner" src="../assets/img/cards/card-grokipedia.jpg" width="900" height="450" alt="The Grok logo seen through a magnifying glass with a gold rim, on a dark dotted background">
+    <div class="lens-bar" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><circle cx="6.5" cy="6.5" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 10l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>saved snapshots · data · scripts</span></div>
+    <h1>Grokipedia Truth Audit</h1>
+    <p class="tag"><span class="k">audit</span><span class="v">fallacy · citation checks</span></p>
+    <p class="lead">Audits of Grokipedia articles, done on saved snapshots so every finding can be traced back to the text that was read.</p>
+
+    <h2>What it is</h2>
+    <p>Grokipedia is xAI's AI-written encyclopedia. This repo checks how its articles reason and how they cite sources. Articles are grouped by topic, and each topic has its own results page in the repo.</p>
+
+    <h2>Method</h2>
+    <ul>
+      <li><strong>Saved snapshots.</strong> Each article is saved before it's audited, so a finding points to the exact text that was read, even if the live article changes later.</li>
+      <li><strong>Two kinds of check so far.</strong> A fallacy scan that reads each sentence and flags reasoning faults, and a citation and fact check.</li>
+      <li><strong>Data and scripts included.</strong> The snapshots, flags, tables, and scripts are all in the repo, so the findings can be checked or rerun.</li>
+    </ul>
+    <div class="note">
+      <p>Every flag is a model's judgment, not a fact-check. A flag means the article's own reasoning has a gap, not that the claim is false. Treat single flags as leads to check by hand.</p>
+    </div>
+
+    <h2>Current topics</h2>
+    <ul class="topics">
+      <li>
+        <h3>Circumcision</h3>
+        <span class="count">58 related articles · fallacy scan</span>
+        <p>The full read flagged 225 reasoning faults, each tagged by the side it favors: 154 pro, 49 anti, and 22 neutral. A blind rescan of 24 of the articles kept the same lean, but only 60% of the flagged sentences were flagged again.</p>
+      </li>
+      <li>
+        <h3>Baruch Spinoza</h3>
+        <span class="count">1 article · citation and fact check</span>
+        <p>From citation [90] on, the article's citation numbers appear shifted by nine places, so 110 of its 389 citation markers (28%) lead to an unrelated or missing source.</p>
+      </li>
+    </ul>
+    <p><a class="gold-link" href="https://github.com/neuresthetics/grokipedia-truth-audit">Repo: neuresthetics/grokipedia-truth-audit</a></p>
+
+    <h2>Credits</h2>
+    <p class="credits">The Grok logo in the header image is a trademark of xAI, used here only for identification. This project is not affiliated with xAI. Logo source: <a href="https://commons.wikimedia.org/wiki/File:Grok-feb-2025-logo.svg">Wikimedia Commons</a>.</p>
+    <p class="back"><a href="../">← Back to home</a></p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Neuresthetics LLC · Portland, OR · neuresthetic.net<br>
+    <a href="https://github.com/neuresthetics">GitHub</a> · <a href="https://x.com/neuresthetic">X: @neuresthetic</a> <span class="x-note">Where I think out loud, unpolished. Dev notes and tech threads are in there too.</span></p>
+  </div>
+</footer>
+</body>
+</html>

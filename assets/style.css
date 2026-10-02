@@ -71,9 +71,11 @@ body {
   font-size: 0.95rem;
 }
 .site-nav li { margin: 0; }
-.site-nav a { color: var(--dim); }
-.site-nav a:hover,
-.site-nav a[aria-current="page"] { color: var(--accent); }
+/* .site-header raises these above each skin's general link color, so the
+   current page stands out; skins can still set their own hover and current color. */
+.site-header .site-nav a { color: var(--dim); }
+.site-header .site-nav a:hover,
+.site-header .site-nav a[aria-current="page"] { color: var(--accent); }
 
 main { padding: 3rem 0 4rem; }
 
@@ -94,7 +96,7 @@ strong { font-weight: 700; }
 
 a { color: var(--accent); text-decoration: none; }
 a:hover { color: var(--accent-soft); text-decoration: underline; }
-a:focus-visible, .card:focus-within {
+a:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
@@ -148,62 +150,6 @@ code {
   padding: 0;
   margin: 1.25rem 0 0;
 }
-
-/* Cards */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 1.25rem;
-  margin: 0;
-  transition: border-color 0.15s ease;
-}
-.card:hover { border-color: #444; }
-.card h3 a { color: var(--ink); }
-.card h3 a::after {
-  /* makes the whole card clickable */
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 8px;
-}
-.card p { color: var(--dim); font-size: 0.97rem; margin-bottom: 0.75rem; }
-.card .more {
-  margin-top: auto;
-  color: var(--accent);
-  font-size: 0.9rem;
-}
-.card .kicker {
-  color: var(--accent);
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
-}
-.cards.stack { grid-template-columns: 1fr; }
-.cards.stack .card h3 a::after { content: none; }
-
-/* Simple link list for small repos */
-.repo-list { list-style: none; padding: 0; }
-.repo-list li {
-  padding: 0.75rem 0;
-  border-bottom: 1px solid var(--line);
-  margin: 0;
-}
-.repo-list li:last-child { border-bottom: 0; }
-.repo-list a { font-family: ui-monospace, 'Courier New', monospace; font-size: 0.95rem; }
-.repo-list span { display: block; color: var(--dim); font-size: 0.95rem; }
 
 /* Figure */
 figure { margin: 1.5rem 0; }

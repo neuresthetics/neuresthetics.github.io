@@ -150,7 +150,7 @@
 .pc-anova .pc-links a:hover { filter: brightness(1.08); color: #000; }
 .pc-anova:hover { box-shadow: 0 0 0 3px #000, 0 0 0 5px #00bb55, 0 14px 38px rgba(0,0,0,0.28); }
 
-/* ---------- 3. Freedom of Necessity: editor pane (Tech & Philosophy page) ---------- */
+/* ---------- 3. Freedom of Necessity: editor pane (the /book/ page) ---------- */
 .pc-book {
   background: #1b1d23;
   color: #c8ccd4;
@@ -177,7 +177,7 @@
 .pc-book .pc-links a:hover { color: #e88bc4; }
 .pc-book:hover { box-shadow: 0 0 0 1px #d94fa3, 0 14px 38px rgba(217,79,163,0.22); }
 
-/* ---------- 4. Genius Study: terminal pane (Tech & Philosophy page) ---------- */
+/* ---------- 4. Genius Study: terminal pane (the /study/ page) ---------- */
 .pc-study {
   background: #0e1014;
   color: #c8ccd4;
