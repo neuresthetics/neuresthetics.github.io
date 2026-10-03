@@ -56,6 +56,12 @@
       <!-- JASON: optional extra bio line goes here (see suggestions in the report) -->
     </section>
 
+    <section class="sec" aria-labelledby="built-title">
+      <h2 id="built-title"><span aria-hidden="true">⚙️ </span>HOW IT'S BUILT</h2>
+      <p><strong>Local models.</strong> A Linux tower with a 20 GB GPU and 64 GB RAM runs Ollama with Qwen 27B, in a standard and an uncensored build, at 16K context. A stock 14B is being added for model-swap runs. The tower works through unattended job queues, for days if needed, for an adversarial argument harness: the models draft the strongest case for each side, code checks every cite against word-for-word source excerpts, and runs are rescored and repeated across seeds and model swaps to see how much of a result comes from the model.</p>
+      <p><strong>Grok.</strong> Grok Bot (an xAI assistant) runs a set of project bots for coding, audits, writing support, and fetching the word-for-word sources those cite checks use.</p>
+    </section>
+
     <section class="sec" aria-labelledby="products-title">
       <h2 id="products-title"><span aria-hidden="true">🛠️ </span>"REAL WORLD" PRODUCTS</h2>
       <p class="sub">Made to be useful to other people.</p>
@@ -140,12 +146,6 @@
           </div>
         </article>
       </div>
-    </section>
-
-    <section class="sec" aria-labelledby="built-title">
-      <h2 id="built-title"><span aria-hidden="true">⚙️ </span>HOW IT'S BUILT</h2>
-      <p><strong>Local models.</strong> A Linux tower with a 20 GB GPU and 64 GB RAM runs Ollama with Qwen 27B, in a standard and an uncensored build, at 16K context. A stock 14B is being added for model-swap runs. The tower works through unattended job queues, for days if needed, for an adversarial argument harness: the models draft the strongest case for each side, code checks every cite against word-for-word source excerpts, and runs are rescored and repeated across seeds and model swaps to see how much of a result comes from the model.</p>
-      <p><strong>Grok.</strong> Grok Bot (an xAI assistant) runs a set of project bots for coding, audits, writing support, and fetching the word-for-word sources those cite checks use.</p>
     </section>
 
   </div>
