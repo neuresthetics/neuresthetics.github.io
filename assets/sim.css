@@ -49,3 +49,8 @@
 .theme-sim .sim-link:hover { text-decoration: none; border-color: var(--amber); }
 .theme-sim .back a, .theme-sim .site-footer a { color: var(--dim); }
 @media (max-width: 640px) { .theme-sim h1 { font-size: 1.7rem; } .theme-sim .sim-bar { font-size: 0.6rem; letter-spacing: 0.08em; } }
+
+/* Code blocks and numbered lists */
+.theme-sim pre { background: #0b1324; border: 1px solid var(--line); border-left: 3px solid var(--teal); border-radius: 6px; padding: 0.7rem 0.95rem; overflow-x: auto; margin: 0 0 0.75rem; }
+.theme-sim pre code { background: none; padding: 0; color: #a7f3e8; font-size: 0.88rem; }
+.theme-sim ol li::marker { color: var(--amber); font-family: ui-monospace, Menlo, Consolas, monospace; }

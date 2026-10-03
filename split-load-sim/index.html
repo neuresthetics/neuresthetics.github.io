@@ -17,7 +17,7 @@
 <link rel="icon" type="image/jpeg" href="../assets/img/logo-192.jpg">
 <link rel="apple-touch-icon" href="../assets/img/logo-192.jpg">
 <link rel="stylesheet" href="../assets/style.css">
-<link rel="stylesheet" href="../assets/sim.css">
+<link rel="stylesheet" href="../assets/sim.css?v=2">
 <link rel="stylesheet" href="../assets/nav.css?v=2">
 </head>
 <body class="theme-sim">
@@ -47,38 +47,65 @@
     <div class="sim-bar" aria-hidden="true"><i class="t"></i><span>main map</span><b></b><span>bottleneck</span><b></b><i class="a"></i><span>reserved map</span></div>
     <h1>split_load_sim</h1>
     <p class="tag"><span class="k">graph models</span><span class="v">working name</span></p>
-    <p class="lead">Graph-growth models that connect the study and the book, descended from <a href="../graphtacular/">graphtacular</a> (2019). Model outputs, not findings.</p>
+    <p class="lead">Graph-growth models that connect the Genius Study and Freedom of Necessity, descended from <a href="../graphtacular/">graphtacular</a> (2019). Model outputs, not findings.</p>
     <p class="runs"><b>Runs on:</b> No model · seeded Python graph models</p>
 
     <h2>What it is</h2>
-    <p>split_load_sim uses graph theory as a model of the structure of the brain and mind, to connect two projects: the <a href="../study/">Neuresthetics Genius Study (v8)</a>, which collects sourced records of remembered geniuses (Lane A) and states a labeled belief model (Lane B), and the book <a href="../book/"><em>Freedom of Necessity</em></a>, whose axiom A2 says the organization of the body's cells produces the mind.</p>
-    <p>The graphs are models of how a mind's maps could be structured and how they grow. They are not brain data, they are not neuroscience findings, and a vertex is not a neuron.</p>
+    <p>split_load_sim uses graph theory as a model of how a mind's maps could be structured and how they grow. It connects the <a href="../study/">Genius Study (v8)</a> and the book <a href="../book/"><em>Freedom of Necessity</em></a>. The graphs are models: not brain data, not neuroscience findings, and a vertex is not a neuron.</p>
 
-    <h2>First use: Lane B inside a model</h2>
-    <p>Lane B (H1, cultivation) says early exposure to the circle (Deus sive Natura) plus geometric form reduces <em>split-model load</em>. The repo asks two questions:</p>
+    <h2>How it grows</h2>
+    <p>One seed vertex starts at step 1 of a shared instruction list, the <em>strand</em>. Each round, every running vertex runs its current instruction:</p>
     <ul>
-      <li>If you build Lane B's assumptions into a growth model, do they produce the effect Lane B claims, inside the model?</li>
-      <li>Could the data Lane A collects tell H1 apart from H2 (selection) and H3 (attractor)?</li>
+      <li><code>branch</code> (definition → consequence)</li>
+      <li><code>complete_cluster</code></li>
+      <li><code>close</code></li>
+      <li><code>link_region</code></li>
+      <li><code>fork_reserved</code> (a second map joined by a bottleneck)</li>
+      <li><code>bridge_regions</code> (late merging)</li>
     </ul>
-    <div class="note">
-      <p>It does not test whether H1 is true of real people. Results are model outputs, not findings. Everything is synthetic: no real Lane A record is read. The exception-prior strand is built with a reserved map joined by one edge, so some of its "split" measures differ from H1 by construction.</p>
-    </div>
+    <p>Strands are YAML files checked on load. Randomness is seeded, so the same strand and seed always give the same graph. Every result is compared against random null graphs.</p>
 
-    <h2>How growth works</h2>
-    <p>One seed vertex starts at step 1 of a shared instruction list, the <em>strand</em>. Each round, every running vertex runs its current instruction: <code>branch</code> (definition → consequence), <code>complete_cluster</code>, <code>close</code>, <code>link_region</code>, <code>fork_reserved</code> (a second map joined by a bottleneck edge) or <code>bridge_regions</code> (late merging). Randomness is seeded, so the same strand and seed always give the same graph. Results are compared against null models.</p>
+    <h2>What it tests</h2>
+    <p><strong>For the study:</strong> Lane B's H1 says early exposure to the circle (Deus sive Natura) plus geometric form reduces split-model load. Two questions:</p>
+    <ol>
+      <li>Built into a growth model, do H1's assumptions produce the effect it claims?</li>
+      <li>Could the data Lane A collects tell H1 apart from H2 (selection) and H3 (attractor)?</li>
+    </ol>
+    <p>It does not test whether H1 is true of real people.</p>
+    <p><strong>For the book:</strong> axiom A2 says the organization of the body's cells produces the mind. The graphs are a place to model how organized parts make one integrated map. Which of the book's claims, if any, the model should encode is still an open question.</p>
 
-    <h2>Where the strand idea comes from</h2>
-    <p>The strand comes from <a href="../graphtacular/">graphtacular</a>, a C# engine from 2019 where every vertex runs a shared, numbered instruction list, like a genome. split_load_sim keeps the idea and fixes its weak points: typed, validated instructions instead of string matching, one kernel rule for every vertex, and exports only to a directory you choose.</p>
+    <h2>What it shows so far</h2>
+    <p class="small">Synthetic, 50 seeds per strand.</p>
+    <ul>
+      <li>A reserved second map behind one bottleneck edge raises bridge load sharply over H1 (peak edge betweenness +0.22, Cohen's d 2.6). Part of that gap is built in. Modularity and clustering barely move, so they look like weak measures of split-model load.</li>
+      <li>H1, H2 and H3 can be told apart even at 5 coded people (about 0.90 accuracy, chance 0.33), but mostly through timing, which the H2 and H3 models were written to differ on.</li>
+      <li>Strict selection (H2) vs H1 is close to a coin flip: 0.61 accuracy at 5 people, 0.65 at 20 and 0.77 at 100 (chance 0.50). With the handful coded so far, the record could barely tell cultivation from selection.</li>
+    </ul>
 
     <h2>Status</h2>
     <ul>
-      <li>The candidate measures of split-model load are <strong>provisional</strong>. The study names split-model load but doesn't define a measure for it.</li>
-      <li>The H2 and H3 models and the discrimination analysis are <strong>proposed</strong> and synthetic. They depend on mappings and parameter ranges Jason has not signed off.</li>
-      <li>Open decisions are tracked in <a href="https://github.com/neuresthetics/split_load_sim/blob/main/docs/OPEN_QUESTIONS.md">docs/OPEN_QUESTIONS.md</a>.</li>
+      <li>Working name; it may change.</li>
+      <li>The split-model load measures are provisional (the study names the idea but doesn't define a measure).</li>
+      <li>The H2 and H3 models are proposed, and Jason hasn't signed off on their parameters.</li>
+      <li>H3's graphs have more edges than the others, so they aren't directly comparable yet; a fix is paused on a branch.</li>
+      <li>No real Lane A record has been read.</li>
+      <li>93 tests, all passing.</li>
     </ul>
 
-    <p><a class="sim-link" href="https://github.com/neuresthetics/split_load_sim">Repo: neuresthetics/split_load_sim</a></p>
-    <p class="small">MIT licensed. Python, run with uv.</p>
+    <h2>Run it</h2>
+    <pre><code>uv sync</code></pre>
+    <pre><code>uv run sls run --strand strands/h1_circle_geometric.yaml --seeds 50 --out results/</code></pre>
+
+    <h2>Links</h2>
+    <ul>
+      <li><a href="https://github.com/neuresthetics/split_load_sim">Repo</a></li>
+      <li><a href="https://github.com/neuresthetics/split_load_sim/blob/main/docs/OPEN_QUESTIONS.md">Open questions</a></li>
+      <li><a href="https://github.com/neuresthetics/split_load_sim/blob/main/docs/runs/2026-10-02_first_run.md">First run</a></li>
+      <li><a href="https://github.com/neuresthetics/split_load_sim/blob/main/docs/runs/2026-10-02_h2_h3.md">H2/H3 run</a></li>
+      <li><a href="https://neuresthetics.github.io/study/">Study</a></li>
+      <li><a href="https://neuresthetics.github.io/book/">Book</a></li>
+      <li><a href="https://neuresthetics.github.io/graphtacular/">History: graphtacular</a></li>
+    </ul>
     <p class="back"><a href="../">← Back to home</a></p>
   </div>
 </main>
