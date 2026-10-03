@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <style>.pin{fill:#0C1B2E}@media (prefers-color-scheme: dark){.pin{fill:#EEF3F9}}</style>
+  <path d="M41 32 L41 12 L46 4 L51 12 L51 32 Z" class="pin"/>
+  <path d="M77 32 L77 12 L82 4 L87 12 L87 32 Z" class="pin"/>
+  <rect x="12" y="26" width="104" height="96" rx="24" fill="#1D69C6"/>
+  <rect x="24" y="40" width="80" height="58" rx="14" fill="#0C1B2E"/>
+  <path d="M47 54.0 C44.025 60.0 38.5 64.825 38.5 69.5 A8.5 8.5 0 0 0 55.5 69.5 C55.5 64.825 49.975 60.0 47 54.0 Z" fill="#3CC4F2"/>
+  <path d="M81 54.0 C78.025 60.0 72.5 64.825 72.5 69.5 A8.5 8.5 0 0 0 89.5 69.5 C89.5 64.825 83.975 60.0 81 54.0 Z" fill="#3CC4F2"/>
+  <rect x="34" y="106" width="60" height="8" rx="4" fill="#0C1B2E"/>
+  <rect x="34" y="106" width="38" height="8" rx="4" fill="#F08A24"/>
+</svg>
