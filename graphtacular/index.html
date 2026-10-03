@@ -17,7 +17,7 @@
 <link rel="icon" type="image/jpeg" href="../assets/img/logo-192.jpg">
 <link rel="apple-touch-icon" href="../assets/img/logo-192.jpg">
 <link rel="stylesheet" href="../assets/style.css">
-<link rel="stylesheet" href="../assets/gephi.css">
+<link rel="stylesheet" href="../assets/gephi.css?v=2">
 <link rel="stylesheet" href="../assets/nav.css?v=2">
 </head>
 <body class="theme-gephi">
@@ -48,7 +48,7 @@
     <h1>Graphtacular</h1>
     <p class="tag"><span class="k">early code</span><span class="v">C# · 2019</span></p>
     <p class="lead">A C# console app I wrote in 2019, before AI tools were around. A graph grows itself from one seed vertex by following a shared list of instructions, like a genome.</p>
-    <p class="small">History: its strand idea now lives on in <a href="../split-load-sim/">split_load_sim</a>.</p>
+    <p class="small">History: kept as the 2019 original. Its strand idea now lives on in <a href="../split-load-sim/">split_load_sim</a>, which swaps the string-matched instructions for typed, checked ones and uses the graphs to test the Genius Study's assumptions.</p>
 
     <h2>How it grows</h2>
     <ul>
@@ -80,22 +80,28 @@
     </div>
 
     <h2>The Graph class</h2>
-    <p>Besides growing graphs, the Graph class measures them:</p>
+    <p>It stores the graph as an adjacency matrix. Besides growing graphs, the Graph class measures them:</p>
     <ul>
       <li>degree (in, out, and mutual edges)</li>
       <li>neighbors, and neighbors within k steps</li>
       <li>islands (disconnected pieces)</li>
       <li>clustering coefficient</li>
     </ul>
+    <figure class="console">
+      <img src="../assets/img/graphtacular/kernel-fracture.jpg" width="992" height="739" loading="lazy" alt="Green-on-black console output from 2019: a 9-by-9 adjacency matrix with a GUID and kernel for each vertex, then each vertex's neighbor list">
+      <figcaption>Console output from 2019: the adjacency matrix and neighbor lists for a nine-vertex graph.</figcaption>
+    </figure>
 
     <h2>Build</h2>
     <ul class="stats">
       <li><b>C#</b> console app</li>
-      <li><b>.NET Core 2.2</b></li>
-      <li><b>89</b> xUnit tests</li>
+      <li><b>.NET Core 2.2</b> (still builds on .NET 8)</li>
+      <li><b>89</b> xUnit tests (all still pass)</li>
       <li>export: <b>GEXF</b></li>
     </ul>
-    <p><a class="pill" href="https://github.com/neuresthetics/graphtacular">Repo: neuresthetics/graphtacular</a></p>
+
+    <h2>Links</h2>
+    <p><a class="pill" href="https://github.com/neuresthetics/graphtacular">Repo: neuresthetics/graphtacular</a> <a class="pill" href="https://neuresthetics.github.io/split-load-sim/">Successor: split_load_sim</a></p>
     <p class="back"><a href="../">← Back to home</a></p>
   </div>
 </main>

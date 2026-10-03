@@ -83,3 +83,7 @@
 
 /* Consolas-style fonts run wide; keep the seven nav links on one line where they fit */
 .theme-gephi .site-nav ul { font-size: 0.88rem; gap: 0.25rem 1.05rem; }
+
+/* 2019 console screenshot */
+.theme-gephi .console { margin: 1rem 0 1.25rem; }
+.theme-gephi .console img { display: block; width: 100%; height: auto; border: 1px solid #222; border-radius: 4px; }
