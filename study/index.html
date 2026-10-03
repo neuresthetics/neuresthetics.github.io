@@ -63,6 +63,7 @@
           <li><strong>One person per run.</strong> Each run picks the next person, researches them from primary and scholarly sources, fills their record (leaving TODO where nothing is sourced yet), validates it and commits.</li>
           <li><strong>Belief systems</strong> are extended the same way, one record at a time.</li>
           <li><strong>Checked by script.</strong> Schemas and validators check every record, and the roster rebuilds from the raw lists.</li>
+          <li><strong>Mid-basin test.</strong> The mid-basin test flags people who hold that God is a transcendent person, distinct from the world, while describing nature as running on law (with at most a stated, limited exception), with both judgments coded at certainty 0.7 or higher.</li>
           <li><strong>Audited.</strong> Claim packets from the records go through blind substance_lens runs, and the fixes are logged in an audit report.</li>
         </ul>
 
@@ -86,7 +87,22 @@
           <p><strong>There are no results yet.</strong> Nothing in v8.0-alpha supports a frequency, rate or ranking claim, so don't draw one from it.</p>
         </div>
 
+        <h2>What the drafts show so far</h2>
+        <p><em>Draft, unreviewed codings. Not results.</em> There are 14 hand-picked draft records, mostly physicists. They aren't a sample, so these are observations, not rates.</p>
+        <ul>
+          <li>7 of the 14 pass the mid-basin test: Newton, Maxwell, Faraday, Aquinas, Ibn Sina, Gödel and Galileo. Six of the seven were chosen in advance as likely examples, so this checks the test, not how common the pattern is.</li>
+          <li>Einstein and Schrödinger score at the lawful pole on both axes, but fail the test on locus: the God they describe is the world's order, not a transcendent person.</li>
+          <li>For Fermi, Meitner and Curie, nothing read places or denies God, so their locus is BELOW_THRESHOLD. Kepler's scores would pass, but only at certainty 0.5, under the test's 0.7 bar. For all four the test is left unapplied rather than guessed.</li>
+          <li>Planck falls between the test's branches, and the rules leave him open.</li>
+          <li>966 of the 1,380 roster people (70%) appear on only one of the five model lists. Only 82 appear on all five.</li>
+          <li>Five blind audit runs covered two packets of draft claims: three runs on 115 claims and two on 147, 262 claims in all. They found wrong locators and page numbers, quotes cut without a [...] mark, misattributed quotes, one wrongly stated fact (when Faraday joined his church), and scores or certainties the auditors judged too high or inconsistent. Each finding was checked against the source. Most led to a fix; a few were kept with reasons given, and one was withdrawn by its auditor. No mid-basin result changed. Separately, checking the Project Gutenberg text of Campbell and Garnett's <cite>Life of James Clerk Maxwell</cite> (1882) against a library scan caught one transcription error: the printed book reads "a most conjectural" (p. 394) where Gutenberg has "almost".</li>
+        </ul>
+
         <h2>Figures</h2>
+        <figure class="fig fig-dark">
+          <img src="../assets/img/study/people-cause-locus.png" width="1530" height="1275" loading="lazy" alt="Scatter plot of the 11 draft records with a locus score, B_cause on the x axis and A_locus on the y axis, with the mid-basin zone (low locus, high cause) shaded. Aquinas, Gödel, Kepler, Newton, Ibn Sina, Galileo, Faraday and Maxwell sit in the shaded zone at B_cause 3; Kepler's point is lighter, at certainty 0.5. Planck sits at B_cause 4, A_locus 2. Einstein and Schrödinger sit at the lawful pole on both axes.">
+          <figcaption>Draft records on cause vs locus, with the mid-basin zone shaded. These are hand-picked, unreviewed drafts, not a sample, so this is a heuristic, not a result.</figcaption>
+        </figure>
         <figure class="fig fig-dark">
           <img src="../assets/img/study/roster-list-overlap.png" width="2040" height="884" loading="lazy" alt="Two bar charts. Left: of the 1,380 roster people, 966 are named by only one of the five model lists, 183 by two, 94 by three, 55 by four, and 82 by all five. Right: each list's raw rows next to the roster people it names, for Claude, DeepSeek, Gemini, GPT, and Grok.">
           <figcaption>How many of the five LLM-generated lists name each roster person. Descriptive, not a result.</figcaption>
