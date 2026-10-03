@@ -99,3 +99,10 @@
   .theme-code .pane-body { padding: 1.25rem 1.1rem 1rem; }
   .theme-code h1 { font-size: 1.45rem; }
 }
+
+/* Verse sample as a quoted block */
+.theme-code blockquote.verses { background: var(--panel); border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0; padding: 0.85rem 1.1rem; margin: 1rem 0 1.25rem; }
+.theme-code blockquote.verses p { margin: 0 0 0.6rem; }
+.theme-code blockquote.verses p:last-child { margin-bottom: 0; }
+.theme-code blockquote.verses .vn { font-family: var(--mono); color: var(--accent); margin-right: 0.35rem; }
+.theme-code .pane-body ul:not(.md-links) li::marker { color: var(--accent); }
