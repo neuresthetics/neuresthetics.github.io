@@ -4,22 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RestoKit · Jason Burns · Neuresthetics</title>
-<meta name="description" content="RestoKit is a restoration kit for water, mold, and crawlspace jobs, built for any level from tech to PM and estimator.">
+<meta name="description" content="A restoration kit for water, mold, and crawlspace work, from tech to lead, PM, and estimator. Grounded in IICRC S500 and S520 principles; runs on commercial models.">
 <meta name="author" content="Jason Burns">
 <meta name="theme-color" content="#0C1B2E">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://neuresthetics.github.io/restokit/">
-<meta property="og:title" content="RestoKit · Neuresthetics">
-<meta property="og:description" content="RestoKit is a restoration kit for water, mold, and crawlspace jobs, built for any level from tech to PM and estimator.">
-<meta property="og:image" content="https://neuresthetics.github.io/assets/img/N.jpg">
-<meta property="og:image:alt" content="Neuresthetics logo">
-<meta name="twitter:card" content="summary">
+<meta property="og:title" content="RestoKit: a restoration kit for water, mold, and crawlspace work">
+<meta property="og:description" content="A restoration kit for water, mold, and crawlspace work, from tech to lead, PM, and estimator. Grounded in IICRC S500 and S520 principles; runs on commercial models.">
+<meta property="og:image" content="https://neuresthetics.github.io/assets/img/restokit-banner.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="533">
+<meta property="og:image:alt" content="RestoKit, a restoration kit for water, mold, and crawlspace work">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="../assets/img/restokit/restokit_icon.svg?v=signal">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/restokit/restokit_icon_32.png?v=signal">
 <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/restokit/restokit_icon_16.png?v=signal">
 <link rel="apple-touch-icon" href="../assets/img/restokit/restokit_icon_180.png?v=signal">
 <link rel="stylesheet" href="../assets/style.css">
-<link rel="stylesheet" href="../assets/field.css?v=signal-d5819d9">
+<link rel="stylesheet" href="../assets/field.css?v=steps">
 <link rel="stylesheet" href="../assets/nav.css?v=2">
 </head>
 <body class="theme-field">
@@ -46,46 +48,53 @@
 <main id="main">
   <div class="wrap">
     <h1 class="rk-logo"><img src="../assets/img/restokit/restokit_logo_horizontal_dark.svg" width="412" height="128" alt="RestoKit"></h1>
-    <img class="banner" src="../assets/img/restokit-banner.jpg" width="1600" height="533" alt="RestoKit, a restoration kit for water, mold, and crawlspace jobs">
-    <p class="tag">Restoration kit · tech to PM and estimator</p>
-    <p class="lead">A restoration kit for water, mold, and crawlspace jobs, built for any level: tech, lead, PM, or estimator. It walks a job through in order, from first response to closeout.</p>
-    <p class="runs"><b>Runs on:</b> Commercial cloud models · loaded into the Grok app or a Grok Bot</p>
+    <img class="banner" src="../assets/img/restokit-banner.jpg" width="1600" height="533" alt="RestoKit, a restoration kit for water, mold, and crawlspace work">
+    <p class="lead">A restoration kit for water, mold, and crawlspace work, from tech to lead, PM, and estimator.</p>
+    <p class="runs"><b>Runs on:</b> commercial models only, loaded into the Grok app or a Grok Bot.</p>
 
-    <h2>What it is</h2>
-    <p>RestoKit is a structured JSON kit. It's grounded in IICRC S500 (water) and S520 (mold) principles. It's written the way someone who has run a lot of jobs talks one through.</p>
-    <p>It has two layers:</p>
+    <h2 id="what-it-is">What it is</h2>
+    <p>RestoKit is a structured JSON kit for anyone running a restoration job. It's grounded in IICRC S500 (water) and S520 (mold) principles and written the way a senior tech talks a job through. It doesn't replace years on the job. Its main job is memory: holding the rare edge cases that don't come up often enough to stay top of mind.</p>
+
+    <h2 id="who-its-for">Who it's for</h2>
     <ul>
-      <li><strong>Phases.</strong> A job flow with gates in a set order, so safety-critical steps don't get skipped under time pressure.</li>
-      <li><strong>Modules and base science.</strong> A reference pool the steps point to for the why: category, remove vs. dry, containment, equipment sizing, drying science, mold cleaning, and crawlspaces.</li>
+      <li><strong>Tech:</strong> the job flow in order, with safety checks called out when they matter: category, electrical, crawlspace gas.</li>
+      <li><strong>Lead:</strong> containment, negative air, equipment sizing, and crew and labor calls.</li>
+      <li><strong>PM:</strong> hold status, work authorization, daily drying readings, and verification before teardown.</li>
+      <li><strong>Estimator:</strong> remove-vs-dry and category calls, plus documentation that backs up the scope.</li>
     </ul>
-    <p>It doesn't replace years on the job. Its main job is memory. It holds the rare edge cases that don't come up often enough to stay top of mind.</p>
 
-    <h2>The job flow</h2>
-    <ol start="0">
-      <li><strong>Hold status.</strong> Stabilize, protect contents, and document while a job waits on approval, abatement, or a plumber.</li>
-      <li><strong>Initial response.</strong> Signed work authorization first. Then the safety walk, category check, source control, extraction, and baseline readings.</li>
-      <li><strong>Selective demo and cleaning.</strong> Remove or dry in place by material, category, and time wet. Demo runs top-down, and hidden water gets chased out of cavities and under flooring.</li>
-      <li><strong>Drying and monitoring.</strong> Daily readings at the same points every visit. If drying stalls under proper conditions, the kit calls for a root-cause check.</li>
-      <li><strong>Verification and closeout.</strong> Controls stay up until final moisture checks pass. Then teardown, the customer walkthrough, and the paperwork.</li>
+    <h2 id="how-it-works">How it works</h2>
+    <ol>
+      <li><strong>Load it.</strong> Attach <code>resto_kit_0.8.9.json</code> in the Grok app or add it to a Grok Bot's knowledge. Nothing to install.</li>
+      <li><strong>Tell it the job.</strong> For example: "Category 2 supply-line leak, kitchen and crawlspace, 1990s house, I'm the PM."</li>
+      <li><strong>Ask one thing at a time.</strong> "Remove or dry this LVP?" "Is the subfloor dry?"</li>
+      <li><strong>Get a field-ready answer.</strong> Short and specific, grounded in IICRC S500 and S520 principles. Deeper detail only when you ask.</li>
     </ol>
+    <p><strong>What's inside</strong></p>
+    <ul>
+      <li><strong>Five gated phases</strong>, from Hold Status to Closeout, so safety steps don't get skipped.</li>
+      <li><strong>Modules</strong> for category, remove vs. dry, containment, negative air, equipment sizing, mold, and crawlspaces.</li>
+      <li><strong>Base science:</strong> RH, temperature, GPP, vapor drive, wicking, material behavior, dry standards.</li>
+      <li><strong>Field lessons</strong> from daily job logs, added only once they prove out on real jobs.</li>
+    </ul>
 
-    <h2>Short answers</h2>
-    <p>Each step carries a short line that can be read at a glance or spoken. Ask in one short phrase and get only that part, not the whole module. Deeper detail stays in the reference layer until it's asked for.</p>
-    <blockquote>
-      <p>"Full containment before demo. Neg air target: about minus five pascals continuous, or more negative. Quick check: bounce a quarter on the six-mil. If it's flat or flapping, you lost pressure."</p>
-    </blockquote>
-
-    <h2>How it grows</h2>
-    <p>New lessons come from daily job logs. A lesson goes into the kit only after it proves itself on real jobs.</p>
-    <p>Next up: connecting the field scope to Xactimate so the scope and the estimate line up.</p>
-
-    <h2>Status</h2>
+    <h2 id="status">Status</h2>
     <div class="note">
-      <p>The full kit is private. The public repo shows what it covers and how it's laid out. A demo is available on request, and I can build a company version around a shop's own procedures.</p>
-      <!-- JASON: edit. Add how shops should request a demo (e.g. an email or contact link) if you want one on this page. -->
-      <p><a href="https://github.com/neuresthetics/resto_kit_public">Public repo: neuresthetics/resto_kit_public</a></p>
+      <ul>
+        <li><strong>Kit version:</strong> 0.8.9.</li>
+        <li><strong>The full kit is private.</strong> It's developed in a private repo; the public repo shows what it covers and how it's laid out.</li>
+        <li><strong>Next:</strong> connecting the field scope to Xactimate so the scope and the estimate line up.</li>
+        <li><strong>For shops:</strong> demo on request. I can build a company version around a shop's own procedures.</li>
+      </ul>
     </div>
-    <p class="back"><a href="../">← Back to home</a></p>
+
+    <h2 id="links">Links</h2>
+    <ul>
+      <li>Public repo: <a href="https://github.com/neuresthetics/resto_kit_public">github.com/neuresthetics/resto_kit_public</a></li>
+      <li>Request a demo: <a href="mailto:neuresthetics@gmail.com">neuresthetics@gmail.com</a></li>
+      <li>GitHub: <a href="https://github.com/neuresthetics">github.com/neuresthetics</a></li>
+    </ul>
+    <p class="back"><a href="https://neuresthetics.github.io/">← Back to home</a></p>
   </div>
 </main>
 

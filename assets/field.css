@@ -99,3 +99,7 @@
 .theme-field .site-footer { background: var(--navy-deep); color: var(--dim); border-top: 3px solid var(--blue); }
 .theme-field .site-footer a { color: var(--blue-text); }
 .theme-field .site-footer a:hover { color: var(--cyan); }
+
+/* How it works: numbered steps, not phases */
+.theme-field ol { counter-reset: phase 0; }
+.theme-field ol li::before { content: "STEP " counter(phase); }
