@@ -66,3 +66,26 @@
 .theme-board .note .btn.speak { background: #00bb55; color: #000; border-color: #000; outline: 3px solid #fff; outline-offset: -1px; }
 .theme-board .note .btn:hover { background: #fff; color: #000; }
 .theme-board .back a, .theme-board .site-footer a { color: var(--dim); }
+
+/* Call-to-action buttons under the lead, same look as the note buttons */
+.theme-board .cta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0 0 1.5rem; }
+.theme-board .cta .btn {
+  display: inline-block; font-weight: 700; border-radius: 12px; padding: 0.45rem 1rem;
+  background: var(--panel); color: #fff; border: 2px solid #777; text-decoration: none;
+}
+.theme-board .cta .btn.speak { background: #00bb55; color: #000; border-color: #000; outline: 3px solid #fff; outline-offset: -1px; }
+.theme-board .cta .btn:hover { background: #fff; color: #000; }
+/* "How it works" as tiles, like the feature list */
+.theme-board ul.tiles { list-style: none; padding: 0; }
+.theme-board ul.tiles li { background: var(--panel); border-radius: 12px; padding: 0.65rem 0.9rem 0.65rem 1.1rem; border-left: 8px solid var(--verb); margin-bottom: 0.6rem; }
+.theme-board ul.tiles li:nth-child(6n+2) { border-left-color: var(--descriptor); }
+.theme-board ul.tiles li:nth-child(6n+3) { border-left-color: var(--noun); }
+.theme-board ul.tiles li:nth-child(6n+4) { border-left-color: var(--social); }
+.theme-board ul.tiles li:nth-child(6n+5) { border-left-color: var(--people); }
+.theme-board ul.tiles li:nth-child(6n+6) { border-left-color: var(--negation); }
+/* Three-up screenshot strip */
+.theme-board .shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.9rem; margin: 1.25rem 0 0.5rem; }
+.theme-board .shots figure { margin: 0; }
+.theme-board .shots img { display: block; width: 100%; height: auto; }
+.theme-board .shots figcaption { text-align: center; font-size: 0.85rem; }
+@media (max-width: 520px) { .theme-board .shots { grid-template-columns: 1fr 1fr; } }

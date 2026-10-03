@@ -17,7 +17,7 @@
 <link rel="icon" type="image/jpeg" href="../assets/img/logo-192.jpg">
 <link rel="apple-touch-icon" href="../assets/img/logo-192.jpg">
 <link rel="stylesheet" href="../assets/style.css">
-<link rel="stylesheet" href="../assets/board.css">
+<link rel="stylesheet" href="../assets/board.css?v=2">
 <link rel="stylesheet" href="../assets/nav.css?v=2">
 </head>
 <body class="theme-board">
@@ -45,18 +45,16 @@
   <div class="wrap">
     <h1>ANOVA Language</h1>
     <p class="tag">App · AAC word board</p>
-    <p class="lead">A free word board for AAC (augmentative and alternative communication). It's a web app for iPad and other tablets, and it works offline once it's installed.</p>
+    <p class="lead">A free word board for people who communicate by tapping words instead of speaking. It's a web app for iPad and other tablets, and it works offline once it's installed.</p>
+    <p class="cta"><a class="btn speak" href="https://neuresthetics.github.io/anova_language_dev_public/">Try the app</a> <a class="btn" href="https://github.com/neuresthetics/anova_language_dev_public">Repo and setup guide</a></p>
 
     <div class="split">
       <div>
-        <h2 class="t-verb">What it does</h2>
+        <h2 class="t-people">Who it's for</h2>
         <ul>
-          <li>A core word board with fixed button positions. Tapping a word speaks it and adds it to the message bar.</li>
-          <li>Word levels: Starter, Middle, Full, or Custom. A hidden word leaves an empty cell, so buttons never move as more words are shown.</li>
-          <li>A spelling keyboard (A to Z in order) with word prediction.</li>
-          <li>Simple read-along stories with photos or emoji. Turning a page never speaks; tapping a word or "read" does.</li>
-          <li>Buttons are color-coded by word type, using a modified Fitzgerald key.</li>
-          <li>An optional usage log. It's off by default, and it stays on the device.</li>
+          <li>Families of nonspeaking or minimally speaking kids who want a board at home, including while they wait on an insurance-funded device.</li>
+          <li>Early readers and spellers who are ahead of their speech: there's a full keyboard with word prediction.</li>
+          <li>Speech therapists, teachers, and tinkerers who want an open, editable board with no account or subscription.</li>
         </ul>
       </div>
       <figure>
@@ -66,19 +64,38 @@
       </figure>
     </div>
 
-    <h2 class="t-descriptor">How it's built</h2>
-    <p>Plain HTML, CSS, and JavaScript. No build step, no frameworks, no ads, no analytics, and no network calls.</p>
-    <p>The repo holds a generic app shell with a starter board and two sample stories. Personal words, stories, photos, and recordings go in a pack. The pack is imported on the device and stays there.</p>
+    <h2 class="t-verb">How it works</h2>
+    <ul class="tiles">
+      <li>Tap a word to hear it and add it to the message bar. Tap "speak" to say the whole message.</li>
+      <li>Buttons never move. Words are shown in levels (Starter, Middle, Full, or Custom), and a hidden word leaves an empty cell, so motor memory carries over as the board grows.</li>
+      <li>Colors follow word type (a modified Fitzgerald key).</li>
+      <li>Spelling keyboard (A to Z) with word prediction.</li>
+      <li>Read-along stories with pictures. Turning a page never speaks; tapping a word or "read" does.</li>
+      <li>Personal words, stories, photos, and recordings go in a pack that's imported on the device and stays there. Nothing is uploaded.</li>
+    </ul>
+    <div class="shots">
+      <figure><img src="../assets/img/anova/keyboard-prediction.jpg" width="560" height="805" loading="lazy" alt="The spelling keyboard, A to Z, with word predictions above the keys"><figcaption>Keyboard with prediction</figcaption></figure>
+      <figure><img src="../assets/img/anova/story-page.jpg" width="560" height="805" loading="lazy" alt="A read-along story page with a picture and tappable words"><figcaption>Story page</figcaption></figure>
+      <figure><img src="../assets/img/anova/word-levels.jpg" width="560" height="805" loading="lazy" alt="The settings screen for choosing which word level is shown"><figcaption>Word levels</figcaption></figure>
+    </div>
 
-    <h2 class="t-noun">About the name</h2>
-    <p>ANOVA is a nod to analysis of variance, the statistics term. Language learning varies a lot from person to person. The board is built to adapt to that: adjustable word levels, custom packs, and buttons that stay put. The app itself doesn't do any statistics.</p>
+    <h2 class="t-descriptor">Why it's free</h2>
+    <p>Dedicated speech devices often cost several thousand dollars, and commercial iPad AAC apps cost a few hundred. This one runs on a tablet you may already have. It's a home option, not a replacement for an evaluation by a speech-language pathologist, and it's not a medical device.</p>
 
-    <h2 class="t-social">Please note</h2>
+    <h2 class="t-noun">How it's built</h2>
+    <p>Plain HTML, CSS, and JavaScript. No build step, frameworks, ads, analytics, or network calls. Installs as a home-screen web app and works offline. MIT license.</p>
+
+    <h2 class="t-social">Status</h2>
+    <p>Version 1.2.8, started September 2026 and actively developed. Recent work: word levels, letter-name speech fixes for iOS, and pictures on story pages.</p>
+
+    <h2 class="t-people">About the name</h2>
+    <p>ANOVA is a nod to analysis of variance, the statistics term. Language learning varies a lot from person to person, and the board is built to adapt to that. The app itself doesn't do any statistics.</p>
+
+    <h2 class="t-negation">Links</h2>
     <div class="note">
-      <p>It's a free option to use at home. It is not a replacement for an evaluation by a speech-language pathologist, and it is not a medical device.</p>
-      <p>Open source under the MIT license.</p>
-      <p><a class="btn" href="https://github.com/neuresthetics/anova_language_dev_public">Repo and setup guide: neuresthetics/anova_language_dev_public</a></p>
-      <p><a class="btn speak" href="https://neuresthetics.github.io/anova_language_dev_public/">Try the app: neuresthetics.github.io/anova_language_dev_public</a></p>
+      <p><a class="btn speak" href="https://neuresthetics.github.io/anova_language_dev_public/">Try the app</a></p>
+      <p><a class="btn" href="https://github.com/neuresthetics/anova_language_dev_public">Repo</a></p>
+      <p><a class="btn" href="https://github.com/neuresthetics/anova_language_dev_public/blob/main/docs/SETUP.md">Parent setup guide</a></p>
     </div>
     <p class="back"><a href="../">← Back to home</a></p>
   </div>
