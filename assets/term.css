@@ -111,3 +111,8 @@
   .theme-term .prog li { grid-template-columns: 1fr 4.5rem; gap: 0.15rem 0.75rem; margin-bottom: 0.6rem; }
   .theme-term .prog .pk { grid-column: 1 / -1; }
 }
+
+/* Faces collage banner (shared with the profile README card) with its credits line */
+.theme-term .faces { margin: 0 0 1.75rem; }
+.theme-term .faces .banner { margin-bottom: 0.5rem; }
+.theme-term .faces figcaption { font-size: 0.78rem; color: var(--dim); }
