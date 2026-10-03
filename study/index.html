@@ -17,7 +17,7 @@
 <link rel="icon" type="image/jpeg" href="../assets/img/logo-192.jpg">
 <link rel="apple-touch-icon" href="../assets/img/logo-192.jpg">
 <link rel="stylesheet" href="../assets/style.css">
-<link rel="stylesheet" href="../assets/term.css?v=faces">
+<link rel="stylesheet" href="../assets/term.css?v=2">
 <link rel="stylesheet" href="../assets/nav.css?v=2">
 </head>
 <body class="theme-term">
@@ -52,49 +52,53 @@
       <div class="term-body">
         <h1>Genius Study</h1>
         <p class="tag"><span class="k">study</span><span class="v">v8 in progress</span></p>
-        <p class="lead">One home for every version of the Neuresthetics study. It's a two-lane study of lawful order and remembered genius.</p>
+        <p class="lead">A study of where remembered genius sits on a scale of lawful, non-intervening order, plus a labeled belief model of how learning that order early might pay off.</p>
 
-        <h2>Two lanes</h2>
-        <p>Lane A describes what the public record shows. Lane B states a belief out loud and writes it so it can fail. Lane A doesn't depend on Lane B.</p>
+        <h2>What it is</h2>
+        <p>One home for every version of the Neuresthetics study. It has two lanes. Lane A describes what the public record shows about each person. Lane B states a belief out loud and writes it so it can fail. Lane A doesn't depend on Lane B.</p>
+        <p>The roster of 1,380 people comes from five LLM-generated lists; 441 of them are core candidates.</p>
+
+        <h2>How it works</h2>
+        <ul>
+          <li><strong>One person per run.</strong> Each run picks the next person, researches them from primary and scholarly sources, fills their record (leaving TODO where nothing is sourced yet), validates it and commits.</li>
+          <li><strong>Belief systems</strong> are extended the same way, one record at a time.</li>
+          <li><strong>Checked by script.</strong> Schemas and validators check every record, and the roster rebuilds from the raw lists.</li>
+          <li><strong>Audited.</strong> Claim packets from the records go through blind substance_lens runs, and the fixes are logged in an audit report.</li>
+        </ul>
 
         <h2>Status</h2>
-        <p>Version 8 starts by rebuilding the data from the original model lists. <strong>v8.0-alpha</strong> is tagged as a GitHub prerelease. It's scaffolding and draft records only: the rebuilt roster, the schemas and validators, and a few unreviewed draft records.</p>
+        <p>Version 8 rebuilds the data from the original model lists. <a href="https://github.com/neuresthetics/neuresthetics_genius_study/releases/tag/v8.0-alpha">v8.0-alpha</a> is tagged as a GitHub prerelease: scaffolding and draft records only. The latest complete release is v7.1.</p>
         <div class="out" role="group" aria-label="v8 progress">
           <p class="out-cmd" aria-hidden="true">progress</p>
           <ul class="prog">
-            <li><span class="pk">core people coded</span><span class="pbar" aria-hidden="true"><span style="width:1.4%"></span></span><span class="pv">6 / 441</span></li>
+            <li><span class="pk">core people coded</span><span class="pbar" aria-hidden="true"><span style="width:3.2%"></span></span><span class="pv">14 / 441 drafts</span></li>
             <li><span class="pk">belief systems sourced</span><span class="pbar" aria-hidden="true"><span style="width:11.7%"></span></span><span class="pv">9 / 77</span></li>
             <li><span class="pk">method decisions settled</span><span class="pbar full" aria-hidden="true"><span style="width:100.0%"></span></span><span class="pv">21 / 21</span></li>
           </ul>
           <dl>
             <dt>results</dt><dd><span class="no">none yet</span></dd>
-            <dt>latest tag</dt><dd>v8.0-alpha (prerelease)</dd>
+            <dt>latest tag</dt><dd><a href="https://github.com/neuresthetics/neuresthetics_genius_study/releases/tag/v8.0-alpha">v8.0-alpha</a> (prerelease)</dd>
             <dt>latest complete</dt><dd><span class="yes">v7.1</span></dd>
           </dl>
-          <p class="out-note"># from the repo README, as of 2 Oct 2026</p>
+          <p class="out-note"># from the <a href="https://github.com/neuresthetics/neuresthetics_genius_study#progress-status">repo's progress table</a>, as of 2 Oct 2026. Coded people are unreviewed drafts.</p>
         </div>
         <div class="note">
-          <p><strong>There are no results yet.</strong> Nothing in v8.0-alpha supports a frequency, rate, or ranking claim, so don't draw one from it.</p>
+          <p><strong>There are no results yet.</strong> Nothing in v8.0-alpha supports a frequency, rate or ranking claim, so don't draw one from it.</p>
         </div>
-        <p>The latest complete release is v7.1. Earlier versions stay in their own repos and are linked as history.</p>
 
-        <h2>Descriptive figures</h2>
-        <p>These charts describe what's in the repo so far. They are not results. The roster comes from five LLM-generated lists.</p>
-        <figure class="fig">
-          <img src="../assets/img/study/roster-list-overlap.png" width="1400" height="607" loading="lazy" alt="Two bar charts. Left: of the 1,380 roster people, 966 are named by only one of the five model lists, 183 by two, 94 by three, 55 by four, and 82 by all five. Right: each list's raw rows next to the roster people it names, for Claude, DeepSeek, Gemini, GPT, and Grok.">
-          <figcaption>Descriptive, not a result. How many of the five LLM-generated lists name each of the 1,380 roster people, and each list's raw rows against the roster people it names.</figcaption>
-        </figure>
-        <figure class="fig">
-          <img src="../assets/img/study/core-by-region-field.png" width="1400" height="808" loading="lazy" alt="Two bar charts of the 441 core candidates. Left: study region of birth, coded so far for only six people. Right: field buckets, led by philosophy, then social science, literature, history, mathematics, and physics.">
-          <figcaption>Descriptive, not a result. The 441 core candidates by field bucket. Region is coded per person record, so only the six coded people appear in the region panel.</figcaption>
+        <h2>Figures</h2>
+        <figure class="fig fig-dark">
+          <img src="../assets/img/study/roster-list-overlap.png" width="2040" height="884" loading="lazy" alt="Two bar charts. Left: of the 1,380 roster people, 966 are named by only one of the five model lists, 183 by two, 94 by three, 55 by four, and 82 by all five. Right: each list's raw rows next to the roster people it names, for Claude, DeepSeek, Gemini, GPT, and Grok.">
+          <figcaption>How many of the five LLM-generated lists name each roster person. Descriptive, not a result.</figcaption>
         </figure>
 
         <h2>Links</h2>
         <ul class="cmd-links">
-          <li><a href="https://github.com/neuresthetics/neuresthetics_genius_study">Read it on GitHub: neuresthetics/neuresthetics_genius_study</a></li>
-          <li><a href="https://github.com/neuresthetics/neuresthetics_genius_study/releases/tag/v8.0-alpha">v8.0-alpha prerelease</a> <span>(scaffolding, no results)</span></li>
-          <li><a href="https://github.com/neuresthetics/neuresthetics_genius_study/tree/main/figures">All four descriptive figures</a></li>
-          <li><a href="https://github.com/neuresthetics/neuresthetics_v7">Latest complete release: v7.1</a></li>
+          <li><a href="https://github.com/neuresthetics/neuresthetics_genius_study">Repo: neuresthetics/neuresthetics_genius_study</a></li>
+          <li><a href="https://github.com/neuresthetics/neuresthetics_genius_study/blob/main/docs/CODING_GUIDE.md">Coding guide</a></li>
+          <li><a href="https://github.com/neuresthetics/neuresthetics_genius_study/blob/main/reports/audit_2026-10-02.md">Audit report, 2 Oct 2026</a></li>
+          <li><a href="https://github.com/neuresthetics/neuresthetics_v7">v7.1: latest complete release</a></li>
+          <li><a href="https://github.com/neuresthetics/NEUR-V6-DATA">V6 history: NEUR-V6-DATA</a></li>
         </ul>
       </div>
     </div>
