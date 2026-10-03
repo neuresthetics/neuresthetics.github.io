@@ -47,8 +47,12 @@
     <div class="sl-bar" aria-hidden="true"><span>prompt spec</span><span>67 fallacies</span><span>both sides</span></div>
     <h1>substance_lens</h1>
     <p class="tag"><span class="k">prompt spec</span><span class="v">v0.5.9</span></p>
+    <h2>What it is</h2>
     <p class="lead">A JSON prompt spec you give a chat model so it checks an argument step by step and scans it for 67 fallacies, on both the claim and its strongest counter-case. Flags are judgments to verify, not proofs.</p>
     <p class="runs"><b>Runs on:</b> Any capable chat model · a prompt spec, built with Grok in mind; no code ships</p>
+
+    <h2>Who it's for</h2>
+    <p>Anyone who wants a slower, structured second read of an argument, including their own: a writer checking a draft, a researcher auditing a source, or someone weighing two sides of a contested topic. It isn't a fact-checker, and it isn't an automated grader. Its output is a list of leads for a person to confirm.</p>
 
     <h2>How to use it</h2>
     <ol class="steps">
@@ -88,8 +92,22 @@
       <li><a href="../study/">Neuresthetics Genius Study</a>: blind claim audits of the study's records.</li>
     </ul>
 
-    <p><a class="gold-link" href="https://github.com/neuresthetics/substance_lens">Repo: neuresthetics/substance_lens</a></p>
-    <p class="small">MIT licensed. Older spec versions are kept in the repo's <code>history/</code> folder as a record.</p>
+    <h2>Status</h2>
+    <ul>
+      <li>Version 0.5.9 (October 2026), MIT license.</li>
+      <li>Prompt only. No checker code ships, and older versions are kept in <code>history/</code>.</li>
+      <li>Misuse example: <code>examples/misuse/TRUE_HEIRS.md</code> shows the fiction module run on contested non-fiction and its output then called verified. That breaks the spec's own rules. It's kept as a warning that polish isn't evidence.</li>
+    </ul>
+
+    <h2>Links</h2>
+    <ul class="links-list">
+      <li><a href="https://github.com/neuresthetics/substance_lens">Repository</a></li>
+      <li><a href="https://github.com/neuresthetics/substance_lens/blob/main/substance_lens_0.5.9.json">The spec (substance_lens_0.5.9.json)</a></li>
+      <li><a href="https://github.com/neuresthetics/substance_lens/blob/main/CHANGELOG_0.5.9.md">Changelog (0.5.9)</a></li>
+      <li><a href="https://github.com/neuresthetics/grokipedia-truth-audit/blob/main/docs/METHOD_THREE_PHASE_TEST.md">Consistency test method</a></li>
+      <li><a href="https://github.com/neuresthetics/substance_lens/tree/main/examples/misuse">Misuse example</a></li>
+      <li><a href="https://github.com/neuresthetics/substance_lens/blob/main/LICENSE">License (MIT)</a></li>
+    </ul>
     <p class="back"><a href="../">← Back to home</a></p>
   </div>
 </main>
