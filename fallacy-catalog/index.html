@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>fallacy_catalog · Jason Burns · Neuresthetics</title>
+<meta name="description" content="A sourced catalog of 221 named logical fallacies and a written method for checking an argument one step at a time, built to avoid false accusations. A flag is a lead to check, not a verdict.">
+<meta name="author" content="Jason Burns">
+<meta name="theme-color" content="#0b0b0c">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://neuresthetics.github.io/fallacy-catalog/">
+<meta property="og:title" content="fallacy_catalog · Neuresthetics">
+<meta property="og:description" content="A sourced catalog of 221 named logical fallacies and a written method for checking an argument one step at a time, built to avoid false accusations. A flag is a lead to check, not a verdict.">
+<meta property="og:image" content="https://neuresthetics.github.io/assets/img/N.jpg">
+<meta property="og:image:alt" content="Neuresthetics logo">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/jpeg" href="../assets/img/logo-192.jpg">
+<link rel="apple-touch-icon" href="../assets/img/logo-192.jpg">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/sublens.css">
+<link rel="stylesheet" href="../assets/nav.css?v=2">
+</head>
+<body class="theme-sublens">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/img/logo-192.jpg" alt="" width="28" height="28">NEURESTHETICS</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="../">Home</a></li>
+        <li><a href="../restokit/">RestoKit</a></li>
+        <li><a href="../anova/">ANOVA_Language</a></li>
+        <li><a href="../grokipedia/">Grokipedia_Audit</a></li>
+        <li><a href="../study/">Study</a></li>
+        <li><a href="../book/">Book</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <div class="sl-bar" aria-hidden="true"><span>221 sourced entries</span><span>one step at a time</span><span>no false accusations</span></div>
+    <h1>fallacy_catalog</h1>
+    <p class="tag"><span class="k">catalog</span><span class="v">v0.6.1</span></p>
+
+    <h2>What it is</h2>
+    <p class="lead">A catalog of 221 named logical fallacies, each with a published source, and a written method for checking an argument one step at a time. Most of its design is about not accusing a sound argument.</p>
+    <p class="runs"><b>Runs on:</b> No model required · a JSON catalog and a written method, applied by a person or an AI agent</p>
+    <p>It replaces substance_lens, a custom prompt framework that has been retired.</p>
+    <ul>
+      <li><strong>Each entry</strong> has a plain definition, an example, the conditions that must all be shown from the text before the label applies, the legitimate arguments that look similar, and the published references that list it.</li>
+      <li><strong>Sources</strong> include the Internet Encyclopedia of Philosophy, the Stanford Encyclopedia of Philosophy, Aristotle's <cite>On Sophistical Refutations</cite>, <cite>The Fallacy Files</cite> and Wikipedia's list of fallacies. Each reference page was fetched and matched, not recalled. No entry is unsourced.</li>
+      <li><strong>209 standard, 12 contested.</strong> A contested entry is a disputed name or a move whose status as a fallacy is debated; using one means saying so.</li>
+    </ul>
+
+    <h2>Who it's for</h2>
+    <p>Anyone checking a real argument: a writer reviewing a draft, a reader auditing a source, or an AI agent doing either. It isn't a fact-checker, and a flag doesn't show a conclusion is false. It says one step doesn't support what it claims to.</p>
+
+    <h2>How to check an argument</h2>
+    <ol class="steps">
+      <li><strong>Quote</strong> the exact words.</li>
+      <li><strong>Restate</strong> the argument in its strongest reasonable form.</li>
+      <li><strong>Pick</strong> the single most specific entry.</li>
+      <li><strong>Show</strong> the words that meet each required condition. If any is unmet, don't flag.</li>
+      <li><strong>Rule out</strong> each legitimate look-alike.</li>
+      <li><strong>Handle</strong> conditions that need facts from outside the passage.</li>
+      <li><strong>Verdict:</strong> flag, possible issue (say what would settle it), or no issue.</li>
+    </ol>
+    <p>The full procedure, record format and worked examples are in <a href="https://github.com/neuresthetics/fallacy_catalog/blob/main/METHOD.md">METHOD.md</a>.</p>
+
+    <h2>How it was tested</h2>
+    <ul>
+      <li><strong>Three blind test rounds.</strong> For each round, a separate model instance that couldn't read the catalog wrote new passages and an answer key. Two reviewers applied the catalog without seeing the key or each other's work. Round 3 included 20 real public-domain excerpts.</li>
+      <li><strong>No false accusations in testing.</strong> Across all three rounds, no legitimate or no-argument passage was flagged or given a possible issue: 0 of 328 reviewer judgments.</li>
+      <li><strong>Limits.</strong> Every writer, reviewer and scorer was an AI model from one family, most passages are model-written, and no human expert has validated the catalog. v0.6.x has not had a blind round yet.</li>
+    </ul>
+
+    <h2>Where it's used</h2>
+    <p><a href="../grokipedia/">Grokipedia Audit</a>: where an article argues rather than reports, its reasoning is checked against this catalog. A flag is a lead to follow up, not a verdict.</p>
+
+    <h2>Status</h2>
+    <ul>
+      <li>Version 0.6.1 (October 2026), MIT license.</li>
+      <li>Every score in the repo can be recomputed from the reviewer verdicts with the included scripts.</li>
+    </ul>
+
+    <h2>Links</h2>
+    <ul class="links-list">
+      <li><a href="https://github.com/neuresthetics/fallacy_catalog">Repository</a></li>
+      <li><a href="https://github.com/neuresthetics/fallacy_catalog/blob/main/METHOD.md">Method (METHOD.md)</a></li>
+      <li><a href="https://github.com/neuresthetics/fallacy_catalog/blob/main/FALLACIES.md">The catalog, readable (FALLACIES.md)</a></li>
+      <li><a href="https://github.com/neuresthetics/fallacy_catalog/tree/main/tests">Tests and scores</a></li>
+      <li><a href="https://github.com/neuresthetics/fallacy_catalog/blob/main/LICENSE">License (MIT)</a></li>
+    </ul>
+
+    <p class="back"><a href="../">← Back to home</a></p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Neuresthetics LLC · neuresthetic.net<br>
+    <a href="https://github.com/neuresthetics">github · neuresthetics</a></p>
+  </div>
+</footer>
+</body>
+</html>
