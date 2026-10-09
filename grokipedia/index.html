@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grokipedia Truth Audit · Jason Burns · Neuresthetics</title>
-<meta name="description" content="Audits of Grokipedia articles on saved snapshots, with the data and scripts to check them. So far: 58 circumcision-related articles and the Baruch Spinoza article.">
+<title>Grokipedia Audit · Jason Burns · Neuresthetics</title>
+<meta name="description" content="Checks Grokipedia articles against the sources they cite, one claim at a time, with the evidence kept next to every finding. Being rebuilt on a plain method; no current results yet.">
 <meta name="author" content="Jason Burns">
 <meta name="theme-color" content="#0b0b0c">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://neuresthetics.github.io/grokipedia/">
-<meta property="og:title" content="Grokipedia Truth Audit · Neuresthetics">
-<meta property="og:description" content="Audits of Grokipedia articles on saved snapshots, with the data and scripts to check them. So far: 58 circumcision-related articles and the Baruch Spinoza article.">
+<meta property="og:title" content="Grokipedia Audit · Neuresthetics">
+<meta property="og:description" content="Checks Grokipedia articles against the sources they cite, one claim at a time, with the evidence kept next to every finding. Being rebuilt on a plain method; no current results yet.">
 <meta property="og:image" content="https://neuresthetics.github.io/assets/img/N.jpg">
 <meta property="og:image:alt" content="Neuresthetics logo">
 <meta name="twitter:card" content="summary">
@@ -42,56 +42,44 @@
 <main id="main">
   <div class="wrap">
     <img class="banner" src="../assets/img/cards/card-grokipedia.jpg" width="900" height="450" alt="The Grok logo seen through a magnifying glass with a gold rim, on a dark dotted background">
-    <div class="lens-bar" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><circle cx="6.5" cy="6.5" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 10l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>saved snapshots · data · scripts</span></div>
-    <h1>Grokipedia Truth Audit</h1>
-    <p class="tag"><span class="k">audit</span><span class="v">fallacy · citation checks</span></p>
-    <p class="lead">Audits of Grokipedia articles, done on saved snapshots so every finding can be traced back to the exact text that was read.</p>
+    <div class="lens-bar" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><circle cx="6.5" cy="6.5" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 10l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>snapshot · claim and source · verdict</span></div>
+    <h1>Grokipedia Audit</h1>
+    <p class="tag"><span class="k">audit</span><span class="v">citation check · fallacy_catalog</span></p>
+    <p class="lead">Checks Grokipedia articles against the sources they cite, one claim at a time, with the evidence kept next to every finding so a reader can check the work without having to trust it.</p>
 
     <h2>What it is</h2>
-    <p>Grokipedia is xAI's AI-written encyclopedia. This project checks how its articles reason and how they cite sources. So far: 58 circumcision-related articles and the Baruch Spinoza article, each topic with its own results page in the repo.</p>
+    <p>Grokipedia is xAI's AI-written encyclopedia. Its articles look well sourced, but an AI writer can attach a citation that doesn't say what the sentence claims, or let the numbering slip so a footnote points to the wrong source. This audit looks for those problems claim by claim.</p>
 
     <h2>Who it's for</h2>
-    <p>Readers and editors of Grokipedia, people studying AI-written reference text, and anyone who would rather check the findings than take them on trust.</p>
+    <p>Readers and editors of Grokipedia, people studying AI-written reference text, and anyone who would rather check a finding than take it on trust.</p>
 
     <h2>How it works</h2>
+    <p>A general-purpose AI agent follows plain written steps. No custom framework, scoring system or private vocabulary.</p>
     <ul>
-      <li><strong>Save first.</strong> Each article is saved before it's audited, so findings point to the text that was read, even if the live page changes.</li>
-      <li><strong>Fallacy scan.</strong> A model reads every sentence against a fixed fallacy catalogue (substance_lens v0.5.9) and flags faults in the article's own reasoning, tagged by the side they favor. A script confirms each quote appears in the snapshot.</li>
-      <li><strong>Citation and fact check.</strong> Scripts count citation markers, sources and dead links; claims are then judged against their sources.</li>
-      <li><strong>Open data.</strong> Snapshots, flags, tables and scripts are in the repo; counts and charts can be recomputed from the flag files.</li>
-    </ul>
-
-    <h2>Findings so far</h2>
-    <ul class="topics">
-      <li>
-        <h3>Circumcision</h3>
-        <span class="count">58 articles · fallacy scan</span>
-        <p>A full read of 10,258 sentences and table rows raised 225 flags (154 pro, 49 anti, 22 neutral). In the 39 male-circumcision articles, 85% of sided flags were pro. A second blind read of the 24 articles with "circumcision" in the title kept the lean (84.0% pro, then 82.7%) and the order of most-flagged articles (Spearman 0.837), but flagged only 77 of the 128 sentences the first read had flagged (60%).</p>
-        <figure class="chart">
-          <img src="../assets/img/grokipedia/lean-by-run.png" width="1200" height="840" loading="lazy" alt="Stacked bar chart of flags by side for each run: run 1 partial read 239 flags (69.2% pro of sided); run 2 full read 225 (75.9%); run 2 on the 24 title matches 126 (84.0%); run 3 on the same 24, 111 (82.7%).">
-        </figure>
-      </li>
-      <li>
-        <h3>Baruch Spinoza</h3>
-        <span class="count">1 article · citation and fact check</span>
-        <p>From citation [90] on, the numbers appear shifted by nine places, so 110 of 389 citation markers (28%) point to the wrong source or to none. Of 263 sentences judged, 41 had a factual problem.</p>
-      </li>
+      <li><strong>Snapshot.</strong> Save the article as it appeared on the day of the audit, because Grokipedia pages change.</li>
+      <li><strong>Claim and source.</strong> Quote what the article says, then quote what the cited source actually says.</li>
+      <li><strong>Verdict.</strong> Mark each claim <em>supported</em>, <em>miscited</em> (the source exists but doesn't say this), <em>unsupported</em> (the source contradicts it or gives nothing to check) or <em>uncited</em>. Article, source and judgment are kept separate.</li>
+      <li><strong>Reasoning check.</strong> Where an article argues rather than reports, the argument is checked against <a href="https://github.com/neuresthetics/fallacy_catalog">fallacy_catalog</a>, a plain, sourced list of known logical fallacies. A flag is a lead to follow up, not a verdict.</li>
     </ul>
     <div class="note">
-      <p>Flags and verdicts are judgments, not proof. No human or independent model has checked them yet, and all scan runs used the same model family, so agreement shows consistency, not correctness. A fallacy flag means the reasoning has a gap, not that the claim is false. Treat single flags as leads.</p>
+      <p>Every finding records the date and the model that made the judgment. Nothing is presented as a human expert's ruling, and citations or quotes are never filled in from memory.</p>
     </div>
 
     <h2>Status</h2>
-    <p>First runs done 1–2 Oct 2026. Next: re-snapshot and re-scan the same articles later, then more articles and topics. An independent check of sampled flags would strengthen the results; it hasn't been done.</p>
+    <ul class="topics">
+      <li>
+        <h3>Rebuilding</h3>
+        <span class="count">no current results</span>
+        <p>Audits made before October 2026 used a custom framework that has since been retired. The circumcision and Spinoza topics are being rebuilt with the method above. Their older files will be rechecked or removed, and until then they aren't current findings. New results will be posted here once a topic is redone.</p>
+      </li>
+    </ul>
 
     <h2>Links</h2>
     <ul class="link-list">
-      <li><a class="gold-link" href="https://github.com/neuresthetics/grokipedia_audit">Repo: neuresthetics/grokipedia-truth-audit</a></li>
-      <li><a href="https://github.com/neuresthetics/grokipedia_audit/blob/main/topics/circumcision/README.md">Circumcision results</a></li>
-      <li><a href="https://github.com/neuresthetics/grokipedia_audit/blob/main/topics/spinoza/README.md">Spinoza results</a></li>
-      <li><a href="https://github.com/neuresthetics/grokipedia_audit/blob/main/docs/METHOD_THREE_PHASE_TEST.md">How the scans were tested</a></li>
-      <li><a href="https://github.com/neuresthetics/grokipedia_audit/blob/main/README.md#caveats">Caveats</a></li>
-      <li><a href="https://neuresthetics.github.io/substance-lens/">substance_lens</a></li>
+      <li><a class="gold-link" href="https://github.com/neuresthetics/grokipedia_audit">Repo: neuresthetics/grokipedia_audit</a></li>
+      <li><a href="https://github.com/neuresthetics/grokipedia_audit#how-it-works">How it works</a></li>
+      <li><a href="https://github.com/neuresthetics/fallacy_catalog">fallacy_catalog</a></li>
+      <li><a href="https://github.com/neuresthetics/grokipedia_audit#older-files">About the older files</a></li>
     </ul>
 
     <h2>Credits</h2>
