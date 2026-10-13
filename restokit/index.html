@@ -62,19 +62,19 @@
       <li><strong>Tech:</strong> the job flow in order, with safety checks called out when they matter: category, electrical, crawlspace gas.</li>
       <li><strong>Lead:</strong> containment, negative air, equipment sizing, and crew and labor calls.</li>
       <li><strong>PM:</strong> hold status, work authorization, daily drying readings, and verification before teardown.</li>
-      <li><strong>Estimator:</strong> remove-vs-dry and category calls, plus documentation that backs up the scope.</li>
+      <li><strong>Estimator:</strong> the Phase 0 survey and scope, remove-vs-dry and category calls, plus documentation that backs up the scope.</li>
     </ul>
 
     <h2 id="how-it-works">How it works</h2>
     <ol>
-      <li><strong>Load it.</strong> Attach <code>resto_kit_0.9.0.json</code> in the Grok app or add it to a Grok Bot's knowledge. Nothing to install.</li>
+      <li><strong>Load it.</strong> Attach <code>resto_kit_0.9.1.json</code> in the Grok app or add it to a Grok Bot's knowledge. Nothing to install.</li>
       <li><strong>Tell it the job.</strong> For example: "Category 2 supply-line leak, kitchen and crawlspace, 1990s house, I'm the PM."</li>
       <li><strong>Ask one thing at a time.</strong> "Remove or dry this LVP?" "Is the subfloor dry?"</li>
       <li><strong>Get a field-ready answer.</strong> Short and specific, grounded in IICRC S500 and S520 principles. Deeper detail only when you ask.</li>
     </ol>
     <p><strong>What's inside</strong></p>
     <ul>
-      <li><strong>Five gated phases</strong>, from Hold Status to Closeout, so safety steps don't get skipped.</li>
+      <li><strong>Five gated phases</strong>, from Survey &amp; Estimate to Closeout, so safety steps don't get skipped. <strong>Hold</strong> is a status a job can enter from any phase.</li>
       <li><strong>Modules</strong> for category, remove vs. dry, containment, negative air, equipment sizing, mold, and crawlspaces.</li>
       <li><strong>Base science:</strong> RH, temperature, GPP, vapor drive, wicking, material behavior, dry standards.</li>
       <li><strong>Field lessons</strong> from daily job logs, added only once they prove out on real jobs.</li>
@@ -83,8 +83,8 @@
     <h2 id="status">Status</h2>
     <div class="note">
       <ul>
-        <li><strong>Kit version:</strong> 0.9.0.</li>
-        <li>New in 0.9.0: legal/liability module, glossary, HVAC module.</li>
+        <li><strong>Kit version:</strong> 0.9.1.</li>
+        <li>New in 0.9.1: Survey &amp; Estimate is Phase 0, Hold is a status for any phase, and each phase lists its common hold points.</li>
         <li><strong>The full kit is private.</strong> It's developed in a private repo; the public repo shows what it covers and how it's laid out.</li>
         <li><strong>Next:</strong> connecting the field scope to Xactimate so the scope and the estimate line up.</li>
         <li><strong>For shops:</strong> demo on request. I can build a company version around a shop's own procedures.</li>
