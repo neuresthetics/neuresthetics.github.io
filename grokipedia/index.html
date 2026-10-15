@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Grokipedia Audit · Jason Burns · Neuresthetics</title>
-<meta name="description" content="Checks Grokipedia articles against the sources they cite, one claim at a time, with the evidence kept next to every finding. Being rebuilt on a plain method; no current results yet.">
+<meta name="description" content="Checks Grokipedia articles against the sources they cite, one claim at a time, with the evidence kept next to every finding. Current results: a circumcision fallacy_catalog benchmark run and a Spinoza citation audit.">
 <meta name="author" content="Jason Burns">
 <meta name="theme-color" content="#0b0b0c">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://neuresthetics.github.io/grokipedia/">
 <meta property="og:title" content="Grokipedia Audit · Neuresthetics">
-<meta property="og:description" content="Checks Grokipedia articles against the sources they cite, one claim at a time, with the evidence kept next to every finding. Being rebuilt on a plain method; no current results yet.">
+<meta property="og:description" content="Checks Grokipedia articles against the sources they cite, one claim at a time, with the evidence kept next to every finding. Current results: a circumcision fallacy_catalog benchmark run and a Spinoza citation audit.">
 <meta property="og:image" content="https://neuresthetics.github.io/assets/img/N.jpg">
 <meta property="og:image:alt" content="Neuresthetics logo">
 <meta name="twitter:card" content="summary">
@@ -65,14 +65,23 @@
       <p>Every finding records the date and the model that made the judgment. Nothing is presented as a human expert's ruling, and citations or quotes are never filled in from memory.</p>
     </div>
 
-    <h2>Status</h2>
+    <h2>Current results</h2>
     <ul class="topics">
       <li>
-        <h3>Rebuilding</h3>
-        <span class="count">no current results</span>
-        <p>Audits made before October 2026 used a custom framework that has since been retired. The circumcision and Spinoza topics are being rebuilt with the method above. Their older files will be rechecked or removed, and until then they aren't current findings. New results will be posted here once a topic is redone.</p>
+        <h3>Circumcision: fallacy_catalog benchmark</h3>
+        <span class="count">run 2026-10-08 · 39 articles</span>
+        <p>Every sentence in 39 circumcision articles (snapshots from 2026-10-01) was labeled, and three AI reviewers flagged reasoning problems against fallacy_catalog. Flags are leads to follow up, not verdicts.</p>
+        <p><a href="https://github.com/neuresthetics/grokipedia_audit/blob/main/topics/circumcision/runs/2026-10-08_fallacy_catalog/README.md">Run README</a> · <a href="https://github.com/neuresthetics/grokipedia_audit/blob/main/topics/circumcision/runs/2026-10-08_fallacy_catalog/WALKTHROUGH.md">Step-by-step walkthrough</a></p>
+      </li>
+      <li>
+        <h3>Spinoza: citation audit</h3>
+        <span class="count">run 2026-10-15 · 401 sentences</span>
+        <p>Each sentence of the Baruch Spinoza article was checked against the source its footnote links, and claims about the <em>Ethics</em> against Spinoza's text. A footnote numbering shift means only 30 of 401 sentences are supported by the source they actually link; with the shift undone, 135 are.</p>
+        <p><a href="https://github.com/neuresthetics/grokipedia_audit/blob/main/topics/spinoza/articles/baruch-spinoza/analyses/2026-10-15/README.md">Run README</a> · <a href="https://github.com/neuresthetics/grokipedia_audit/blob/main/topics/spinoza/README.md#update-2026-10-15">Topic summary</a></p>
+        <img src="https://raw.githubusercontent.com/neuresthetics/grokipedia_audit/main/docs/img/spinoza/2026-10-15/headline_content_vs_citations.png" alt="Bar chart: the same 401 sentences judged as linked and with the footnote shift undone" loading="lazy" style="max-width:100%;height:auto">
       </li>
     </ul>
+    <p>Audits made before October 2026 used a custom framework that has since been retired; those older files aren't current findings.</p>
 
     <h2>Links</h2>
     <ul class="link-list">
