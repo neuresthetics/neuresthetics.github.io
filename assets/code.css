@@ -46,9 +46,9 @@
   --frame-ink: #6e7582;
   --frame-ink-soft: #555b68;
   --frame-ghost: #3d4350;
-  --frame-accent: var(--accent);
+  --frame-accent: #7a808c;   /* quiet ink, not magenta */
   --frame-node-fill: var(--bg);
-  --frame-pad: #7a808c;
+  --frame-pad: #686e7a;
   outline: none;
 }
 .theme-code .tabs {
@@ -220,8 +220,8 @@
 .theme-code .pane-body ul:not(.md-links) li::marker { color: var(--accent); }
 
 /* Framing lattice — thick geometric Celtic (blocky over-under, four-fold
-   voids + lobes) meeting digital terminals. Symmetrical side rails; filled
-   bands only (no hairlines). Reference knot language + light cyber pinch. */
+   voids + lobes). Symmetrical side rails; filled bands only (no hairlines).
+   Quiet ink terminals — cyber pads/glow dialed back. */
 .theme-code .pane-ornament {
   position: absolute;
   z-index: 2;
@@ -275,90 +275,86 @@
   transition: fill 0.35s ease, opacity 0.35s ease;
 }
 .theme-code .pane-ornament .frame-knot {
-  fill: #8a909c;
+  fill: #848a96;
   stroke: none;
-  transition: fill 0.35s ease;
+  transition: fill 0.35s ease, opacity 0.35s ease;
 }
 .theme-code .pane-ornament .frame-accent-fill {
-  fill: var(--frame-accent);
+  fill: var(--frame-ink);
   stroke: none;
-  opacity: 0.9;
+  opacity: 0.75;
   transition: fill 0.35s ease, opacity 0.35s ease;
 }
 
-/* Circuit terminals (digital ends) */
+/* Quiet end-caps (legacy pad/node/via hooks → ink) */
 .theme-code .pane-ornament .frame-pad {
   fill: var(--frame-pad);
   stroke: none;
   transition: fill 0.35s ease;
 }
 .theme-code .pane-ornament .frame-trace {
-  fill: var(--frame-ink);
+  fill: var(--frame-ink-soft);
   stroke: none;
-  opacity: 0.95;
+  opacity: 0.9;
   transition: fill 0.35s ease;
 }
 .theme-code .pane-ornament .frame-node {
   fill: var(--frame-node-fill);
-  stroke: var(--ink);
-  stroke-width: 1.1;
-  transition: stroke 0.35s ease, fill 0.35s ease;
+  stroke: var(--frame-ink);
+  stroke-width: 1;
+  opacity: 0.55;
+  transition: stroke 0.35s ease, fill 0.35s ease, opacity 0.35s ease;
 }
 .theme-code .pane-ornament .frame-root {
-  fill: var(--frame-accent);
-  stroke: var(--frame-accent);
+  fill: var(--frame-ink);
+  stroke: var(--frame-ink);
+  opacity: 0.7;
 }
 .theme-code .pane-ornament .frame-via {
-  fill: var(--frame-accent);
+  fill: var(--frame-ink-soft);
   stroke: none;
-  opacity: 0.8;
+  opacity: 0.45;
 }
-.theme-code .pane-ornament .frame-circuit {
+.theme-code .pane-ornament .frame-circuit,
+.theme-code .pane-ornament .frame-ends {
   transition: opacity 0.35s ease;
 }
+
 
 /* Legacy stroke hooks (unused by filled paths; keep harmless) */
 .theme-code .pane-ornament .frame-ink,
 .theme-code .pane-ornament .frame-ghost,
 .theme-code .pane-ornament .frame-accent { fill: none; stroke: none; }
 
-/* Slow pulse / cyber pinch */
+/* Slow ink breath — no neon glow */
 @keyframes frame-pulse {
-  0%, 100% { opacity: 0.78; }
-  50% { opacity: 1; }
+  0%, 100% { opacity: 0.82; }
+  50% { opacity: 0.96; }
 }
 @keyframes frame-pinch {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.03); }
-}
-@keyframes frame-glow {
-  0%, 100% { filter: drop-shadow(0 0 0 transparent); }
-  50% { filter: drop-shadow(0 0 4px rgba(217, 79, 163, 0.4)); }
+  50% { transform: scale(1.015); }
 }
 
 .theme-code .pane-ornament .frame-mass,
 .theme-code .pane-ornament .frame-mass-soft {
-  animation: frame-pulse 8s ease-in-out infinite;
+  animation: frame-pulse 10s ease-in-out infinite;
 }
 .theme-code .pane-ornament .frame-knot {
   transform-box: fill-box;
   transform-origin: center;
-  animation: frame-pinch 6.5s ease-in-out infinite;
-}
-.theme-code .pane-ornament .frame-root,
-.theme-code .pane-ornament .frame-accent-fill {
-  animation: frame-glow 5.5s ease-in-out infinite;
+  animation: frame-pinch 9s ease-in-out infinite;
 }
 
-/* Hover / focus / touch: fabric warms, terminals brighten */
+/* Hover / focus / touch: ink lifts slightly, stays Celtic */
 .theme-code .pane:hover,
 .theme-code .pane:focus-within,
 .theme-code .pane:active {
-  --frame-ink: #a07090;
-  --frame-ink-soft: #7a4a68;
-  --frame-pad: #b07a9a;
-  --frame-accent: #e88bc4;
-  box-shadow: 0 14px 44px rgba(217, 79, 163, 0.18);
+  --frame-ink: #8a919c;
+  --frame-ink-soft: #6a7180;
+  --frame-pad: #7a828e;
+  --frame-accent: #8a919c;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.28);
 }
 .theme-code .pane:hover .pane-ornament.dual,
 .theme-code .pane:focus-within .pane-ornament.dual,
@@ -374,7 +370,7 @@
 .theme-code .pane:hover .pane-ornament .frame-knot,
 .theme-code .pane:focus-within .pane-ornament .frame-knot,
 .theme-code .pane:active .pane-ornament .frame-knot {
-  fill: var(--accent-soft);
+  fill: #9aa1ac;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -383,27 +379,25 @@
     cursor: default;
   }
   .theme-code .pane-ornament:hover .frame-mass {
-    fill: var(--accent-soft);
+    fill: #8a919c;
     opacity: 1;
   }
   .theme-code .pane-ornament:hover .frame-mass-soft {
-    fill: #9a4a78;
+    fill: #6a7180;
   }
   .theme-code .pane-ornament:hover .frame-pad {
-    fill: #e88bc4;
+    fill: #848b96;
   }
   .theme-code .pane-ornament:active .frame-mass,
   .theme-code .pane-ornament:active .frame-pad {
-    fill: #ffd0ea;
+    fill: #a0a6b0;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .theme-code .pane-ornament .frame-mass,
   .theme-code .pane-ornament .frame-mass-soft,
-  .theme-code .pane-ornament .frame-knot,
-  .theme-code .pane-ornament .frame-root,
-  .theme-code .pane-ornament .frame-accent-fill {
+  .theme-code .pane-ornament .frame-knot {
     animation: none !important;
   }
 }
