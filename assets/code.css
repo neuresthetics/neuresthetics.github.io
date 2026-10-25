@@ -65,6 +65,7 @@
   box-shadow: inset 0 2px 0 var(--accent), 1px 0 0 var(--line);
 }
 .theme-code .pane-body {
+  position: relative;
   padding: 1.85rem 1.85rem 1.5rem;
   box-shadow: inset 3px 0 0 var(--accent);
 }
@@ -209,3 +210,48 @@
   margin: 0 0 0.55rem;
 }
 .theme-code .pane-body ul:not(.md-links) li::marker { color: var(--accent); }
+
+/* Lattice motif — SVG primary; watermark + quiet in-pane figure (not a banner) */
+.theme-code .lattice-mark {
+  position: absolute;
+  right: -1.5rem;
+  top: 0.4rem;
+  width: min(52%, 22rem);
+  height: auto;
+  opacity: 0.11;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  mix-blend-mode: screen;
+}
+.theme-code .pane-body > :not(.lattice-mark) { position: relative; z-index: 1; }
+
+.theme-code figure.lattice {
+  margin: 0 0 1.35rem;
+  padding: 0.65rem 0.75rem 0.55rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+.theme-code figure.lattice img {
+  display: block;
+  width: 100%;
+  max-height: 13.5rem;
+  height: auto;
+  object-fit: contain;
+  object-position: center top;
+  border-radius: 3px;
+}
+.theme-code figure.lattice figcaption {
+  margin-top: 0.45rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--dim);
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .theme-code .lattice-mark { width: 70%; opacity: 0.08; }
+  .theme-code figure.lattice img { max-height: 10.5rem; }
+}
