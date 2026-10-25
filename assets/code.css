@@ -29,44 +29,118 @@
 .theme-code a { color: var(--link); }
 .theme-code a:hover { color: var(--accent-soft); }
 
-/* Photo above the editor pane */
+/* Optional photo above the editor pane (book page: none) */
 .theme-code .banner { border: 1px solid var(--line); border-radius: 10px 10px 0 0; margin: 0; border-bottom: 0; }
+.theme-code .banner + .pane { border-radius: 0 0 10px 10px; }
 
-/* Editor pane: a tab bar with the open file, then the text with a magenta rule */
+/* Editor pane: tab bar, then text with a magenta rule.
+   Full radius when there is no banner above. */
 .theme-code .pane {
   background: var(--bg);
   border: 1px solid var(--line);
-  border-radius: 0 0 10px 10px;
+  border-radius: 10px;
   box-shadow: 0 14px 40px rgba(217, 79, 163, 0.10);
   margin-bottom: 1rem;
+  overflow: hidden;
 }
 .theme-code .tabs {
   display: flex;
-  height: 2.1rem;
+  height: 2.2rem;
   background: var(--panel-bar);
   border-bottom: 1px solid var(--line);
   font-size: 0.78rem;
   white-space: nowrap;
   overflow: hidden;
 }
-.theme-code .tabs span { display: flex; align-items: center; padding: 0 1.25rem; color: var(--dim); box-shadow: 1px 0 0 var(--line); }
-.theme-code .tabs .on { background: var(--bg); color: var(--ink); box-shadow: inset 0 2px 0 var(--accent), 1px 0 0 var(--line); }
-.theme-code .pane-body { padding: 1.75rem 1.75rem 1.25rem; box-shadow: inset 3px 0 0 var(--accent); }
+.theme-code .tabs span {
+  display: flex;
+  align-items: center;
+  padding: 0 1.15rem;
+  color: var(--dim);
+  box-shadow: 1px 0 0 var(--line);
+}
+.theme-code .tabs .on {
+  background: var(--bg);
+  color: var(--ink);
+  box-shadow: inset 0 2px 0 var(--accent), 1px 0 0 var(--line);
+}
+.theme-code .pane-body {
+  padding: 1.85rem 1.85rem 1.5rem;
+  box-shadow: inset 3px 0 0 var(--accent);
+}
 
 /* Headings as markdown */
-.theme-code h1 { font-family: var(--mono); font-weight: 600; color: var(--fn); font-size: 1.8rem; letter-spacing: -0.01em; }
+.theme-code h1 {
+  font-family: var(--mono);
+  font-weight: 600;
+  color: var(--fn);
+  font-size: 1.8rem;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.65rem;
+}
 .theme-code h1::before { content: "# "; color: var(--accent); }
-.theme-code h2 { font-family: var(--mono); color: var(--fn); font-weight: 600; font-size: 1.1rem; border-bottom: 1px dashed var(--line); margin-top: 2.25rem; }
+.theme-code h2 {
+  font-family: var(--mono);
+  color: var(--fn);
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-bottom: 1px dashed var(--line);
+  margin-top: 2.4rem;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.35rem;
+}
 .theme-code h2::before { content: "## "; color: var(--accent); }
 
 /* Badge, like the card's */
-.theme-code .tag { display: inline-flex; margin: 0 0 1.25rem; font-size: 0.75rem; line-height: 1; letter-spacing: 0; text-transform: none; border-radius: 4px; overflow: hidden; }
+.theme-code .tag {
+  display: inline-flex;
+  margin: 0 0 1.1rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: none;
+  border-radius: 4px;
+  overflow: hidden;
+}
 .theme-code .tag span { padding: 0.35rem 0.6rem; }
 .theme-code .tag .k { background: #2c2f38; color: var(--key); }
 .theme-code .tag .v { background: var(--accent); color: #fff; }
 
-.theme-code .lead { color: var(--ink); font-size: 1rem; }
+/* Quiet git-flash status block (README-style) */
+.theme-code pre.status {
+  margin: 0 0 1.35rem;
+  padding: 0.85rem 1rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: inset 3px 0 0 var(--accent);
+  overflow-x: auto;
+  font-size: 0.84rem;
+  line-height: 1.7;
+}
+.theme-code pre.status .k { color: var(--accent); font-weight: 600; }
+.theme-code pre.status .s { color: var(--ink); }
+
+.theme-code .lead { color: var(--ink); font-size: 1rem; margin: 0 0 0.9rem; }
 .theme-code .lead em { color: var(--str); font-style: normal; }
+.theme-code .pitch { color: var(--dim); margin: 0 0 1rem; }
+.theme-code .pane-body > p { margin: 0 0 0.85rem; }
+.theme-code .pane-body code {
+  font-family: var(--mono);
+  font-size: 0.88em;
+  color: var(--str);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 0.05em 0.35em;
+}
+.theme-code .pane-body pre code {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+}
 
 /* An entry shown as a small yaml block */
 .theme-code pre {
@@ -85,24 +159,53 @@
 .theme-code pre .c { color: var(--dim); font-style: italic; }
 
 /* Links written like markdown links */
-.theme-code .md-links { list-style: none; padding: 0; margin: 0; }
-.theme-code .md-links li { margin: 0 0 0.3rem; }
+.theme-code .md-links { list-style: none; padding: 0; margin: 0.25rem 0 0; }
+.theme-code .md-links li { margin: 0 0 0.4rem; }
 .theme-code .md-links a::before { content: "["; color: var(--dim); }
 .theme-code .md-links a::after { content: "](\2026)"; color: var(--dim); }
 
-.theme-code .note { background: var(--panel); border-color: var(--line); border-left: 3px solid var(--accent); border-radius: 6px; color: var(--ink); }
+.theme-code .note {
+  background: var(--panel);
+  border-color: var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  color: var(--ink);
+}
 
+.theme-code .back { margin-top: 0.5rem; }
 .theme-code .back a, .theme-code .site-footer a { color: var(--dim); }
+.theme-code .back a:hover, .theme-code .site-footer a:hover { color: var(--accent-soft); }
 .theme-code .x-note { color: var(--dim); }
 
 @media (max-width: 640px) {
-  .theme-code .pane-body { padding: 1.25rem 1.1rem 1rem; }
-  .theme-code h1 { font-size: 1.45rem; }
+  .theme-code .pane-body { padding: 1.3rem 1.1rem 1.1rem; }
+  .theme-code h1 { font-size: 1.4rem; }
+  .theme-code .tabs span:nth-child(n+3) { display: none; }
+  .theme-code pre.status { font-size: 0.78rem; }
 }
 
 /* Verse sample as a quoted block */
-.theme-code blockquote.verses { background: var(--panel); border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0; padding: 0.85rem 1.1rem; margin: 1rem 0 1.25rem; }
-.theme-code blockquote.verses p { margin: 0 0 0.6rem; }
+.theme-code blockquote.verses {
+  background: var(--panel);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+  padding: 0.95rem 1.15rem;
+  margin: 1.1rem 0 1.35rem;
+}
+.theme-code blockquote.verses p { margin: 0 0 0.7rem; color: var(--ink); }
 .theme-code blockquote.verses p:last-child { margin-bottom: 0; }
-.theme-code blockquote.verses .vn { font-family: var(--mono); color: var(--accent); margin-right: 0.35rem; }
+.theme-code blockquote.verses .vn {
+  font-family: var(--mono);
+  color: var(--accent);
+  margin-right: 0.35rem;
+  font-weight: 600;
+}
+.theme-code blockquote.verses em { color: var(--str); font-style: italic; }
+.theme-code .pane-body ul:not(.md-links) {
+  margin: 0.4rem 0 0;
+  padding-left: 1.2rem;
+}
+.theme-code .pane-body ul:not(.md-links) li {
+  margin: 0 0 0.55rem;
+}
 .theme-code .pane-body ul:not(.md-links) li::marker { color: var(--accent); }
