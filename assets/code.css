@@ -219,8 +219,9 @@
 }
 .theme-code .pane-body ul:not(.md-links) li::marker { color: var(--accent); }
 
-/* Framing lattice — filled cyber-Celtic weave + circuit terminals.
-   Symmetrical left/right rails; strokes replaced by solid masses. */
+/* Framing lattice — thick geometric Celtic (blocky over-under, four-fold
+   voids + lobes) meeting digital terminals. Symmetrical side rails; filled
+   bands only (no hairlines). Reference knot language + light cyber pinch. */
 .theme-code .pane-ornament {
   position: absolute;
   z-index: 2;
@@ -228,17 +229,17 @@
   overflow: visible;
   color: var(--frame-ink);
 }
-.theme-code .pane-ornament.tl { top: 0.1rem; left: 0.1rem; width: 3.6rem; height: 3.6rem; }
-.theme-code .pane-ornament.tr { top: 0.1rem; right: 0.1rem; width: 3.6rem; height: 3.6rem; }
-.theme-code .pane-ornament.bl { bottom: 0.1rem; left: 0.1rem; width: 3.6rem; height: 3.6rem; }
-.theme-code .pane-ornament.br { bottom: 0.1rem; right: 0.1rem; width: 3.6rem; height: 3.6rem; }
+.theme-code .pane-ornament.tl { top: 0.1rem; left: 0.1rem; width: 3.9rem; height: 3.9rem; }
+.theme-code .pane-ornament.tr { top: 0.1rem; right: 0.1rem; width: 3.9rem; height: 3.9rem; }
+.theme-code .pane-ornament.bl { bottom: 0.1rem; left: 0.1rem; width: 3.9rem; height: 3.9rem; }
+.theme-code .pane-ornament.br { bottom: 0.1rem; right: 0.1rem; width: 3.9rem; height: 3.9rem; }
 .theme-code .pane-ornament.rail-l,
 .theme-code .pane-ornament.rail-r {
   top: 2.55rem;
-  width: 2.35rem;
+  width: 2.85rem;
   height: calc(100% - 3.3rem);
-  max-height: 24rem;
-  opacity: 0.92;
+  max-height: 26rem;
+  opacity: 0.94;
 }
 .theme-code .pane-ornament.rail-l { left: 0.05rem; }
 .theme-code .pane-ornament.rail-r { right: 0.05rem; }
@@ -411,9 +412,9 @@
   .theme-code .pane-ornament.tl,
   .theme-code .pane-ornament.tr,
   .theme-code .pane-ornament.bl,
-  .theme-code .pane-ornament.br { width: 2.7rem; height: 2.7rem; }
+  .theme-code .pane-ornament.br { width: 2.9rem; height: 2.9rem; }
   .theme-code .pane-ornament.rail-l,
-  .theme-code .pane-ornament.rail-r { width: 1.55rem; opacity: 0.88; }
+  .theme-code .pane-ornament.rail-r { width: 1.85rem; opacity: 0.9; }
   .theme-code .pane-ornament.dual { width: 5.2rem; height: 3rem; opacity: 0.55; }
   .theme-code .pane-ornament.weave { display: none; }
 }
