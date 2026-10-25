@@ -36,12 +36,18 @@
 /* Editor pane: tab bar, then text with a magenta rule.
    Full radius when there is no banner above. */
 .theme-code .pane {
+  position: relative;
   background: var(--bg);
   border: 1px solid var(--line);
   border-radius: 10px;
   box-shadow: 0 14px 40px rgba(217, 79, 163, 0.10);
   margin-bottom: 1rem;
   overflow: hidden;
+  --frame-ink: #6e7582;
+  --frame-ghost: #3d4350;
+  --frame-accent: var(--accent);
+  --frame-node-fill: var(--bg);
+  outline: none;
 }
 .theme-code .tabs {
   display: flex;
@@ -66,7 +72,7 @@
 }
 .theme-code .pane-body {
   position: relative;
-  padding: 1.85rem 1.85rem 1.5rem;
+  padding: 1.85rem 1.85rem 1.5rem 2.15rem;
   box-shadow: inset 3px 0 0 var(--accent);
 }
 
@@ -179,7 +185,7 @@
 .theme-code .x-note { color: var(--dim); }
 
 @media (max-width: 640px) {
-  .theme-code .pane-body { padding: 1.3rem 1.1rem 1.1rem; }
+  .theme-code .pane-body { padding: 1.3rem 1.1rem 1.1rem 1.55rem; }
   .theme-code h1 { font-size: 1.4rem; }
   .theme-code .tabs span:nth-child(n+3) { display: none; }
   .theme-code pre.status { font-size: 0.78rem; }
@@ -211,47 +217,157 @@
 }
 .theme-code .pane-body ul:not(.md-links) li::marker { color: var(--accent); }
 
-/* Lattice motif — SVG primary; watermark + quiet in-pane figure (not a banner) */
-.theme-code .lattice-mark {
+/* Framing lattice — inline SVG ornaments, strokes owned by stylesheet.
+   Woven into pane edges/corners (not a captioned diagram). */
+.theme-code .pane-ornament {
   position: absolute;
-  right: -1.5rem;
-  top: 0.4rem;
-  width: min(52%, 22rem);
-  height: auto;
-  opacity: 0.11;
+  z-index: 2;
   pointer-events: none;
-  user-select: none;
+  overflow: visible;
+  color: var(--frame-ink);
+}
+.theme-code .pane-ornament.tl { top: 0.15rem; left: 0.15rem; width: 3.4rem; height: 3.4rem; }
+.theme-code .pane-ornament.tr { top: 0.15rem; right: 0.15rem; width: 3.4rem; height: 3.4rem; }
+.theme-code .pane-ornament.bl { bottom: 0.15rem; left: 0.15rem; width: 3.4rem; height: 3.4rem; }
+.theme-code .pane-ornament.br { bottom: 0.15rem; right: 0.15rem; width: 3.4rem; height: 3.4rem; }
+.theme-code .pane-ornament.rail {
+  top: 2.6rem;
+  left: 0.05rem;
+  width: 1.65rem;
+  height: calc(100% - 3.4rem);
+  max-height: 22rem;
+}
+.theme-code .pane-ornament.weave {
+  top: 2.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(70%, 20rem);
+  height: 1.1rem;
+  opacity: 0.85;
+}
+.theme-code .pane-ornament.dual {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.2rem;
+  width: 6.5rem;
+  height: 3.9rem;
+  opacity: 0.75;
   z-index: 0;
-  mix-blend-mode: screen;
 }
-.theme-code .pane-body > :not(.lattice-mark) { position: relative; z-index: 1; }
 
-.theme-code figure.lattice {
-  margin: 0 0 1.35rem;
-  padding: 0.65rem 0.75rem 0.55rem;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  box-shadow: inset 3px 0 0 var(--accent);
+.theme-code .pane-ornament .frame-ink {
+  stroke: var(--frame-ink);
+  stroke-width: 1.1;
+  fill: none;
+  transition: stroke 0.35s ease, opacity 0.35s ease;
 }
-.theme-code figure.lattice img {
-  display: block;
-  width: 100%;
-  max-height: 13.5rem;
-  height: auto;
-  object-fit: contain;
-  object-position: center top;
-  border-radius: 3px;
+.theme-code .pane-ornament .frame-ghost,
+.theme-code .pane-ornament line.frame-ghost {
+  stroke: var(--frame-ghost);
+  stroke-width: 0.85;
+  stroke-dasharray: 2 3;
+  fill: none;
+  opacity: 0.7;
+  transition: stroke 0.35s ease, opacity 0.35s ease;
 }
-.theme-code figure.lattice figcaption {
-  margin-top: 0.45rem;
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
-  color: var(--dim);
-  text-align: right;
+.theme-code .pane-ornament .frame-accent {
+  stroke: var(--frame-accent);
+  stroke-width: 1.15;
+  fill: none;
+  transition: stroke 0.35s ease, opacity 0.35s ease;
+}
+.theme-code .pane-ornament .frame-node {
+  fill: var(--frame-node-fill);
+  stroke: var(--frame-ink);
+  stroke-width: 1.1;
+  transition: stroke 0.35s ease, fill 0.35s ease;
+}
+.theme-code .pane-ornament .frame-root {
+  stroke: var(--frame-accent);
+  fill: var(--frame-accent);
+  fill-opacity: 0.35;
+}
+
+/* Slow ink drift / pulse — cyber quiet */
+@keyframes frame-pulse {
+  0%, 100% { opacity: 0.72; }
+  50% { opacity: 1; }
+}
+@keyframes frame-drift {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -18; }
+}
+@keyframes frame-glow {
+  0%, 100% { filter: drop-shadow(0 0 0 transparent); }
+  50% { filter: drop-shadow(0 0 3px rgba(217, 79, 163, 0.35)); }
+}
+
+.theme-code .pane-ornament .frame-ink,
+.theme-code .pane-ornament .frame-accent {
+  animation: frame-pulse 7.5s ease-in-out infinite;
+}
+.theme-code .pane-ornament .frame-ghost,
+.theme-code .pane-ornament line.frame-ghost {
+  animation: frame-drift 14s linear infinite, frame-pulse 9s ease-in-out infinite;
+}
+.theme-code .pane-ornament .frame-root {
+  animation: frame-glow 6s ease-in-out infinite;
+}
+
+/* Hover / focus / touch: ink warms toward magenta, accent brightens */
+.theme-code .pane:hover,
+.theme-code .pane:focus-within,
+.theme-code .pane:active {
+  --frame-ink: #b07a9a;
+  --frame-ghost: #7a4a68;
+  --frame-accent: #e88bc4;
+  box-shadow: 0 14px 44px rgba(217, 79, 163, 0.18);
+}
+.theme-code .pane:hover .pane-ornament.dual,
+.theme-code .pane:focus-within .pane-ornament.dual,
+.theme-code .pane:active .pane-ornament.dual {
+  opacity: 1;
+}
+.theme-code .pane:hover .pane-ornament .frame-root,
+.theme-code .pane:focus-within .pane-ornament .frame-root,
+.theme-code .pane:active .pane-ornament .frame-root {
+  fill-opacity: 0.85;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .theme-code .pane-ornament {
+    pointer-events: auto;
+    cursor: default;
+  }
+  .theme-code .pane-ornament:hover .frame-ink {
+    stroke: var(--accent-soft);
+  }
+  .theme-code .pane-ornament:hover .frame-accent,
+  .theme-code .pane-ornament:hover .frame-root {
+    stroke: #ffb3de;
+  }
+  .theme-code .pane-ornament:active .frame-ink,
+  .theme-code .pane-ornament:active .frame-accent {
+    stroke: #fff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-code .pane-ornament .frame-ink,
+  .theme-code .pane-ornament .frame-accent,
+  .theme-code .pane-ornament .frame-ghost,
+  .theme-code .pane-ornament line.frame-ghost,
+  .theme-code .pane-ornament .frame-root {
+    animation: none !important;
+  }
 }
 
 @media (max-width: 640px) {
-  .theme-code .lattice-mark { width: 70%; opacity: 0.08; }
-  .theme-code figure.lattice img { max-height: 10.5rem; }
+  .theme-code .pane-ornament.tl,
+  .theme-code .pane-ornament.tr,
+  .theme-code .pane-ornament.bl,
+  .theme-code .pane-ornament.br { width: 2.6rem; height: 2.6rem; }
+  .theme-code .pane-ornament.rail { width: 1.25rem; opacity: 0.85; }
+  .theme-code .pane-ornament.dual { width: 5rem; height: 3rem; opacity: 0.55; }
+  .theme-code .pane-ornament.weave { display: none; }
 }
