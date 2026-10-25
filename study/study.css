@@ -1,0 +1,344 @@
+/* Study page only. Palette sampled from the Brain mountain painting.
+   Loaded by study/index.html. Do not link this from other pages. */
+
+.theme-study {
+  --bg: #f6f0ec;
+  --panel: #fffaf8;
+  --ink: #28354f;
+  --dim: #445b87;
+  --line: #e4d4d6;
+  --accent: #445b87;
+  --accent-soft: #28354f;
+  --rose: #cea1a7;
+  --mauve: #a67fa0;
+  --mauve-2: #b893a9;
+  --mauve-3: #bfa8b5;
+  --purple: #6f6383;
+  --purple-2: #867ba7;
+  --blue-2: #667db4;
+  --blue-3: #8191c1;
+  --blue-4: #97a0c5;
+  --taupe: #ceb4ae;
+  --navy: #28354f;
+  --paper: #f6f0ec;
+
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(ellipse 80% 42% at 0% 18%, rgba(206, 161, 167, 0.28), transparent 56%),
+    radial-gradient(ellipse 62% 36% at 100% 0%, rgba(129, 145, 193, 0.22), transparent 52%),
+    radial-gradient(ellipse 55% 32% at 78% 100%, rgba(206, 180, 174, 0.34), transparent 58%);
+  color: var(--navy);
+  color-scheme: light;
+  font-family: Georgia, "Iowan Old Style", Palatino, "Palatino Linotype", "Times New Roman", serif;
+  font-size: 1.075rem;
+  line-height: 1.7;
+}
+
+.theme-study ::selection {
+  background: #cea1a7;
+  color: #28354f;
+}
+
+.theme-study .skip {
+  background: #28354f;
+  color: #f6f0ec;
+}
+
+.theme-study .site-header {
+  background: #28354f;
+  border-bottom: 1px solid rgba(206, 180, 174, 0.45);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.theme-study .site-header .brand {
+  color: #f6f0ec;
+}
+
+.theme-study .site-header .brand:hover {
+  color: #ceb4ae;
+  text-decoration: none;
+}
+
+.theme-study .site-header .site-nav a {
+  color: #bfa8b5;
+}
+
+.theme-study .site-header .site-nav a:hover,
+.theme-study .site-header .site-nav a[aria-current="page"] {
+  color: #ceb4ae;
+}
+
+.theme-study main {
+  padding-top: 0;
+  padding-bottom: 4rem;
+}
+
+.theme-study main > .wrap {
+  padding-top: 1.6rem;
+}
+
+/* Full-width painting under the shared nav */
+.theme-study .hero {
+  margin: 0;
+}
+
+.theme-study .hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  background: #28354f;
+}
+
+.theme-study .hero figcaption {
+  margin: 0.7rem auto 0;
+  color: #445b87;
+  font-size: 0.92rem;
+}
+
+.theme-study h1 {
+  color: #28354f;
+  font-size: 2.35rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.7rem;
+}
+
+.theme-study h2 {
+  color: #28354f;
+  font-size: 1.35rem;
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-top: 2.6rem;
+}
+
+.theme-study h2::after {
+  content: "";
+  display: block;
+  width: 3.4rem;
+  height: 2px;
+  margin-top: 0.45rem;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #cea1a7, #8191c1);
+}
+
+.theme-study h3 {
+  color: #445b87;
+  margin-top: 1.6rem;
+}
+
+.theme-study .tag {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.5rem;
+  margin: 0 0 1.15rem;
+  padding: 0.28rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(206, 161, 167, 0.28);
+  border: 1px solid rgba(166, 127, 160, 0.55);
+  color: #28354f;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.theme-study .tag .k {
+  color: #6f6383;
+  font-weight: 700;
+}
+
+.theme-study .tag .v {
+  color: #28354f;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  font-size: 0.92rem;
+}
+
+.theme-study .lead {
+  color: #28354f;
+  font-size: 1.22rem;
+  line-height: 1.55;
+}
+
+.theme-study .runs {
+  color: #445b87;
+}
+
+.theme-study .runs b {
+  color: #6f6383;
+}
+
+.theme-study strong {
+  color: #28354f;
+}
+
+.theme-study li::marker {
+  color: #a67fa0;
+}
+
+.theme-study main a {
+  color: #445b87;
+  text-decoration: underline;
+  text-decoration-color: rgba(166, 127, 160, 0.85);
+  text-underline-offset: 0.16em;
+}
+
+.theme-study main a:hover {
+  color: #28354f;
+  text-decoration-color: #28354f;
+}
+
+.theme-study a:focus-visible {
+  outline-color: #a67fa0;
+}
+
+/* Faces collage, lower on the page */
+.theme-study .faces {
+  margin: 2.4rem 0 0.4rem;
+  padding: 0.7rem 0.7rem 0.9rem;
+  background: #fffaf8;
+  border: 1px solid #e4d4d6;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(40, 53, 79, 0.07);
+}
+
+.theme-study .faces .banner,
+.theme-study .faces img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border: 0;
+  border-radius: 10px;
+}
+
+.theme-study .faces figcaption {
+  color: #445b87;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin-top: 0.7rem;
+}
+
+/* Charts sit on a warm mat; the images themselves are unchanged */
+.theme-study .fig {
+  margin: 1.15rem 0 1.6rem;
+  padding: 0.65rem 0.65rem 0.85rem;
+  background: #fffaf8;
+  border: 1px solid #e4d4d6;
+  border-radius: 16px;
+  box-shadow: 0 14px 36px rgba(40, 53, 79, 0.08);
+}
+
+.theme-study .fig img {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background: #28354f;
+}
+
+.theme-study .fig figcaption {
+  color: #445b87;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin-top: 0.7rem;
+}
+
+.theme-study .cmd-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0.3rem 0 0;
+}
+
+.theme-study .cmd-links li {
+  margin: 0;
+}
+
+.theme-study .cmd-links li::marker {
+  content: "";
+}
+
+.theme-study .cmd-links a {
+  display: inline-block;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: #fffaf8;
+  border: 1px solid #d9c6cc;
+  color: #445b87;
+  text-decoration: none;
+}
+
+.theme-study .cmd-links a:hover {
+  background: #28354f;
+  border-color: #28354f;
+  color: #f6f0ec;
+  text-decoration: none;
+}
+
+.theme-study .back {
+  margin-top: 2.6rem;
+}
+
+.theme-study .site-footer {
+  background: #28354f;
+  color: #d9cdd4;
+  border-top: 3px solid #cea1a7;
+  font-size: 0.9rem;
+}
+
+.theme-study .site-footer a {
+  color: #ceb4ae;
+  text-decoration: underline;
+  text-decoration-color: rgba(206, 180, 174, 0.55);
+  text-underline-offset: 0.15em;
+}
+
+.theme-study .site-footer a:hover {
+  color: #f6f0ec;
+  text-decoration-color: #f6f0ec;
+}
+
+@media (max-width: 640px) {
+  .theme-study {
+    font-size: 1rem;
+  }
+
+  .theme-study main {
+    padding-bottom: 2.75rem;
+  }
+
+  .theme-study main > .wrap {
+    padding-top: 1.2rem;
+  }
+
+  .theme-study h1 {
+    font-size: 1.8rem;
+  }
+
+  .theme-study .lead {
+    font-size: 1.08rem;
+  }
+
+  .theme-study .hero figcaption,
+  .theme-study .faces figcaption,
+  .theme-study .fig figcaption {
+    font-size: 0.86rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-study .site-header {
+    position: static;
+  }
+}
