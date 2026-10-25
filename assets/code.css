@@ -1,414 +1,273 @@
-/* Book theme (/book/): the editor pane from the homepage card. Slate, monospace,
-   magenta accent, yellow headings. Loaded after style.css on that page only. */
+/* Book theme (/book/): Matrix Construct — blank white room, clean sans,
+   text flies in like a row of guns. Scoped to .theme-code only. */
+
 .theme-code {
-  --bg: #1b1d23;
-  --panel: #23262e;
-  --panel-bar: #16181d;
-  --ink: #c8ccd4;
-  --dim: #7f848e;
-  --line: #333743;
-  --accent: #d94fa3;      /* magenta */
-  --accent-soft: #e88bc4;
-  --key: #e06c75;         /* yaml keys */
-  --str: #d19a66;         /* strings */
-  --fn: #e5c07b;          /* headings */
-  --link: #56b6c2;        /* links */
-  --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  --bg: #f5f5f3;
+  --panel: #ffffff;
+  --ink: #111111;
+  --dim: #5c5c5c;
+  --line: #d8d8d4;
+  --accent: #111111;
+  --accent-soft: #333333;
+  --link: #111111;
+  --key: #111111;
+  --str: #333333;
+  --measure: 40rem;
   background: var(--bg);
   color: var(--ink);
-  font-family: var(--mono);
-  font-size: 0.95rem;
-  line-height: 1.75;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  letter-spacing: -0.01em;
 }
 
 .theme-code .site-header,
-.theme-code .site-footer { background: var(--panel-bar); border-color: var(--line); }
+.theme-code .site-footer {
+  background: var(--bg);
+  border-color: var(--line);
+}
+.theme-code .site-header .brand { color: var(--ink); }
+.theme-code .site-header .site-nav a { color: var(--dim); }
 .theme-code .site-nav a[aria-current="page"],
-.theme-code .site-nav a:hover { color: var(--accent); }
+.theme-code .site-nav a:hover { color: var(--ink); }
 
-.theme-code a { color: var(--link); }
+.theme-code a {
+  color: var(--link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
 .theme-code a:hover { color: var(--accent-soft); }
 
-/* Optional photo above the editor pane (book page: none) */
-.theme-code .banner { border: 1px solid var(--line); border-radius: 10px 10px 0 0; margin: 0; border-bottom: 0; }
-.theme-code .banner + .pane { border-radius: 0 0 10px 10px; }
+.theme-code main { padding: 4rem 0 5rem; }
+.theme-code main > .wrap { max-width: var(--measure); }
 
-/* Editor pane: tab bar, then text with a magenta rule.
-   Full radius when there is no banner above. */
-.theme-code .pane {
-  position: relative;
-  background: var(--bg);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  box-shadow: 0 14px 40px rgba(217, 79, 163, 0.10);
-  margin-bottom: 1rem;
-  overflow: hidden;
-  --frame-ink: #6e7582;
-  --frame-ink-soft: #555b68;
-  --frame-ghost: #3d4350;
-  --frame-accent: #7a808c;   /* quiet ink, not magenta */
-  --frame-node-fill: var(--bg);
-  --frame-pad: #686e7a;
-  outline: none;
+/* No banner. No pane chrome. Blank room. */
+.theme-code .banner { display: none !important; }
+.theme-code .pane,
+.theme-code .tabs,
+.theme-code .pane-ornament { display: none !important; }
+
+.theme-code .construct {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
 }
-.theme-code .tabs {
-  display: flex;
-  height: 2.2rem;
-  background: var(--panel-bar);
-  border-bottom: 1px solid var(--line);
-  font-size: 0.78rem;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.theme-code .tabs span {
-  display: flex;
-  align-items: center;
-  padding: 0 1.15rem;
+
+.theme-code .eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: var(--dim);
-  box-shadow: 1px 0 0 var(--line);
-}
-.theme-code .tabs .on {
-  background: var(--bg);
-  color: var(--ink);
-  box-shadow: inset 0 2px 0 var(--accent), 1px 0 0 var(--line);
-}
-.theme-code .pane-body {
-  position: relative;
-  padding: 1.85rem 2.35rem 1.5rem 2.35rem;
-  box-shadow: inset 3px 0 0 var(--accent);
 }
 
-/* Headings as markdown */
 .theme-code h1 {
-  font-family: var(--mono);
+  margin: 0 0 1.25rem;
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
   font-weight: 600;
-  color: var(--fn);
-  font-size: 1.8rem;
-  letter-spacing: -0.01em;
-  margin: 0 0 0.65rem;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: var(--ink);
 }
-.theme-code h1::before { content: "# "; color: var(--accent); }
-.theme-code h2 {
-  font-family: var(--mono);
-  color: var(--fn);
-  font-weight: 600;
-  font-size: 1.1rem;
-  border-bottom: 1px dashed var(--line);
-  margin-top: 2.4rem;
-  margin-bottom: 0.85rem;
-  padding-bottom: 0.35rem;
-}
-.theme-code h2::before { content: "## "; color: var(--accent); }
+.theme-code h1::before { content: none; }
 
-/* Badge, like the card's */
+.theme-code h2 {
+  margin: 2.4rem 0 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+.theme-code h2::before { content: none; }
+
 .theme-code .tag {
   display: inline-flex;
-  margin: 0 0 1.1rem;
-  font-size: 0.75rem;
-  line-height: 1;
-  letter-spacing: 0;
-  text-transform: none;
-  border-radius: 4px;
-  overflow: hidden;
+  gap: 0;
+  margin: 0 0 1.5rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--ink);
 }
-.theme-code .tag span { padding: 0.35rem 0.6rem; }
-.theme-code .tag .k { background: #2c2f38; color: var(--key); }
-.theme-code .tag .v { background: var(--accent); color: #fff; }
+.theme-code .tag span { padding: 0.3rem 0.55rem; }
+.theme-code .tag .k { background: var(--ink); color: var(--bg); }
+.theme-code .tag .v { background: transparent; color: var(--ink); }
 
-/* Quiet git-flash status block (README-style) */
-.theme-code pre.status {
-  margin: 0 0 1.35rem;
-  padding: 0.85rem 1rem;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  box-shadow: inset 3px 0 0 var(--accent);
-  overflow-x: auto;
-  font-size: 0.84rem;
-  line-height: 1.7;
+.theme-code .status {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0 0 1.75rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: 0.82rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  line-height: 1.55;
+  color: var(--dim);
 }
-.theme-code pre.status .k { color: var(--accent); font-weight: 600; }
-.theme-code pre.status .s { color: var(--ink); }
+.theme-code .status .k {
+  display: inline-block;
+  min-width: 4.2rem;
+  color: var(--ink);
+  font-weight: 600;
+}
+.theme-code .status .s { color: var(--dim); }
 
-.theme-code .lead { color: var(--ink); font-size: 1rem; margin: 0 0 0.9rem; }
-.theme-code .lead em { color: var(--str); font-style: normal; }
+.theme-code .lead {
+  color: var(--ink);
+  font-size: 1.12rem;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+.theme-code .lead em { font-style: italic; color: var(--ink); }
 .theme-code .pitch { color: var(--dim); margin: 0 0 1rem; }
-.theme-code .pane-body > p { margin: 0 0 0.85rem; }
-.theme-code .pane-body code {
-  font-family: var(--mono);
+.theme-code .construct p { margin: 0 0 0.9rem; }
+
+.theme-code .construct code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.88em;
-  color: var(--str);
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 3px;
-  padding: 0.05em 0.35em;
+  background: transparent;
+  border-bottom: 1px solid var(--line);
+  padding: 0 0.1em;
+  color: var(--ink);
 }
-.theme-code .pane-body pre code {
+
+.theme-code pre {
+  margin: 1rem 0 1.4rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  overflow-x: auto;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+.theme-code pre code {
   background: none;
   border: 0;
   padding: 0;
-  color: inherit;
   font-size: inherit;
-}
-
-/* An entry shown as a small yaml block */
-.theme-code pre {
-  margin: 0 0 1rem;
-  padding: 0.8rem 1rem;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  overflow-x: auto;
-  font-size: 0.88rem;
-  line-height: 1.6;
-}
-.theme-code pre code { background: none; padding: 0; font-size: inherit; }
-.theme-code pre .k { color: var(--key); }
-.theme-code pre .s { color: var(--str); }
-.theme-code pre .c { color: var(--dim); font-style: italic; }
-
-/* Links written like markdown links */
-.theme-code .md-links { list-style: none; padding: 0; margin: 0.25rem 0 0; }
-.theme-code .md-links li { margin: 0 0 0.4rem; }
-.theme-code .md-links a::before { content: "["; color: var(--dim); }
-.theme-code .md-links a::after { content: "](\2026)"; color: var(--dim); }
-
-.theme-code .note {
-  background: var(--panel);
-  border-color: var(--line);
-  border-left: 3px solid var(--accent);
-  border-radius: 6px;
   color: var(--ink);
 }
+.theme-code pre .k { color: var(--ink); font-weight: 600; }
+.theme-code pre .s { color: var(--dim); }
+.theme-code pre .c { color: var(--dim); font-style: italic; }
 
-.theme-code .back { margin-top: 0.5rem; }
-.theme-code .back a, .theme-code .site-footer a { color: var(--dim); }
-.theme-code .back a:hover, .theme-code .site-footer a:hover { color: var(--accent-soft); }
-.theme-code .x-note { color: var(--dim); }
-
-@media (max-width: 640px) {
-  .theme-code .pane-body { padding: 1.3rem 1.7rem 1.1rem 1.7rem; }
-  .theme-code h1 { font-size: 1.4rem; }
-  .theme-code .tabs span:nth-child(n+3) { display: none; }
-  .theme-code pre.status { font-size: 0.78rem; }
+.theme-code .md-links {
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0 0;
 }
+.theme-code .md-links li {
+  margin: 0;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.theme-code .md-links li:first-child { border-top: 1px solid var(--line); }
+.theme-code .md-links a::before,
+.theme-code .md-links a::after { content: none; }
 
-/* Verse sample as a quoted block */
+.theme-code .construct ul:not(.md-links) {
+  margin: 0.4rem 0 1rem;
+  padding-left: 1.15rem;
+}
+.theme-code .construct ul:not(.md-links) li {
+  margin: 0 0 0.55rem;
+  color: var(--ink);
+}
+.theme-code .construct ul:not(.md-links) li::marker { color: var(--dim); }
+
 .theme-code blockquote.verses {
-  background: var(--panel);
-  border-left: 3px solid var(--accent);
-  border-radius: 0 6px 6px 0;
-  padding: 0.95rem 1.15rem;
-  margin: 1.1rem 0 1.35rem;
+  margin: 1.5rem 0;
+  padding: 0.25rem 0 0.25rem 1rem;
+  border-left: 2px solid var(--ink);
+  background: transparent;
 }
-.theme-code blockquote.verses p { margin: 0 0 0.7rem; color: var(--ink); }
+.theme-code blockquote.verses p {
+  margin: 0 0 0.85rem;
+  color: var(--ink);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
 .theme-code blockquote.verses p:last-child { margin-bottom: 0; }
 .theme-code blockquote.verses .vn {
-  font-family: var(--mono);
-  color: var(--accent);
-  margin-right: 0.35rem;
+  display: block;
+  margin-bottom: 0.2rem;
+  font-size: 0.72rem;
   font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dim);
 }
-.theme-code blockquote.verses em { color: var(--str); font-style: italic; }
-.theme-code .pane-body ul:not(.md-links) {
-  margin: 0.4rem 0 0;
-  padding-left: 1.2rem;
-}
-.theme-code .pane-body ul:not(.md-links) li {
-  margin: 0 0 0.55rem;
-}
-.theme-code .pane-body ul:not(.md-links) li::marker { color: var(--accent); }
+.theme-code blockquote.verses em { color: var(--ink); font-style: italic; }
 
-/* Framing lattice — thick geometric Celtic (blocky over-under, four-fold
-   voids + lobes). Symmetrical side rails; filled bands only (no hairlines).
-   Quiet ink terminals — cyber pads/glow dialed back. */
-.theme-code .pane-ornament {
-  position: absolute;
-  z-index: 2;
-  pointer-events: none;
-  overflow: visible;
-  color: var(--frame-ink);
+.theme-code .back { margin-top: 2.5rem; font-size: 0.9rem; }
+.theme-code .back a,
+.theme-code .site-footer a { color: var(--dim); text-decoration: none; }
+.theme-code .back a:hover,
+.theme-code .site-footer a:hover { color: var(--ink); }
+.theme-code .site-footer {
+  color: var(--dim);
+  font-size: 0.85rem;
 }
-.theme-code .pane-ornament.tl { top: 0.1rem; left: 0.1rem; width: 3.9rem; height: 3.9rem; }
-.theme-code .pane-ornament.tr { top: 0.1rem; right: 0.1rem; width: 3.9rem; height: 3.9rem; }
-.theme-code .pane-ornament.bl { bottom: 0.1rem; left: 0.1rem; width: 3.9rem; height: 3.9rem; }
-.theme-code .pane-ornament.br { bottom: 0.1rem; right: 0.1rem; width: 3.9rem; height: 3.9rem; }
-.theme-code .pane-ornament.rail-l,
-.theme-code .pane-ornament.rail-r {
-  top: 2.55rem;
-  width: 2.85rem;
-  height: calc(100% - 3.3rem);
-  max-height: 26rem;
-  opacity: 0.94;
-}
-.theme-code .pane-ornament.rail-l { left: 0.05rem; }
-.theme-code .pane-ornament.rail-r { right: 0.05rem; }
-.theme-code .pane-ornament.weave {
-  top: 2.2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(62%, 22rem);
-  height: 1.15rem;
-  opacity: 0.88;
-}
-.theme-code .pane-ornament.dual {
-  position: absolute;
-  top: 0.2rem;
-  right: 0.15rem;
-  width: 7rem;
-  height: 4rem;
-  opacity: 0.78;
-  z-index: 0;
-}
+.theme-code .site-footer .wrap { max-width: var(--measure); }
 
-/* Filled masses (fabric) */
-.theme-code .pane-ornament .frame-mass {
-  fill: var(--frame-ink);
-  stroke: none;
-  opacity: 0.88;
-  transition: fill 0.35s ease, opacity 0.35s ease;
-}
-.theme-code .pane-ornament .frame-mass-soft {
-  fill: var(--frame-ink-soft);
-  stroke: none;
-  opacity: 0.78;
-  transition: fill 0.35s ease, opacity 0.35s ease;
-}
-.theme-code .pane-ornament .frame-knot {
-  fill: #848a96;
-  stroke: none;
-  transition: fill 0.35s ease, opacity 0.35s ease;
-}
-.theme-code .pane-ornament .frame-accent-fill {
-  fill: var(--frame-ink);
-  stroke: none;
-  opacity: 0.75;
-  transition: fill 0.35s ease, opacity 0.35s ease;
-}
-
-/* Quiet end-caps (legacy pad/node/via hooks → ink) */
-.theme-code .pane-ornament .frame-pad {
-  fill: var(--frame-pad);
-  stroke: none;
-  transition: fill 0.35s ease;
-}
-.theme-code .pane-ornament .frame-trace {
-  fill: var(--frame-ink-soft);
-  stroke: none;
-  opacity: 0.9;
-  transition: fill 0.35s ease;
-}
-.theme-code .pane-ornament .frame-node {
-  fill: var(--frame-node-fill);
-  stroke: var(--frame-ink);
-  stroke-width: 1;
-  opacity: 0.55;
-  transition: stroke 0.35s ease, fill 0.35s ease, opacity 0.35s ease;
-}
-.theme-code .pane-ornament .frame-root {
-  fill: var(--frame-ink);
-  stroke: var(--frame-ink);
-  opacity: 0.7;
-}
-.theme-code .pane-ornament .frame-via {
-  fill: var(--frame-ink-soft);
-  stroke: none;
-  opacity: 0.45;
-}
-.theme-code .pane-ornament .frame-circuit,
-.theme-code .pane-ornament .frame-ends {
-  transition: opacity 0.35s ease;
-}
-
-
-/* Legacy stroke hooks (unused by filled paths; keep harmless) */
-.theme-code .pane-ornament .frame-ink,
-.theme-code .pane-ornament .frame-ghost,
-.theme-code .pane-ornament .frame-accent { fill: none; stroke: none; }
-
-/* Slow ink breath — no neon glow */
-@keyframes frame-pulse {
-  0%, 100% { opacity: 0.82; }
-  50% { opacity: 0.96; }
-}
-@keyframes frame-pinch {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.015); }
-}
-
-.theme-code .pane-ornament .frame-mass,
-.theme-code .pane-ornament .frame-mass-soft {
-  animation: frame-pulse 10s ease-in-out infinite;
-}
-.theme-code .pane-ornament .frame-knot {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: frame-pinch 9s ease-in-out infinite;
-}
-
-/* Hover / focus / touch: ink lifts slightly, stays Celtic */
-.theme-code .pane:hover,
-.theme-code .pane:focus-within,
-.theme-code .pane:active {
-  --frame-ink: #8a919c;
-  --frame-ink-soft: #6a7180;
-  --frame-pad: #7a828e;
-  --frame-accent: #8a919c;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.28);
-}
-.theme-code .pane:hover .pane-ornament.dual,
-.theme-code .pane:focus-within .pane-ornament.dual,
-.theme-code .pane:active .pane-ornament.dual,
-.theme-code .pane:hover .pane-ornament.rail-l,
-.theme-code .pane:hover .pane-ornament.rail-r,
-.theme-code .pane:focus-within .pane-ornament.rail-l,
-.theme-code .pane:focus-within .pane-ornament.rail-r,
-.theme-code .pane:active .pane-ornament.rail-l,
-.theme-code .pane:active .pane-ornament.rail-r {
-  opacity: 1;
-}
-.theme-code .pane:hover .pane-ornament .frame-knot,
-.theme-code .pane:focus-within .pane-ornament .frame-knot,
-.theme-code .pane:active .pane-ornament .frame-knot {
-  fill: #9aa1ac;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .theme-code .pane-ornament {
-    pointer-events: auto;
-    cursor: default;
+/* Text flies in like a row of guns — stagger, settle, stop. */
+@keyframes construct-fly {
+  from {
+    opacity: 0;
+    transform: translate3d(-1.75rem, 0, 0);
   }
-  .theme-code .pane-ornament:hover .frame-mass {
-    fill: #8a919c;
+  to {
     opacity: 1;
-  }
-  .theme-code .pane-ornament:hover .frame-mass-soft {
-    fill: #6a7180;
-  }
-  .theme-code .pane-ornament:hover .frame-pad {
-    fill: #848b96;
-  }
-  .theme-code .pane-ornament:active .frame-mass,
-  .theme-code .pane-ornament:active .frame-pad {
-    fill: #a0a6b0;
+    transform: translate3d(0, 0, 0);
   }
 }
+
+.theme-code .fly > * {
+  opacity: 0;
+  animation: construct-fly 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.theme-code .fly > *:nth-child(1)  { animation-delay: 0.04s; }
+.theme-code .fly > *:nth-child(2)  { animation-delay: 0.10s; }
+.theme-code .fly > *:nth-child(3)  { animation-delay: 0.16s; }
+.theme-code .fly > *:nth-child(4)  { animation-delay: 0.22s; }
+.theme-code .fly > *:nth-child(5)  { animation-delay: 0.28s; }
+.theme-code .fly > *:nth-child(6)  { animation-delay: 0.34s; }
+.theme-code .fly > *:nth-child(7)  { animation-delay: 0.40s; }
+.theme-code .fly > *:nth-child(8)  { animation-delay: 0.46s; }
+.theme-code .fly > *:nth-child(9)  { animation-delay: 0.52s; }
+.theme-code .fly > *:nth-child(10) { animation-delay: 0.58s; }
+.theme-code .fly > *:nth-child(11) { animation-delay: 0.64s; }
+.theme-code .fly > *:nth-child(12) { animation-delay: 0.70s; }
+.theme-code .fly > *:nth-child(13) { animation-delay: 0.76s; }
+.theme-code .fly > *:nth-child(14) { animation-delay: 0.82s; }
+.theme-code .fly > *:nth-child(15) { animation-delay: 0.88s; }
+.theme-code .fly > *:nth-child(16) { animation-delay: 0.94s; }
+.theme-code .fly > *:nth-child(17) { animation-delay: 1.00s; }
+.theme-code .fly > *:nth-child(18) { animation-delay: 1.06s; }
+.theme-code .fly > *:nth-child(19) { animation-delay: 1.12s; }
+.theme-code .fly > *:nth-child(20) { animation-delay: 1.18s; }
+.theme-code .fly > *:nth-child(21) { animation-delay: 1.24s; }
+.theme-code .fly > *:nth-child(22) { animation-delay: 1.30s; }
+.theme-code .fly > *:nth-child(23) { animation-delay: 1.36s; }
+.theme-code .fly > *:nth-child(n+24) { animation-delay: 1.42s; }
 
 @media (prefers-reduced-motion: reduce) {
-  .theme-code .pane-ornament .frame-mass,
-  .theme-code .pane-ornament .frame-mass-soft,
-  .theme-code .pane-ornament .frame-knot {
-    animation: none !important;
+  .theme-code .fly > * {
+    opacity: 1;
+    animation: none;
+    transform: none;
   }
 }
 
 @media (max-width: 640px) {
-  .theme-code .pane-ornament.tl,
-  .theme-code .pane-ornament.tr,
-  .theme-code .pane-ornament.bl,
-  .theme-code .pane-ornament.br { width: 2.9rem; height: 2.9rem; }
-  .theme-code .pane-ornament.rail-l,
-  .theme-code .pane-ornament.rail-r { width: 1.85rem; opacity: 0.9; }
-  .theme-code .pane-ornament.dual { width: 5.2rem; height: 3rem; opacity: 0.55; }
-  .theme-code .pane-ornament.weave { display: none; }
+  .theme-code main { padding: 2.5rem 0 3.5rem; }
+  .theme-code h1 { font-size: 2.2rem; }
+  .theme-code .status { font-size: 0.74rem; }
+  .theme-code .status .k { min-width: 3.6rem; }
 }
