@@ -1,5 +1,5 @@
-/* Homepage (/): dark, uniform cards that mirror the GitHub profile README.
-   Section order and wording follow the profile; loaded after style.css on the homepage only. */
+/* Homepage (/): dark, uniform cards. Section order follows the GitHub profile README.
+   Card wording follows the live project pages. Loaded after style.css on the homepage only. */
 .theme-home {
   --bg: #0b0b0d;
   --panel: #131316;
