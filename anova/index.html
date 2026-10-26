@@ -17,7 +17,7 @@
 <link rel="icon" type="image/jpeg" href="../assets/img/logo-192.jpg">
 <link rel="apple-touch-icon" href="../assets/img/logo-192.jpg">
 <link rel="stylesheet" href="../assets/style.css">
-<link rel="stylesheet" href="../assets/board.css?v=2">
+<link rel="stylesheet" href="../assets/board.css?v=3">
 <link rel="stylesheet" href="../assets/nav.css?v=2">
 </head>
 <body class="theme-board">
@@ -60,7 +60,7 @@
       </div>
       <figure>
         <img src="../assets/img/anova/home-starter.jpg" width="560" height="806" loading="lazy"
-             alt="The home board at the starter level: a message bar with speak, delete, and clear buttons, tabs for home, abc, and stories, and a grid of color-coded word buttons.">
+             alt="The home board at the starter level: a message bar with speak, delete, and clear buttons, tabs for home, abc, and paths, and a grid of color-coded word buttons.">
         <figcaption>The generic starter board.</figcaption>
       </figure>
     </div>
@@ -71,13 +71,21 @@
       <li>Buttons never move. Words are shown in levels (Starter, Middle, Expanded, Sentences, Full, or Custom), and a hidden word leaves an empty cell, so motor memory carries over as the board grows.</li>
       <li>Colors follow word type (a modified Fitzgerald key).</li>
       <li>Spelling keyboard (A to Z) with word prediction and a backspace key. Tapping . or ? reads the typed sentence aloud.</li>
-      <li>Read-along stories with pictures. Turning a page never speaks; tapping a word or "read" does.</li>
-      <li>All words and stories are built into the app, so there's nothing to import. A pack is optional, only for adding photos, recordings, or extras, and it stays on the device. Nothing is uploaded.</li>
+      <li>Paths is a speech-pattern tree you tap through, such as "I want" then milk, or open and close then door, to practice common phrases. It can send the phrase to the message bar.</li>
+      <li>All words, paths, and stories are built into the app, so there's nothing to import. A pack is optional, only for adding photos, recordings, or extras, and it stays on the device. Nothing is uploaded.</li>
     </ul>
-    <div class="shots">
+    <div class="shots two">
+      <figure><img src="../assets/img/anova/paths-menu.jpg" width="820" height="1180" loading="lazy" alt="The Paths tab in portrait: a menu of speech patterns such as I want, I need, I see, open or close, and turn on or off. The tab bar reads home, abc, and paths."><figcaption>Paths</figcaption></figure>
+      <figure><img src="../assets/img/anova/paths-open-close.jpg" width="1180" height="820" loading="lazy" alt="A Paths step with open and close buttons. The message bar reads open or close, and the tab bar reads home, abc, and paths."><figcaption>Open or close</figcaption></figure>
       <figure><img src="../assets/img/anova/keyboard-sentence.jpg" width="560" height="806" loading="lazy" alt="The spelling keyboard, A to Z, with a typed sentence, a period and question mark key, and a backspace key"><figcaption>Keyboard</figcaption></figure>
-      <figure><img src="../assets/img/anova/story-cat.jpg" width="560" height="806" loading="lazy" alt="A read-along story page with a full-color illustration and tappable words"><figcaption>Story page</figcaption></figure>
       <figure><img src="../assets/img/anova/settings-words-shown.jpg" width="560" height="806" loading="lazy" alt="The parent settings screen for choosing which words are shown"><figcaption>Word levels</figcaption></figure>
+    </div>
+
+    <h2 class="t-social">Paths</h2>
+    <p>Pick a pattern, then tap the next word. After close, the board offers door, book, box, and the other things you can close. The phrase can go to the message bar.</p>
+    <div class="shots two">
+      <figure><img src="../assets/img/anova/paths-menu-landscape.jpg" width="1180" height="820" loading="lazy" alt="The Paths menu in landscape, listing speech patterns such as I want, I feel, open or close, and turn on or off."><figcaption>Pattern menu</figcaption></figure>
+      <figure><img src="../assets/img/anova/paths-close-things.jpg" width="1180" height="820" loading="lazy" alt="The Paths step after close, with buttons for door, book, box, eyes, window, and mouth."><figcaption>Close, then a thing</figcaption></figure>
     </div>
 
     <h2 class="t-descriptor">How the board grows</h2>
@@ -110,7 +118,7 @@
     <p>Plain HTML, CSS, and JavaScript. No build step, frameworks, ads, analytics, or network calls. Installs as a home-screen web app and works offline. MIT license.</p>
 
     <h2 class="t-social">Status</h2>
-    <p>Version 1.4.1, started September 2026 and actively developed. Recent work: the Expanded level filled in with everyday words for short sentences (a, the, and me on home; a "little words" folder with I'm, it's, that's, and let's; body parts, clothes, daily things like bath, bed, and potty; foods including juice; and reaction words like wow, yuck, and oops), two new word levels (Sentences and Conversation), word endings (-s, -ing, -ed, 's) with irregular forms, "little words" and "time" folders, the "where" folder renamed to "places", a more natural voice picked automatically, and a 9x10 home board with core words and opposites side by side.</p>
+    <p>Version 1.5.0, started September 2026 and actively developed. Paths, a speech-pattern tree, replaces Stories on the tab bar (home, abc, and paths). You tap through a common phrase, such as "I want" then milk, or open and close then door, and the phrase can go to the message bar. Stories is still in the app, but it is off the tab bar for this MVP. Version 1.4.1 filled in everyday words for short sentences, added the Sentences and Conversation levels and word endings (-s, -ing, -ed, 's), and set a 9x10 home board with core words and opposites side by side.</p>
 
     <h2 class="t-people">About the name</h2>
     <p>ANOVA is a nod to analysis of variance, the statistics term. Language learning varies a lot from person to person, and the board is built to adapt to that. The app itself doesn't do any statistics.</p>
