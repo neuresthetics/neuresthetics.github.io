@@ -83,8 +83,9 @@
 .theme-board ul.tiles li:nth-child(6n+4) { border-left-color: var(--social); }
 .theme-board ul.tiles li:nth-child(6n+5) { border-left-color: var(--people); }
 .theme-board ul.tiles li:nth-child(6n+6) { border-left-color: var(--negation); }
-/* Three-up screenshot strip */
+/* Three-up screenshot strip. .two is a pair, or a four-shot strip that should not leave one cell alone. */
 .theme-board .shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.9rem; margin: 1.25rem 0 0.5rem; }
+.theme-board .shots.two { grid-template-columns: 1fr 1fr; }
 .theme-board .shots figure { margin: 0; }
 .theme-board .shots img { display: block; width: 100%; height: auto; }
 .theme-board .shots figcaption { text-align: center; font-size: 0.85rem; }
