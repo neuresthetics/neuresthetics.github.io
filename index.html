@@ -54,14 +54,6 @@
       <!-- JASON: optional extra bio line goes here (see suggestions in the report) -->
     </section>
 
-    <section class="sec" aria-labelledby="built-title">
-      <h2 id="built-title"><span aria-hidden="true">⚙️ </span>HOW THE WORK IS CHECKED</h2>
-      <p class="sub">One rule runs through every project below.</p>
-      <p><strong>The rule.</strong> A claim stands only if its source says so, word for word. Models draft, search and argue; code and blind audit runs check what they produce, and anything unchecked is labeled a draft. Arguments are checked against <a href="fallacy-catalog/">fallacy_catalog</a> (v0.6.1), a sourced catalog of 221 named fallacies with a method for checking one step at a time, built to avoid false accusations. A flag is a lead to check, not a verdict. Models are tools here, not the point.</p>
-      <p><strong>Local models.</strong> A Linux tower with a 20 GB GPU and 64 GB RAM runs Ollama with Qwen 27B, in a standard and an uncensored build, at 32K context (argument runs use 16K). A stock 14B has already run as the swap model. The tower works through unattended job queues, for days if needed, for an adversarial argument harness: the models draft the strongest case for each side, code checks every cite against word-for-word source excerpts, and runs are rescored and repeated across seeds and model swaps to see how much of a result comes from the model. It has no valid scores yet.</p>
-      <p><strong>Grok.</strong> Grok Bot (an xAI assistant) runs a set of project bots for coding, audits, writing support, and fetching the word-for-word sources those cite checks use.</p>
-    </section>
-
     <section class="sec" aria-labelledby="products-title">
       <h2 id="products-title"><span aria-hidden="true">🛠️ </span>"REAL WORLD" PRODUCTS</h2>
       <p class="sub">Made to be useful to other people.</p>
@@ -90,8 +82,8 @@
         <a class="card-img" href="grokipedia/" tabindex="-1" aria-hidden="true"><img src="assets/img/cards/card-grokipedia.jpg?v=2" alt="" width="900" height="450" loading="lazy"></a>
         <div class="card-body">
           <h3><span aria-hidden="true">🔎 </span><a href="grokipedia/">Grokipedia Audit</a></h3>
-          <p>Checks Grokipedia articles against the sources they cite, one claim at a time, with the evidence kept next to every finding. Current results: a circumcision fallacy_catalog benchmark (58 articles) and a Spinoza citation audit (401 sentences).</p>
-          <p class="runs"><span aria-hidden="true">⚙️ </span><b>Runs on:</b> A general-purpose AI agent · plain written steps and fallacy_catalog; each finding records the model and date</p>
+          <p>Checks Grokipedia articles against the sources they cite, one claim at a time, with the evidence kept next to every finding. Current results: a benchmark of 58 circumcision and FGM articles, and a Spinoza citation audit (401 sentences).</p>
+          <p class="runs"><span aria-hidden="true">⚙️ </span><b>Runs on:</b> A general-purpose AI agent · plain written steps; each finding records the model and date</p>
           <p class="links"><a href="grokipedia/"><span aria-hidden="true">🌐 </span>page</a><a href="https://github.com/neuresthetics/grokipedia_audit"><span aria-hidden="true">📂 </span>repo</a></p>
         </div>
       </article>
