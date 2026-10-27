@@ -374,7 +374,7 @@
 }
 @media (max-width: 860px) {
   .theme-field .mast { grid-template-columns: 1fr; align-items: start; gap: 1.35rem; }
-  .theme-field .product-shot { max-width: 32rem; }
+  .theme-field .product-shot { max-width: none; }
 }
 @media (max-width: 800px) {
   .theme-field .measure,
