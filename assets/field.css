@@ -49,6 +49,9 @@
   outline: 2px solid var(--amber);
   outline-offset: 3px;
 }
+/* The shared link color would paint the skip chip blue-on-amber (fails).
+   Navy on amber matches the buttons and stays AA. */
+.theme-field a.skip { color: var(--navy); }
 
 .theme-field h2 {
   font-weight: 650;
