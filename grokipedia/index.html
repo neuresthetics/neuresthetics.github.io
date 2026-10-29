@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Grokipedia Audit · Jason Burns · Neuresthetics</title>
-<meta name="description" content="Checks Grokipedia articles against the sources they cite, one claim at a time, with the evidence kept next to every finding. Current results: a circumcision fallacy_catalog benchmark run and a Spinoza citation audit.">
+<meta name="description" content="Checks Grokipedia articles against the sources they cite, one claim at a time, with the evidence kept next to every finding. Current results: a circumcision fallacy_catalog benchmark run and a Spinoza citation audit, plus circumcision idea_detection dry runs.">
 <meta name="author" content="Jason Burns">
 <meta name="theme-color" content="#0b0b0c">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://neuresthetics.github.io/grokipedia/">
 <meta property="og:title" content="Grokipedia Audit · Neuresthetics">
-<meta property="og:description" content="Checks Grokipedia articles against the sources they cite, one claim at a time, with the evidence kept next to every finding. Current results: a circumcision fallacy_catalog benchmark run and a Spinoza citation audit.">
+<meta property="og:description" content="Checks Grokipedia articles against the sources they cite, one claim at a time, with the evidence kept next to every finding. Current results: a circumcision fallacy_catalog benchmark run and a Spinoza citation audit, plus circumcision idea_detection dry runs.">
 <meta property="og:image" content="https://neuresthetics.github.io/assets/img/N.jpg">
 <meta property="og:image:alt" content="Neuresthetics logo">
 <meta name="twitter:card" content="summary">
@@ -47,13 +47,15 @@
     <p class="tag"><span class="k">audit</span><span class="v">citation check · fallacy_catalog</span></p>
     <p class="lead">Checks Grokipedia articles against the sources they cite, one claim at a time, with the evidence kept next to every finding so a reader can check the work without having to trust it.</p>
 
+    <p class="toc"><a href="#results">Results</a> · <a href="#wip">Work in progress</a> · <a href="#method">Method</a> · <a href="#limits">Limitations</a> · <a href="#links">Links</a></p>
+
     <h2>What it is</h2>
     <p>Grokipedia is xAI's AI-written encyclopedia. Its articles look well sourced, but an AI writer can attach a citation that doesn't say what the sentence claims, or let the numbering slip so a footnote points to the wrong source. This audit looks for those problems claim by claim.</p>
 
     <h2>Who it's for</h2>
     <p>Readers and editors of Grokipedia, people studying AI-written reference text, and anyone who would rather check a finding than take it on trust.</p>
 
-    <h2>How it works</h2>
+    <h2 id="method">How it works</h2>
     <p>A general-purpose AI agent follows plain written steps. No custom framework, scoring system or private vocabulary.</p>
     <ul>
       <li><strong>Snapshot.</strong> Save the article as it appeared on the day of the audit, because Grokipedia pages change.</li>
@@ -65,7 +67,7 @@
       <p>Every finding records the date and the model that made the judgment. Nothing is presented as a human expert's ruling, and citations or quotes are never filled in from memory.</p>
     </div>
 
-    <h2>Current results</h2>
+    <h2 id="results">Current results</h2>
     <ul class="topics">
       <li>
         <h3>Circumcision: fallacy_catalog benchmark</h3>
@@ -81,9 +83,34 @@
         <img src="https://raw.githubusercontent.com/neuresthetics/grokipedia_audit/main/docs/img/spinoza/2026-10-15/headline_content_vs_citations.png" alt="Bar chart: the same 401 sentences judged as linked and with the footnote shift undone" loading="lazy" style="max-width:100%;height:auto">
       </li>
     </ul>
+    <h2 id="wip">Work in progress</h2>
+    <ul class="topics">
+      <li>
+        <h3>Circumcision: idea_detection dry runs</h3>
+        <span class="count">2026-10-27/28 · 2,616 passages · assist leads only</span>
+        <p>An automated pass of fallacy_catalog's <code>idea_detection</code> checker over the 2026-10-08 argument inventory. <strong>Flat</strong> (catalog <code>bfcbc8b</code>): 0 hard flags; 452 <em>possible_issue</em> leads on 450 passages (appeal-to-authority 426, argument-from-ignorance 18, false-cause 6, begging-the-question 2). A <em>possible_issue</em> means a pattern matched but a condition depends on facts outside the excerpt, such as whether a cited body is expert.</p>
+        <p><strong>Nested</strong> (catalog <code>f304b80</code>): each lead re-checked with its snapshot window and cite text. 1 survives; 449 break, of which 25 closed as hard flags and 424 remain open. The open breaks are mostly unresolved source-expertise questions, not established fallacies; the 25 flags are the suggested first queue for human review.</p>
+        <p><a href="https://github.com/neuresthetics/grokipedia_audit/blob/main/topics/circumcision/dry_runs/README.md">Dry-run index</a> · <a href="https://github.com/neuresthetics/grokipedia_audit/blob/main/topics/circumcision/dry_runs/2026-10-28_idea_detection_full/out/RUN_SUMMARY.md">Flat summary</a> · <a href="https://github.com/neuresthetics/grokipedia_audit/blob/main/topics/circumcision/dry_runs/2026-10-28_idea_detection_full/nested_out/RUN_SUMMARY.md">Nested summary</a> · commit <a href="https://github.com/neuresthetics/grokipedia_audit/commit/368a337">368a337</a></p>
+      </li>
+      <li>
+        <h3>Consciousness: snapshots</h3>
+        <span class="count">2026-10-17 · 18 pages · no checks yet</span>
+        <p>Pages saved with an article list and snapshot log (commit <a href="https://github.com/neuresthetics/grokipedia_audit/commit/2a4faea">2a4faea</a>).</p>
+        <p><a href="https://github.com/neuresthetics/grokipedia_audit/blob/main/topics/consciousness/README.md">Topic README</a></p>
+      </li>
+    </ul>
+
+    <h2 id="limits">Limitations</h2>
+    <ul>
+      <li>All judgments come from AI models following written steps; none is a human expert's ruling.</li>
+      <li>A flag marks a passage worth checking; it does not show the claim false, and an unflagged passage is not shown sound.</li>
+      <li>The idea_detection checker has 13 pilot patterns, so most catalog entries cannot fire yet.</li>
+      <li>Snapshots record a page on one day; Grokipedia pages change.</li>
+    </ul>
+
     <p>Audits made before October 2026 used a custom framework that has since been retired; those older files aren't current findings.</p>
 
-    <h2>Links</h2>
+    <h2 id="links">Links</h2>
     <ul class="link-list">
       <li><a class="gold-link" href="https://github.com/neuresthetics/grokipedia_audit">Repo: neuresthetics/grokipedia_audit</a></li>
       <li><a href="https://github.com/neuresthetics/grokipedia_audit#how-it-works">How it works</a></li>
