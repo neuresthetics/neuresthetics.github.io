@@ -27,6 +27,21 @@
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="stylesheet" href="../assets/field.css?v=product15">
 <link rel="stylesheet" href="../assets/nav.css?v=2">
+<style>
+.app-hero img{width:100%;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .25s}
+.app-hero:hover img{transform:scale(1.01)}
+.app-cap{text-align:center;opacity:.75;font-size:.9em;margin:.5em 0 1.2em}
+.app-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.app-thumb{display:block;text-decoration:none;color:inherit}
+.app-thumb img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:top;border-radius:10px;transition:transform .2s,box-shadow .2s}
+.app-thumb:hover img{transform:translateY(-4px) rotate(-.6deg);box-shadow:0 8px 20px rgba(0,0,0,.35)}
+.app-thumb span{display:block;font-size:.85em;margin-top:.4em;opacity:.85}
+.app-more{margin-top:1.2em}
+.app-lightbox{display:none;position:fixed;inset:0;z-index:99;background:rgba(5,10,20,.9);align-items:center;justify-content:center;flex-direction:column;color:#fff;text-decoration:none;padding:2vh 2vw}
+.app-lightbox:target{display:flex}
+.app-lightbox img{max-width:96vw;max-height:88vh;border-radius:8px}
+.app-lightbox span{margin-top:.6em;font-size:.9em;opacity:.85}
+</style>
 </head>
 <body class="theme-field">
 <a class="skip" href="#main">Skip to content</a>
@@ -157,6 +172,16 @@
           From daily job logs, added only once they prove out on real jobs.
         </li>
       </ul>
+    </section>
+
+    <section class="block app" id="app" aria-labelledby="app-h">
+      <h2 id="app-h">The application</h2>
+      <p>Beyond the kit itself, RestoKit grew a working field app: a live project board for crews, trucks, dispatch and job files. Real screens, demo data. Tap any shot to enlarge.</p>
+      <a class="app-hero" href="#shot-hero_board"><img src="img/app/hero_board.jpg" alt="The project board: crew, vehicles and every job lane on one screen"></a>
+      <p class="app-cap">The project board: crew, vehicles and every job lane on one screen</p>
+      <div class="app-grid"><a class="app-thumb" href="#shot-dispatch"><img src="img/app/thumbs/dispatch.jpg" alt="Dispatch plans the day's routes" loading="lazy"><span>Dispatch plans the day's routes</span></a><a class="app-thumb" href="#shot-dispatch_stops"><img src="img/app/thumbs/dispatch_stops.jpg" alt="Stops assigned per truck" loading="lazy"><span>Stops assigned per truck</span></a><a class="app-thumb" href="#shot-map"><img src="img/app/thumbs/map.jpg" alt="Map of the day's jobs" loading="lazy"><span>Map of the day's jobs</span></a><a class="app-thumb" href="#shot-crew_picker"><img src="img/app/thumbs/crew_picker.jpg" alt="Crew picker: tap a name, then a seat" loading="lazy"><span>Crew picker: tap a name, then a seat</span></a><a class="app-thumb" href="#shot-job_table"><img src="img/app/thumbs/job_table.jpg" alt="Table view of every job" loading="lazy"><span>Table view of every job</span></a><a class="app-thumb" href="#shot-photo_viewer"><img src="img/app/thumbs/photo_viewer.jpg" alt="Job photo viewer" loading="lazy"><span>Job photo viewer</span></a><a class="app-thumb" href="#shot-labor_ratio"><img src="img/app/thumbs/labor_ratio.jpg" alt="Labor ratio" loading="lazy"><span>Labor ratio</span></a><a class="app-thumb" href="#shot-file_quality"><img src="img/app/thumbs/file_quality.jpg" alt="Job file quality checks" loading="lazy"><span>Job file quality checks</span></a><a class="app-thumb" href="#shot-phone"><img src="img/app/thumbs/phone.jpg" alt="The same board on a phone" loading="lazy"><span>The same board on a phone</span></a></div>
+      <p class="app-more"><a href="https://github.com/neuresthetics/restokit-showcase">See the full 201-screen walkthrough →</a></p>
+      <a class="app-lightbox" id="shot-hero_board" href="#app"><img src="img/app/hero_board.jpg" alt="The project board: crew, vehicles and every job lane on one screen"><span>The project board: crew, vehicles and every job lane on one screen · tap to close</span></a><a class="app-lightbox" id="shot-dispatch" href="#app"><img src="img/app/dispatch.jpg" alt="Dispatch plans the day's routes"><span>Dispatch plans the day's routes · tap to close</span></a><a class="app-lightbox" id="shot-dispatch_stops" href="#app"><img src="img/app/dispatch_stops.jpg" alt="Stops assigned per truck"><span>Stops assigned per truck · tap to close</span></a><a class="app-lightbox" id="shot-map" href="#app"><img src="img/app/map.jpg" alt="Map of the day's jobs"><span>Map of the day's jobs · tap to close</span></a><a class="app-lightbox" id="shot-crew_picker" href="#app"><img src="img/app/crew_picker.jpg" alt="Crew picker: tap a name, then a seat"><span>Crew picker: tap a name, then a seat · tap to close</span></a><a class="app-lightbox" id="shot-job_table" href="#app"><img src="img/app/job_table.jpg" alt="Table view of every job"><span>Table view of every job · tap to close</span></a><a class="app-lightbox" id="shot-photo_viewer" href="#app"><img src="img/app/photo_viewer.jpg" alt="Job photo viewer"><span>Job photo viewer · tap to close</span></a><a class="app-lightbox" id="shot-labor_ratio" href="#app"><img src="img/app/labor_ratio.jpg" alt="Labor ratio"><span>Labor ratio · tap to close</span></a><a class="app-lightbox" id="shot-file_quality" href="#app"><img src="img/app/file_quality.jpg" alt="Job file quality checks"><span>Job file quality checks · tap to close</span></a><a class="app-lightbox" id="shot-phone" href="#app"><img src="img/app/phone.jpg" alt="The same board on a phone"><span>The same board on a phone · tap to close</span></a>
     </section>
 
     <section class="block" aria-labelledby="status">
