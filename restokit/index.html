@@ -74,6 +74,7 @@
         <h1 id="product-name" class="rk-logo"><img src="../assets/img/restokit/restokit_logo_horizontal_dark.svg" width="412" height="128" alt="RestoKit"></h1>
         <p class="lead">A restoration kit for water, mold, and crawlspace work.</p>
         <p class="dek">From tech to lead, PM, and estimator.</p>
+        <p class="runs"><a href="#framework">RestoKit: the framework</a> · <a href="#tools">RestoKit tools: the showcase</a></p>
         <p class="runs"><b>Runs on:</b> commercial models only, loaded into the Grok app or a Grok Bot.</p>
         <p class="actions">
           <a class="btn" href="https://github.com/neuresthetics/resto_kit_public">Public repo</a>
@@ -86,6 +87,14 @@
         </div>
         <figcaption>On the stop, next to the meters.</figcaption>
       </figure>
+    </section>
+
+    <section class="block" id="framework" aria-labelledby="framework-h">
+      <p class="kicker">Part one</p>
+      <h2 id="framework-h">RestoKit: the framework</h2>
+      <div class="measure">
+        <p>RestoKit is the framework: the job stages (phases) and the modules that load into an AI model. This part of the page is about the kit itself: what it is, where it came from, and how it is built. The tools built on it have their own section <a href="#tools">further down</a>.</p>
+      </div>
     </section>
 
     <section class="block" aria-labelledby="day">
@@ -178,12 +187,50 @@
       </ul>
     </section>
 
+
+    <section class="block" aria-labelledby="status">
+      <h2 id="status">Kit status</h2>
+      <div class="note">
+        <p class="ver">Kit version <strong>0.9.15</strong></p>
+        <ul class="releases">
+          <li><strong>0.9.15.</strong> Morning into-file notes are delta-only: decisions, today’s work, and who’s assigned. Not a reprint of data already in the file.</li>
+          <li><strong>0.9.14.</strong> File review runs before the day-forward plan. To-dos come back role-sorted: PM, then Lead, then Techs.</li>
+        </ul>
+        <p class="status-more">Earlier 0.9.x stays in the kit. Next, it keeps growing as a field memory and voice guide, and keeps lining field scope up with estimating. For shops, a demo is on request. I can build a company version around a shop’s own procedures. The full kit is private; the public repo shows what it covers and how it’s laid out.</p>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="history">
+      <h2 id="history">Development history</h2>
+      <ul class="releases">
+        <li><strong>Pre-0.6.</strong> First single-file kit, then split into a modular kit.</li>
+        <li><strong>0.6.7 to 0.6.9.</strong> First numbered releases.</li>
+        <li><strong>0.8.x.</strong> Base for the 0.8 line, then field-memory expansion: crawlspaces rebuilt around displacement, combustion backdrafting, condition labels, cleaning stacks, dehumidifier ducting, and a job-type gate.</li>
+        <li><strong>0.9.0.</strong> Depth cap, four tiers, citations and notes moved out of the kit body, and a pump truck module.</li>
+        <li><strong>0.9.1.</strong> Job flow restructured into five phases, survey to closeout, plus Hold as a status. Hazard sampling rebuilt.</li>
+        <li><strong>0.9.3 to 0.9.5.</strong> Daily log template loads with the kit; job file review workflow and its checks.</li>
+        <li><strong>0.9.6 to 0.9.10.</strong> Cut clearance, moisture mapping tape line, day forward plan format, shower-over-crawl checks.</li>
+        <li><strong>0.9.11 to 0.9.13.</strong> Visit-note cadence, photo timing, and note style.</li>
+        <li><strong>0.9.14 and 0.9.15.</strong> File review before the day-forward plan, role-sorted; morning into-file notes stay delta-only.</li>
+      </ul>
+      <p class="status-more">Full history is in the <a href="https://github.com/neuresthetics/resto_kit_public#%EF%B8%8F-development-history">public repo</a>.</p>
+    </section>
+
+    <section class="block" id="tools" aria-labelledby="tools-h">
+      <p class="kicker">Part two</p>
+      <h2 id="tools-h">RestoKit tools: the showcase</h2>
+      <div class="measure">
+        <p>RestoKit tools are the applications built on top of the framework: the ops board, Job Digest, ScopeBot and the rest. They follow the kit’s stages and rules; they are not the kit itself.</p>
+      </div>
+    </section>
+
     <section class="block app" id="app" aria-labelledby="app-h">
       <h2 id="app-h">RestoKit tools: feature showroom</h2>
       <p>These are the board&#x27;s tools as they look today, one screenshot each, running on demo data. Every name, job number and address is made up. The board ties into the RestoKit kit (the rules), the tower API (serves board.json), read-only Encircle digs (job data), the board manual and scope_bot. Tap any shot to enlarge.</p>
       <div class="tool" id="t-00_overview"><h3>Main page, all sections collapsed</h3><a class="app-hero" href="#shot-00_overview"><img src="img/showroom/00_overview.png" alt="Main page, all sections collapsed" loading="lazy"></a><p>The board&#x27;s front page. One Ops panel with a collapsible section per tool; each header shows a live count or status (jobs on board, trucks staffed, stops today).</p><ul><li>Collapse all / Expand all</li><li>Sync stamp and job count in the header</li><li>Desktop and phone layouts</li></ul><p class="tie"><strong>Ties in:</strong> Reads board.json, which the tower host rebuilds from read-only Encircle digs.</p></div>
       <div class="tool" id="t-01_personnel"><h3>Personnel</h3><a class="app-hero" href="#shot-01_personnel"><img src="img/showroom/01_personnel.png" alt="Personnel" loading="lazy"></a><p>Who is on the crew today, their role and the truck they&#x27;re in.</p><ul><li>Role and default vehicle per person</li><li>Tap a name for skills, licenses and notes</li><li>Local-only edits, never synced</li></ul><p class="tie"><strong>Ties in:</strong> Feeds Vehicles and Dispatch so crews are suggested from people who are actually available.</p></div>
       <div class="tool" id="t-02_vehicles"><h3>Vehicles</h3><a class="app-hero" href="#shot-02_vehicles"><img src="img/showroom/02_vehicles.png" alt="Vehicles" loading="lazy"></a><p>Seats people into trucks for the day.</p><ul><li>Drag or tap to seat a person</li><li>Crew suggestions from today&#x27;s jobs, two-person jobs first</li><li>Return to defaults / set defaults</li></ul><p class="tie"><strong>Ties in:</strong> Uses Personnel plus the job board&#x27;s due stops; the seats drive Dispatch and the Labor ratio.</p></div>
+      <div class="tool" id="t-16_job_digest"><h3>Job Digest</h3><a class="app-hero" href="#shot-16_job_digest"><img src="img/showroom/16_job_digest.png" alt="Job Digest" loading="lazy"></a><p>A job-by-job briefing so office and field start from the same picture. Shown collapsed here; the header chip names the three fields.</p><ul><li>Get in: what came in on the job</li><li>State: where the job stands now</li><li>Next: the next action</li></ul><p class="tie"><strong>Ties in:</strong> Same jobs as the job board, folded into one short briefing per job.</p></div>
       <div class="tool" id="t-03_job_board"><h3>Job board</h3><a class="app-hero" href="#shot-03_job_board"><img src="img/showroom/03_job_board.png" alt="Job board" loading="lazy"></a><p>Every open job as a card in the lane for its stage, from call to close.</p><ul><li>Lanes (Call/Inspect, Work Authorization, Hazard testing, Abatement, Demo, Dry out, On hold, Close) or table view</li><li>Needs-action filters: missing work auth, asbestos/lead not negative, lockbox and spider placement</li><li>Locked by default; unlock to edit</li></ul><p class="tie"><strong>Ties in:</strong> Lanes follow the kit&#x27;s phase sequence. Card data comes from the Encircle digs through the tower API.</p></div>
       <div class="tool" id="t-04_labor_ratio"><h3>Labor ratio</h3><a class="app-hero" href="#shot-04_labor_ratio"><img src="img/showroom/04_labor_ratio.png" alt="Labor ratio" loading="lazy"></a><p>Due stops divided by the stops the crew can make today, as a plain call: OK, busy or too busy.</p><ul><li>Two-person vs solo check coverage</li><li>Stuck jobs by lane</li><li>Short explainer of what the ratio measures</li></ul><p class="tie"><strong>Ties in:</strong> Built from the job board and today&#x27;s Vehicles seats.</p></div>
       <div class="tool" id="t-05_triage"><h3>Triage</h3><a class="app-hero" href="#shot-05_triage"><img src="img/showroom/05_triage.png" alt="Triage" loading="lazy"></a><p>An intake script for the office on a new loss call, most urgent first.</p><ul><li>Tap what the caller says; the board suggests urgency</li><li>Only asks what a caller can answer; the tech measures the rest</li><li>Writes are disabled when offline (as in this demo)</li></ul><p class="tie"><strong>Ties in:</strong> Questions and urgency rules come from the kit&#x27;s intake guidance; a filled intake becomes a new job card.</p></div>
@@ -197,19 +244,7 @@
       <div class="tool" id="t-13_features"><h3>Features</h3><a class="app-hero" href="#shot-13_features"><img src="img/showroom/13_features.png" alt="Features" loading="lazy"></a><p>A searchable list of every board feature and the reason it exists.</p><ul><li>57 features grouped by tool</li><li>Each one says why: a kit rule or an ops rule</li><li>Search box</li></ul><p class="tie"><strong>Ties in:</strong> Ties each feature back to the kit version it follows (references hidden in this shot).</p></div>
       <div class="tool" id="t-14_dev"><h3>Dev</h3><a class="app-hero" href="#shot-14_dev"><img src="img/showroom/14_dev.png" alt="Dev" loading="lazy"></a><p>Developer notes and a systems check.</p><ul><li>How the board reads Encircle: data flow, write policy, PII handling, refresh cadence</li><li>Version history</li><li>Live systems check of the tower host</li></ul><p class="tie"><strong>Ties in:</strong> Documents the tower API and the read-only Encircle digs. Section bodies are collapsed here.</p></div>
       <div class="tool" id="t-15_manual"><h3>Manual / Lookup</h3><a class="app-hero" href="#shot-15_manual"><img src="img/showroom/15_manual.png" alt="Manual / Lookup" loading="lazy"></a><p>The board manual: searchable chapters with quick-lookup chips.</p><ul><li>Chapters and sections with expand/collapse</li><li>Quick chips: moisture readings, containment, asbestos, PPE, photos and more</li><li>Cross-links into board tools</li></ul><p class="tie"><strong>Ties in:</strong> A field reference that follows the kit; only chapter headings are shown here.</p></div>
-      <a class="app-lightbox" id="shot-00_overview" href="#t-00_overview"><img src="img/showroom/00_overview.png" alt="Main page, all sections collapsed"><span>Main page, all sections collapsed · tap to close</span></a><a class="app-lightbox" id="shot-01_personnel" href="#t-01_personnel"><img src="img/showroom/01_personnel.png" alt="Personnel"><span>Personnel · tap to close</span></a><a class="app-lightbox" id="shot-02_vehicles" href="#t-02_vehicles"><img src="img/showroom/02_vehicles.png" alt="Vehicles"><span>Vehicles · tap to close</span></a><a class="app-lightbox" id="shot-03_job_board" href="#t-03_job_board"><img src="img/showroom/03_job_board.png" alt="Job board"><span>Job board · tap to close</span></a><a class="app-lightbox" id="shot-04_labor_ratio" href="#t-04_labor_ratio"><img src="img/showroom/04_labor_ratio.png" alt="Labor ratio"><span>Labor ratio · tap to close</span></a><a class="app-lightbox" id="shot-05_triage" href="#t-05_triage"><img src="img/showroom/05_triage.png" alt="Triage"><span>Triage · tap to close</span></a><a class="app-lightbox" id="shot-06_dispatch" href="#t-06_dispatch"><img src="img/showroom/06_dispatch.png" alt="Dispatch"><span>Dispatch · tap to close</span></a><a class="app-lightbox" id="shot-07_map" href="#t-07_map"><img src="img/showroom/07_map.png" alt="Map"><span>Map · tap to close</span></a><a class="app-lightbox" id="shot-08_hazard_survey" href="#t-08_hazard_survey"><img src="img/showroom/08_hazard_survey.png" alt="Hazard survey"><span>Hazard survey · tap to close</span></a><a class="app-lightbox" id="shot-09_scopebot" href="#t-09_scopebot"><img src="img/showroom/09_scopebot.png" alt="ScopeBot"><span>ScopeBot · tap to close</span></a><a class="app-lightbox" id="shot-10_templates" href="#t-10_templates"><img src="img/showroom/10_templates.png" alt="Templates"><span>Templates · tap to close</span></a><a class="app-lightbox" id="shot-11_pm_analysis" href="#t-11_pm_analysis"><img src="img/showroom/11_pm_analysis.png" alt="PM analysis"><span>PM analysis · tap to close</span></a><a class="app-lightbox" id="shot-12_file_quality" href="#t-12_file_quality"><img src="img/showroom/12_file_quality.png" alt="File quality"><span>File quality · tap to close</span></a><a class="app-lightbox" id="shot-13_features" href="#t-13_features"><img src="img/showroom/13_features.png" alt="Features"><span>Features · tap to close</span></a><a class="app-lightbox" id="shot-14_dev" href="#t-14_dev"><img src="img/showroom/14_dev.png" alt="Dev"><span>Dev · tap to close</span></a><a class="app-lightbox" id="shot-15_manual" href="#t-15_manual"><img src="img/showroom/15_manual.png" alt="Manual / Lookup"><span>Manual / Lookup · tap to close</span></a>
-    </section>
-
-    <section class="block" aria-labelledby="status">
-      <h2 id="status">Status</h2>
-      <div class="note">
-        <p class="ver">Kit version <strong>0.9.15</strong></p>
-        <ul class="releases">
-          <li><strong>0.9.15.</strong> Morning into-file notes are delta-only: decisions, today’s work, and who’s assigned. Not a reprint of data already in the file.</li>
-          <li><strong>0.9.14.</strong> File review runs before the day-forward plan. To-dos come back role-sorted: PM, then Lead, then Techs.</li>
-        </ul>
-        <p class="status-more">Earlier 0.9.x stays in the kit. Next, it keeps growing as a field memory and voice guide, and keeps lining field scope up with estimating. For shops, a demo is on request. I can build a company version around a shop’s own procedures. The full kit is private; the public repo shows what it covers and how it’s laid out.</p>
-      </div>
+      <a class="app-lightbox" id="shot-00_overview" href="#t-00_overview"><img src="img/showroom/00_overview.png" alt="Main page, all sections collapsed"><span>Main page, all sections collapsed · tap to close</span></a><a class="app-lightbox" id="shot-01_personnel" href="#t-01_personnel"><img src="img/showroom/01_personnel.png" alt="Personnel"><span>Personnel · tap to close</span></a><a class="app-lightbox" id="shot-02_vehicles" href="#t-02_vehicles"><img src="img/showroom/02_vehicles.png" alt="Vehicles"><span>Vehicles · tap to close</span></a><a class="app-lightbox" id="shot-16_job_digest" href="#t-16_job_digest"><img src="img/showroom/16_job_digest.png" alt="Job Digest"><span>Job Digest · tap to close</span></a><a class="app-lightbox" id="shot-03_job_board" href="#t-03_job_board"><img src="img/showroom/03_job_board.png" alt="Job board"><span>Job board · tap to close</span></a><a class="app-lightbox" id="shot-04_labor_ratio" href="#t-04_labor_ratio"><img src="img/showroom/04_labor_ratio.png" alt="Labor ratio"><span>Labor ratio · tap to close</span></a><a class="app-lightbox" id="shot-05_triage" href="#t-05_triage"><img src="img/showroom/05_triage.png" alt="Triage"><span>Triage · tap to close</span></a><a class="app-lightbox" id="shot-06_dispatch" href="#t-06_dispatch"><img src="img/showroom/06_dispatch.png" alt="Dispatch"><span>Dispatch · tap to close</span></a><a class="app-lightbox" id="shot-07_map" href="#t-07_map"><img src="img/showroom/07_map.png" alt="Map"><span>Map · tap to close</span></a><a class="app-lightbox" id="shot-08_hazard_survey" href="#t-08_hazard_survey"><img src="img/showroom/08_hazard_survey.png" alt="Hazard survey"><span>Hazard survey · tap to close</span></a><a class="app-lightbox" id="shot-09_scopebot" href="#t-09_scopebot"><img src="img/showroom/09_scopebot.png" alt="ScopeBot"><span>ScopeBot · tap to close</span></a><a class="app-lightbox" id="shot-10_templates" href="#t-10_templates"><img src="img/showroom/10_templates.png" alt="Templates"><span>Templates · tap to close</span></a><a class="app-lightbox" id="shot-11_pm_analysis" href="#t-11_pm_analysis"><img src="img/showroom/11_pm_analysis.png" alt="PM analysis"><span>PM analysis · tap to close</span></a><a class="app-lightbox" id="shot-12_file_quality" href="#t-12_file_quality"><img src="img/showroom/12_file_quality.png" alt="File quality"><span>File quality · tap to close</span></a><a class="app-lightbox" id="shot-13_features" href="#t-13_features"><img src="img/showroom/13_features.png" alt="Features"><span>Features · tap to close</span></a><a class="app-lightbox" id="shot-14_dev" href="#t-14_dev"><img src="img/showroom/14_dev.png" alt="Dev"><span>Dev · tap to close</span></a><a class="app-lightbox" id="shot-15_manual" href="#t-15_manual"><img src="img/showroom/15_manual.png" alt="Manual / Lookup"><span>Manual / Lookup · tap to close</span></a>
     </section>
 
     <section class="block close" aria-labelledby="links">
