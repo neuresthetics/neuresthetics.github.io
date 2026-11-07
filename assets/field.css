@@ -53,7 +53,7 @@
 }
 html body.theme-field .site-header .wrap { max-width: 68rem; }
 
-.theme-field main { padding: 1.75rem 0 4.5rem; }
+.theme-field main { padding: 0 0 4.5rem; }
 .theme-field main > .wrap { max-width: 68rem; }
 
 .theme-field a {
@@ -107,55 +107,53 @@ html body.theme-field .site-header .wrap { max-width: 68rem; }
   overflow-wrap: anywhere;
 }
 
-/* App-style title row: existing lockup (mark + word) and the kit chip. */
+/* App header: existing lockup on the left, kit label on the right. */
+.theme-field .app-bar {
+  background: var(--bar);
+  border-bottom: 1px solid var(--line);
+}
+.theme-field .app-bar .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.25rem;
+  max-width: 68rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+.theme-field .rk-logo { margin: 0; line-height: 0; min-width: 0; }
+.theme-field .rk-logo img {
+  display: block;
+  height: 36px;
+  width: auto;
+  max-width: 100%;
+}
+.theme-field .app-bar .kicker {
+  margin: 0;
+  padding: 0.12rem 0.45rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--dim);
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  line-height: 1.4;
+  white-space: nowrap;
+}
 .theme-field .mast {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(16rem, 22rem);
   gap: 1.35rem 2.25rem;
   align-items: start;
+  margin-top: 1.35rem;
   padding: 1.15rem 1.2rem 1.25rem;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
 }
-.theme-field .mast-copy {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  column-gap: 1rem;
-  row-gap: 0.15rem;
-  min-width: 0;
-}
-.theme-field .rk-logo {
-  grid-column: 1;
-  grid-row: 1;
-  margin: 0;
-  line-height: 0;
-  min-width: 0;
-}
-.theme-field .rk-logo img {
-  display: block;
-  height: 52px;
-  width: auto;
-  max-width: 100%;
-}
-.theme-field .mast .kicker {
-  grid-column: 2;
-  grid-row: 1;
-  justify-self: end;
-  margin: 0;
-  padding: 0.18rem 0.5rem;
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  background: var(--chip);
-  color: var(--accent);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  line-height: 1.4;
-  white-space: nowrap;
-}
+.theme-field .mast-copy { min-width: 0; }
 .theme-field .block > .kicker {
   margin: 0 0 0.45rem;
   padding: 0;
@@ -174,7 +172,7 @@ html body.theme-field .site-header .wrap { max-width: 68rem; }
 .theme-field .actions { grid-column: 1 / -1; }
 .theme-field .lead {
   max-width: 70ch;
-  margin: 1rem 0 0.35rem;
+  margin: 0 0 0.35rem;
   color: var(--ink);
   font-size: 1.2rem;
   font-weight: 650;
@@ -472,17 +470,10 @@ html body.theme-field .site-header .wrap { max-width: 68rem; }
   .theme-field .mast { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
-  .theme-field main { padding: 1.25rem 0 3rem; }
+  .theme-field main { padding: 0 0 3rem; }
   .theme-field .mast { padding: 1rem; }
-  .theme-field .rk-logo img { height: 44px; }
-  .theme-field .mast-copy { grid-template-columns: 1fr; }
-  .theme-field .mast .kicker {
-    grid-column: 1;
-    grid-row: 2;
-    justify-self: start;
-    margin-top: 0.55rem;
-  }
-  .theme-field .lead { font-size: 1.25rem; }
+  .theme-field .rk-logo img { height: 32px; }
+  .theme-field .lead { font-size: 1.125rem; }
   .theme-field .block { margin-top: 3.25rem; }
   .theme-field .points,
   .theme-field .roles,
