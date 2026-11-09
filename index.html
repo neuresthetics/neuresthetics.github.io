@@ -50,16 +50,7 @@
       <p class="who"><b>Jason Burns</b> · 🌐 <a href="https://neuresthetic.net">neuresthetic.net</a></p>
       <p class="chips"><a class="chip gold" href="https://github.com/neuresthetics">github · neuresthetics</a><span class="chip">builder · tools + research</span><span class="chip blue">since 2017</span></p>
       <blockquote class="define"><p><strong>Neuresthetics</strong> is <em>kinesthetics for brains</em>: spelled with "eu," never "neuroesthetics." Plural, it's the practice: shaping how a mind is organized, on purpose. Singular, a <strong>neuresthetic</strong> is a result of that practice.</p></blockquote>
-      <p class="intro-text">I build tools for people who work with their hands and their heads: 🛠️ a restoration kit for water, mold, and crawlspace work, 🗣️ a word board for people who tap words instead of speaking, and 📜 long-running research on how minds put order on the world. Neuresthetics started before AI. AI is one of the tools now, not the point.</p>
-      <!-- JASON: optional extra bio line goes here (see suggestions in the report) -->
-    </section>
-
-    <section class="sec" aria-labelledby="built-title">
-      <h2 id="built-title"><span aria-hidden="true">⚙️ </span>HOW THE WORK IS CHECKED</h2>
-      <p class="sub">One rule runs through every project below.</p>
-      <p><strong>The rule.</strong> A claim stands only if its source says so, word for word. Models draft, search and argue; code and blind audit runs check what they produce, and anything unchecked is labeled a draft. Arguments are checked against <a href="fallacy-catalog/">fallacy_catalog</a> (v0.6.1), a sourced catalog of 221 named fallacies with a method for checking one step at a time, built to avoid false accusations. A flag is a lead to check, not a verdict. Models are tools here, not the point.</p>
-      <p><strong>Local models.</strong> A Linux tower with a 20 GB GPU and 64 GB RAM runs Ollama with Qwen 27B, in a standard and an uncensored build, at 32K context (argument runs use 16K). A stock 14B has already run as the swap model. The tower works through unattended job queues, for days if needed, for an adversarial argument harness: the models draft the strongest case for each side, code checks every cite against word-for-word source excerpts, and runs are rescored and repeated across seeds and model swaps to see how much of a result comes from the model. It has no valid scores yet.</p>
-      <p><strong>Grok.</strong> Grok Bot (an xAI assistant) runs a set of project bots for coding, audits, writing support, and fetching the word-for-word sources those cite checks use.</p>
+      <p class="intro-text">I build tools for people who work with their hands and their heads: 🛠️ a restoration kit for water, mold, and crawlspace work, 🗣️ a free offline word board for people who tap words instead of speaking, and 📜 long-running research on how minds put order on the world. Neuresthetics started before AI. AI is one of the tools now, not the point.</p>
     </section>
 
     <section class="sec" aria-labelledby="products-title">
@@ -70,7 +61,7 @@
         <a class="card-img" href="restokit/" tabindex="-1" aria-hidden="true"><img src="assets/img/cards/wide-restokit-signal.jpg" alt="" width="900" height="300" loading="lazy"></a>
         <div class="card-body">
           <h3><span aria-hidden="true">💧 </span><a href="restokit/">RestoKit</a></h3>
-          <p>Kit 0.9.15. A restoration kit for water, mold, and crawlspace work, from tech to lead, PM, and estimator. Grounded in IICRC S500 and S520 principles, it walks a job through five phases from survey to closeout, with Hold as a status from any phase, and keeps the rare edge cases. The full kit is private.</p>
+          <p>Kit 0.9.20. A restoration kit for water, mold, and crawlspace work, from tech to lead, PM, and estimator. Grounded in IICRC S500 and S520 principles; five phases from survey to closeout, with Hold from any phase. Recent kit work covers walkthrough note sets and visit notes that stack newest day first. The public page also shows the RestoKit tools showcase (ops board, Job Digest, ScopeBot, and related demos on synthetic data). The full kit is private.</p>
           <p class="runs"><span aria-hidden="true">⚙️ </span><b>Runs on:</b> commercial models only, loaded into the Grok app or a Grok Bot</p>
           <p class="links"><a href="restokit/"><span aria-hidden="true">🌐 </span>page</a><a href="https://github.com/neuresthetics/resto_kit_public"><span aria-hidden="true">📂 </span>repo</a></p>
         </div>
@@ -80,7 +71,7 @@
         <a class="card-img" href="anova/" tabindex="-1" aria-hidden="true"><img src="assets/img/anova/growth-home-levels.jpg" alt="" width="1790" height="830" loading="lazy"></a>
         <div class="card-body">
           <h3><span aria-hidden="true">🗣️ </span><a href="anova/">ANOVA Language</a></h3>
-          <p>A free word board for people who communicate by tapping words instead of speaking. It's a web app for iPad and other tablets, and it works offline once it's installed. Buttons never move as the word levels grow. Version 1.4.1. MIT license.</p>
+          <p>A free, offline AAC word board for iPad and other tablets. Buttons never move as word levels grow. Version 1.6.0: Paths for short grammatical sentences, age-tiered levels (Starter through Full), and button looks (classic, chunky, tint, pebble). MIT license. Open the live board from the project page; no shared account needed.</p>
           <p class="runs"><span aria-hidden="true">⚙️ </span><b>Runs on:</b> No model · plain HTML, CSS and JavaScript, offline, no network calls</p>
           <p class="links"><a href="anova/"><span aria-hidden="true">🌐 </span>page</a><a href="https://github.com/neuresthetics/anova_language_dev_public"><span aria-hidden="true">📂 </span>repo</a></p>
         </div>
@@ -90,8 +81,8 @@
         <a class="card-img" href="grokipedia/" tabindex="-1" aria-hidden="true"><img src="assets/img/cards/card-grokipedia.jpg?v=2" alt="" width="900" height="450" loading="lazy"></a>
         <div class="card-body">
           <h3><span aria-hidden="true">🔎 </span><a href="grokipedia/">Grokipedia Audit</a></h3>
-          <p>Checks Grokipedia articles against the sources they cite, one claim at a time, with the evidence kept next to every finding. Current results: a circumcision fallacy_catalog benchmark (58 articles) and a Spinoza citation audit (401 sentences).</p>
-          <p class="runs"><span aria-hidden="true">⚙️ </span><b>Runs on:</b> A general-purpose AI agent · plain written steps and fallacy_catalog; each finding records the model and date</p>
+          <p>Checks Grokipedia articles against the sources they cite, one claim at a time, with the evidence kept next to every finding. Current published results: a circumcision and FGM benchmark (58 articles) and a Spinoza citation audit (401 sentences). In progress: automated idea_detection dry runs on 2,616 circumcision argument passages (leads, not verdicts). Consciousness pages are snapshotted only; no checks on that set yet.</p>
+          <p class="runs"><span aria-hidden="true">⚙️ </span><b>Runs on:</b> A general-purpose AI agent · plain written steps; each finding records the model and date</p>
           <p class="links"><a href="grokipedia/"><span aria-hidden="true">🌐 </span>page</a><a href="https://github.com/neuresthetics/grokipedia_audit"><span aria-hidden="true">📂 </span>repo</a></p>
         </div>
       </article>
@@ -100,14 +91,14 @@
     <section class="sec" aria-labelledby="brand-title">
       <h2 id="brand-title"><span aria-hidden="true">🧠 </span>BRAND PROJECT</h2>
       <p class="sub">The Neuresthetics project itself: the study and the book.</p>
-      <p>The Genius Study rebuilds, from sources, where remembered geniuses stand on God, nature and law. Drafts only; no results yet. Freedom of Necessity is the geometric book that starts from "I exist." Its current face is one chain, technical and poetic (V001–V251).</p>
+      <p>The Genius Study (v8) collects sourced person and belief-system records of remembered genius and keeps a labeled belief model separate. Drafts only; no results yet. Freedom of Necessity, the book, is a live core v3 draft with dual verse tracks, poetic and technical, sharing V001–V251 from the root axiom A1, “I exist.” Findings in either can send the other back to work.</p>
 
       <div class="brand-cards">
         <article class="card short">
           <a class="card-img" href="study/" tabindex="-1" aria-hidden="true"><img src="assets/img/study/faces-by-chart.jpg" alt="" width="900" height="180" loading="lazy"></a>
           <div class="card-body">
             <h3><span aria-hidden="true">🔬 </span><a href="study/">Genius Study</a></h3>
-            <p><b>The study.</b> Where the people history remembers as geniuses stand on God, nature and law. The public record is rebuilt from sources, one person at a time, beside a labeled belief that learning lawful order early may pay off. Drafts only; no results yet.</p>
+            <p><b>The study.</b> Where remembered genius sits on a scale of lawful, non-intervening order — sourced person and belief-system records, with a labeled belief model kept separate. v8 is in progress; drafts only; no results yet.</p>
             <p class="runs"><span aria-hidden="true">⚙️ </span><b>Runs on:</b> Grok · one Grok Bot drafts person records from web search and the cited pages; blind audit runs check them (unreviewed drafts)</p>
             <p class="links"><a href="study/"><span aria-hidden="true">🌐 </span>page</a><a href="https://github.com/neuresthetics/neuresthetics_genius_study"><span aria-hidden="true">📂 </span>repo</a><a href="credits/#study-portraits"><span aria-hidden="true">🖼️ </span>portrait credits</a></p>
           </div>
@@ -117,8 +108,8 @@
           <a class="card-img" href="book/" tabindex="-1" aria-hidden="true"><img src="assets/img/book-og.jpg" alt="" width="1200" height="630" loading="lazy"></a>
           <div class="card-body">
             <h3><span aria-hidden="true">📖 </span><a href="book/">Freedom of Necessity</a></h3>
-            <p><b>The book.</b> Written axiom by axiom from "I exist," in the geometric order of Spinoza's <em>Ethics</em>. One order, Nature; the mind is the body's own organization described from within. His manuscript is lost; this runs the method again from first principles. Current face: B1 dual render, technical and poetic, V001–V251.</p>
-            <p class="runs"><span aria-hidden="true">⚙️ </span><b>Runs on:</b> Grok · written and checked with Grok; core v3 dual render is the readable face, and core v2 is still the last seed in entries/; no harness scores yet beyond A1 (scored 1.0)</p>
+            <p><b>The book.</b> Freedom of Necessity is a Spinoza-style geometric work — definitions, axioms, and propositions in one chain from the root axiom A1, “I exist.” Live draft is core v3 (BASE 20 + expansion 231 = 251) with dual verse tracks, poetic and technical, sharing the same V001–V251 numbers. The collision record is the book.</p>
+            <p class="runs"><span aria-hidden="true">⚙️ </span><b>Runs on:</b> Grok · core v3 dual-track draft; harness scores dropped from the process (2026-11-09); no results to announce</p>
             <p class="links"><a href="book/"><span aria-hidden="true">🌐 </span>page</a><a href="https://github.com/neuresthetics/freedom_of_necessity"><span aria-hidden="true">📂 </span>repo</a><a href="https://github.com/neuresthetics/freedom_of_necessity/blob/main/drafts/foreword_origin.md"><span aria-hidden="true">📜 </span>foreword</a><a href="https://github.com/neuresthetics/freedom_of_necessity/blob/main/PREFACE.md"><span aria-hidden="true">📜 </span>preface</a><a href="credits/#book-image"><span aria-hidden="true">🖼️ </span>image credit</a></p>
           </div>
         </article>
