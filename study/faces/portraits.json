@@ -1,0 +1,81 @@
+{
+  "Albert Einstein": {
+    "commons_file": "Albert Einstein Head cleaned.jpg",
+    "license": "Public domain",
+    "license_url": "",
+    "author": "Oren Jack Turner"
+  },
+  "B.F. Skinner": {
+    "commons_file": "B.F. Skinner at Harvard circa 1950 (cropped).jpg",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "author": "Silly rabbit"
+  },
+  "Baruch Spinoza": {
+    "commons_file": "Spinoza.jpg",
+    "license": "Public domain",
+    "license_url": "",
+    "author": "anonymous"
+  },
+  "Erwin Schrödinger": {
+    "commons_file": "Erwin Schrödinger - Narodowe Archiwum Cyfrowe (1-E-939).jpg",
+    "license": "Public domain",
+    "license_url": "",
+    "author": "Unknown author"
+  },
+  "Friedrich Nietzsche": {
+    "commons_file": "Nietzsche187a.jpg",
+    "license": "Public domain",
+    "license_url": "",
+    "author": "Friedrich Hermann Hartmann"
+  },
+  "Linus Pauling": {
+    "commons_file": "Linus Pauling in the 1940s.jpg",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "author": "Unknown author"
+  },
+  "Stephen Hawking": {
+    "commons_file": "Stephen Hawking.StarChild.jpg",
+    "license": "Public domain",
+    "license_url": "",
+    "author": "NASA",
+    "crop_frac": [0.02, 0.0, 0.58, 0.42]
+  },
+  "Francis Crick": {
+    "commons_file": "Francis Crick crop.jpg",
+    "license": "CC BY 2.5",
+    "license_url": "https://creativecommons.org/licenses/by/2.5",
+    "author": "Marc Lieberman; crop by Materialscientist"
+  },
+  "James Watson": {
+    "commons_file": "James D. Watson LCCN2007680359.jpg",
+    "license": "Public domain",
+    "license_url": "",
+    "author": "Newspaper Enterprise Association"
+  },
+  "Niels Bohr": {
+    "commons_file": "Niels Bohr.jpg",
+    "license": "Public domain",
+    "license_url": "",
+    "author": "AB Lagrelius & Westphal"
+  },
+  "Richard Feynman": {
+    "commons_file": "Richard Feynman 1939 MIT yearbook portrait.jpg",
+    "license": "Public domain",
+    "license_url": "",
+    "author": "Unknown author"
+  },
+  "Thomas Edison": {
+    "commons_file": "Thomas Edison2.jpg",
+    "license": "Public domain",
+    "license_url": "",
+    "author": "Louis Bachrach, Bachrach Studios"
+  },
+  "Nikola Tesla": {
+    "commons_file": "Tesla circa 1890.jpeg",
+    "license": "Public domain",
+    "license_url": "",
+    "author": "Napoleon Sarony"
+  }
+}

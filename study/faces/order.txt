@@ -1,0 +1,25 @@
+Genius Study header faces
+Source: neuresthetics/neuresthetics_genius_study main 15afac24872560a2b0a5ce3fd4e8747a664ac3ce (2026-10-26)
+Chart: figures/people_cause_locus.png
+Plotted only: numeric A_locus and numeric B_cause.
+Order: Euclidean distance to (A_locus 4, B_cause 4), smaller first;
+then dark before faded (minimum certainty >= 0.7 before below);
+tiebreak: filled before hollow, then higher minimum certainty, then display name A–Z.
+This is chart position, not a ranking of genius.
+
+rank	id	name	A_locus	B_cause	distance	min_certainty	cue	license	commons_file
+1	einstein-albert	Albert Einstein	4	4	0.000	0.7	dark filled	Public domain	Albert Einstein Head cleaned.jpg
+2	skinner-b-f	B.F. Skinner	4	4	0.000	0.7	dark filled	CC BY 3.0	B.F. Skinner at Harvard circa 1950 (cropped).jpg
+3	spinoza-baruch	Baruch Spinoza	4	4	0.000	0.7	dark filled	Public domain	Spinoza.jpg
+4	schrodinger-erwin	Erwin Schrödinger	4	4	0.000	0.7	dark filled	Public domain	Erwin Schrödinger - Narodowe Archiwum Cyfrowe (1-E-939).jpg
+5	nietzsche-friedrich	Friedrich Nietzsche	4	4	0.000	0.7	dark filled	Public domain	Nietzsche187a.jpg
+6	pauling-linus	Linus Pauling	4	4	0.000	0.7	dark filled	CC BY-SA 2.0	Linus Pauling in the 1940s.jpg
+7	hawking-stephen	Stephen Hawking	4	4	0.000	0.7	dark filled	Public domain	Stephen Hawking.StarChild.jpg
+8	crick-francis	Francis Crick	4	4	0.000	0.5	faded filled	CC BY 2.5	Francis Crick crop.jpg
+9	watson-james	James Watson	4	4	0.000	0.5	faded filled	Public domain	James D. Watson LCCN2007680359.jpg
+10	bohr-niels	Niels Bohr	4	4	0.000	0.5	faded filled	Public domain	Niels Bohr.jpg
+11	feynman-richard	Richard Feynman	4	4	0.000	0.5	faded filled	Public domain	Richard Feynman 1939 MIT yearbook portrait.jpg
+12	edison-thomas	Thomas Edison	4	4	0.000	0.5	faded filled	Public domain	Thomas Edison2.jpg
+13	tesla-nikola	Nikola Tesla	4	4	0.000	0.5	faded hollow	Public domain	Tesla circa 1890.jpeg
+
+No face that fit in the strip was dropped for lack of an open portrait.
