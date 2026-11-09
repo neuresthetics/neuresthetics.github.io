@@ -379,3 +379,51 @@
   font-size: 0.95rem;
   color: #333333;
 }
+
+/* Nested sections inside the full draft. Summaries are the sans "context";
+   the draft text inside stays white, near-black, serif. */
+.theme-code .full-draft { --paper: #ffffff; --muted: #5c5c5c; }
+.theme-code .draft-body details.sec {
+  margin-top: 8px;
+  border: 1px solid var(--line, #cbd5e1);
+  border-radius: 9px;
+  padding: 0 10px;
+  background: var(--paper);
+}
+.theme-code .draft-body details.sec > summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 9px 0;
+  font: 700 13.5px/1.2 Helvetica, Arial, sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #111111;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--paper);
+}
+.theme-code .draft-body details.sec > summary::-webkit-details-marker { display: none; }
+.theme-code .draft-body details.sec > summary::before { content: '\25B8'; font-size: 11px; width: 12px; color: var(--muted); }
+.theme-code .draft-body details.sec[open] > summary::before { content: '\25BE'; }
+.theme-code .draft-body details.sec[open] > summary { border-bottom: 1px solid var(--line, #cbd5e1); margin-bottom: 8px; }
+.theme-code .draft-body details.sec[open] { padding-bottom: 10px; }
+.theme-code .draft-body details.sec > summary .ct { margin-left: auto; font-variant-numeric: tabular-nums; font-weight: 400; color: var(--muted); }
+.theme-code .draft-body details.sec > summary .vr { font-weight: 400; color: var(--muted); font-variant-numeric: tabular-nums; }
+.theme-code .draft-body .dsec-body,
+.theme-code .draft-body .dentry-body { padding: 0.25rem 0.25rem 0.5rem; }
+.theme-code .draft-controls { margin: 0 0 0.5rem; }
+.theme-code .draft-controls button {
+  font: 600 13.5px/1.2 Helvetica, Arial, sans-serif;
+  min-height: 44px;
+  padding: 0 14px;
+  background: #ffffff;
+  color: #111111;
+  border: 1px solid var(--line, #cbd5e1);
+  border-radius: 9px;
+  cursor: pointer;
+}
