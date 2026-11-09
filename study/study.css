@@ -79,7 +79,9 @@
   padding-top: 1.6rem;
 }
 
-/* Full-width painting under the shared nav */
+/* Full-width painting under the shared nav.
+   Center crop: keep the current width and the file's proportions, and
+   show the middle third of its natural 16:9 height (1280×720 source). */
 .theme-study .hero {
   margin: 0;
 }
@@ -88,6 +90,9 @@
   display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 16 / 3;
+  object-fit: cover;
+  object-position: center;
   border: 0;
   border-radius: 0;
   background: #28354f;
