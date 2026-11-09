@@ -79,9 +79,8 @@
   padding-top: 1.6rem;
 }
 
-/* Full-width painting under the shared nav.
-   Center crop: keep the current width and the file's proportions, and
-   show the middle third of its natural 16:9 height (1280×720 source). */
+/* Full-width faces collage under the shared nav.
+   Natural 900×180 proportions; the whole image shows. */
 .theme-study .hero {
   margin: 0;
 }
@@ -90,9 +89,7 @@
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 3;
-  object-fit: cover;
-  object-position: center;
+  margin: 0;
   border: 0;
   border-radius: 0;
   background: #28354f;
@@ -101,7 +98,8 @@
 .theme-study .hero figcaption {
   margin: 0.7rem auto 0;
   color: #445b87;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
 }
 
 .theme-study h1 {
@@ -201,33 +199,6 @@
 
 .theme-study a:focus-visible {
   outline-color: #a67fa0;
-}
-
-/* Faces collage, lower on the page */
-.theme-study .faces {
-  margin: 2.4rem 0 0.4rem;
-  padding: 0.7rem 0.7rem 0.9rem;
-  background: #fffaf8;
-  border: 1px solid #e4d4d6;
-  border-radius: 16px;
-  box-shadow: 0 12px 32px rgba(40, 53, 79, 0.07);
-}
-
-.theme-study .faces .banner,
-.theme-study .faces img {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  border: 0;
-  border-radius: 10px;
-}
-
-.theme-study .faces figcaption {
-  color: #445b87;
-  font-size: 0.9rem;
-  line-height: 1.55;
-  margin-top: 0.7rem;
 }
 
 /* Charts sit on a warm mat; the images themselves are unchanged */
@@ -336,7 +307,6 @@
   }
 
   .theme-study .hero figcaption,
-  .theme-study .faces figcaption,
   .theme-study .fig figcaption {
     font-size: 0.86rem;
   }
