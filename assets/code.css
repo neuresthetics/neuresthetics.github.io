@@ -427,3 +427,12 @@
   border-radius: 9px;
   cursor: pointer;
 }
+
+/* Readability tune for the nested summaries: larger sans, softer rules. */
+.theme-code .draft-body details.sec { border-color: #e6e6e2; border-radius: 8px; }
+.theme-code .draft-body details.sec[open] > summary { border-bottom-color: #ececE8; }
+.theme-code .draft-body details.sec > summary { font: 600 15.5px/1.3 Helvetica, Arial, sans-serif; }
+.theme-code .draft-body details.dgroup > summary { font-size: 16px; }
+.theme-code .draft-body details.sec > summary .ct,
+.theme-code .draft-body details.sec > summary .vr { font-size: 13.5px; }
+.theme-code .draft-controls button { font-size: 15px; border-color: #e6e6e2; border-radius: 8px; }
