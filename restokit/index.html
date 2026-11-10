@@ -26,7 +26,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/restokit/restokit_icon_on_dark_16.png?v=dark1" media="(prefers-color-scheme: dark)">
 <link rel="apple-touch-icon" href="../assets/img/restokit/restokit_icon_180.png?v=signal">
 <link rel="stylesheet" href="../assets/style.css">
-<link rel="stylesheet" href="../assets/field.css?v=fine2">
+<link rel="stylesheet" href="../assets/field.css?v=order1">
 <link rel="stylesheet" href="../assets/nav.css?v=2">
 </head>
 <body class="theme-field">
@@ -79,7 +79,7 @@
       <p class="kicker">Part one</p>
       <h2 id="framework-h">RestoKit: the framework</h2>
       <div class="measure">
-        <p>RestoKit is the framework: the job stages (phases) and the modules that load into an AI model. This part of the page is about the kit itself: what it is, where it came from, and how it is built. The tools built on it have their own section <a href="#tools">further down</a>.</p>
+        <p>RestoKit is the framework: the job stages (phases) and the modules that load into an AI model. The tools built on it have their own section <a href="#tools">further down</a>.</p>
       </div>
     </section>
 
@@ -129,15 +129,22 @@
           <strong>Anyone can pick it up.</strong>
           Task lists stay hand-editable. Someone not using RestoKit can open one, see what’s done, half done, and still to do, pick up where the last person left off, and check a box. Crews don’t have time to write long lists, and hand-written lists are sloppy and rarely read.
         </li>
-        <li>
-          <strong>It runs on Grok Bot.</strong>
-          With teams, each field tech gets a bot for the work in the field. Tech bots form a cluster that reports to the manager’s bot or cluster, and that continues up. The top of the business gets a complete view of profit and loss.
-        </li>
-        <li>
-          <strong>Carriers read the data, not the logo.</strong>
-          Insurance carriers care what’s in the file, not which software made it. A file laid out close to the format carriers already see for that job type gives them no reason to push back, because it carries all the required data, and usually better data than most restoration companies send today. Well-organized files move through review faster, which means less back-and-forth and faster payment.
-        </li>
       </ul>
+      <div class="measure">
+        <h3 id="drawn-from">Knowledge drawn from seven restoration companies</h3>
+        <p>Built from the field across tech, lead, production manager, PM, and estimator roles at:</p>
+        <ul class="company-list">
+          <li>Servpro of Southwest Portland</li>
+          <li>Oregon Restoration</li>
+          <li>Servpro (Hillsboro)</li>
+          <li>BluSky Restoration</li>
+          <li>Roto-Rooter</li>
+          <li>Restoration One</li>
+          <li>Sarkinen Home Services</li>
+        </ul>
+        <p>That spans the lowest-billable shops to the highest-quality ones, so the kit knows what cutting corners looks like and what doing it right looks like.</p>
+        <p class="fine-print"><em>Work history only. No affiliation or endorsement implied.</em></p>
+      </div>
     </section>
 
     <section class="block" aria-labelledby="standard-h">
@@ -147,6 +154,10 @@
         <p>That standard feeds real-time decisions — including justifications to an insurer about why a line is billable — with the reason attached. Two shops on the kit can say they make trade decisions the same way, without waiting on the next printed edition of a standards book.</p>
       </div>
       <ul class="shop-grid">
+        <li>
+          <strong>Edge cases stay in the kit</strong>
+          The rare ones don’t come up often enough to stay top of mind. The standard carries them, so you carry less of that inventory in your head.
+        </li>
         <li>
           <strong>Field-proven editions</strong>
           Growth still goes through review by experienced field techs. Once an edition is verified, everyone gets it at the same moment.
@@ -164,6 +175,16 @@
         <p>Every billable item carries a real reason, down to the specifics of that job. Adjusters get a clear window into the services you provided and why — not a stack of lines with no trail.</p>
         <p>That is the claim trail from the stop, written for the person who has to defend it.</p>
       </div>
+      <ul class="shop-grid">
+        <li>
+          <strong>The claim trail rides with the work</strong>
+          Photos, moisture, why the equipment is there and where it sits, and a short note happen on the stop, not at the end of the day.
+        </li>
+        <li>
+          <strong>Carriers read the data, not the logo</strong>
+          Insurance carriers care what’s in the file, not which software made it. A file laid out close to the format carriers already see for that job type gives them no reason to push back, because it carries all the required data, and usually better data than most restoration companies send today. Well-organized files move through review faster, which means less back-and-forth and faster payment.
+        </li>
+      </ul>
     </section>
 
     <section class="block" aria-labelledby="how-it-works">
@@ -377,41 +398,11 @@
       <div class="measure">
         <p>RestoKit is a structured JSON kit for anyone running a restoration job. It’s grounded in IICRC S500 (water) and S520 (mold) principles, and written the way a senior tech talks a job through.</p>
         <p>It doesn’t replace years on the job. It carries lessons from people who’ve spent decades in the trade. Its main job is memory: the rare edge cases that don’t come up often enough to stay top of mind.</p>
-        <h3 id="drawn-from">Knowledge drawn from seven restoration companies</h3>
-        <p>Built from the field across tech, lead, production manager, PM, and estimator roles at:</p>
-        <ul class="company-list">
-          <li>Servpro of Southwest Portland</li>
-          <li>Oregon Restoration</li>
-          <li>Servpro (Hillsboro)</li>
-          <li>BluSky Restoration</li>
-          <li>Roto-Rooter</li>
-          <li>Restoration One</li>
-          <li>Sarkinen Home Services</li>
-        </ul>
-        <p>That spans the lowest-billable shops to the highest-quality ones, so the kit knows what cutting corners looks like and what doing it right looks like.</p>
-        <p class="fine-print"><em>Work history only. No affiliation or endorsement implied.</em></p>
         <h3 id="every-field">Where it’s headed: every restoration field</h3>
         <p>Water and mold make up most restoration jobs, and that’s where RestoKit’s field knowledge runs deepest. It already covers contents at a basic level, and fire jobs share most of the same structure. A fire job is largely a water and mold job with different cleaning and demo. The plan is to deepen each of those fields and grow the same standard across the whole trade, built from real jobs and through the same distributed, field-proven review. That way one company can run every kind of loss on one standard with one set of agents.</p>
       </div>
     </section>
 
-    <section class="block" aria-labelledby="day">
-      <h2 id="day">How it changes the day</h2>
-      <ul class="points">
-        <li>
-          <strong>Edge cases stay in the kit.</strong>
-          The rare ones don’t come up often enough to stay top of mind. You carry less of that inventory in your head.
-        </li>
-        <li>
-          <strong>The claim trail rides with the work.</strong>
-          Photos, moisture, why the equipment is there and where it sits, and a short note happen on the stop.
-        </li>
-        <li>
-          <strong>One question at a time.</strong>
-          The answer is short and specific, the way a senior tech talks the job through.
-        </li>
-      </ul>
-    </section>
 
     <section class="block" aria-labelledby="status">
       <h2 id="status">The kit</h2>
