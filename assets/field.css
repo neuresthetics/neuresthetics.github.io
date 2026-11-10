@@ -953,3 +953,12 @@ html body.theme-field .site-header .wrap { max-width: 68rem; }
 }
 
 .email-plain{cursor:text;user-select:all;-webkit-user-select:all}
+
+.theme-field .bot-tree .tree-note {
+  margin: 1rem auto 0;
+  max-width: 40rem;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  font-style: italic;
+}
