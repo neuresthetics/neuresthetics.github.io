@@ -951,3 +951,5 @@ html body.theme-field .site-header .wrap { max-width: 68rem; }
   gap: 0.65rem 0.75rem;
   margin: 0;
 }
+
+.email-plain{cursor:text;user-select:all;-webkit-user-select:all}
