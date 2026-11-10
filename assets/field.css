@@ -1,18 +1,18 @@
 /* RestoKit page only. Looks like the board: charcoal field, slate panels,
    one safety-orange accent. Prose stays in a 70ch column. */
 .theme-field {
-  --bg: #0b1220;
-  --bar: #0b1220;
-  --panel: #152033;
-  --panel-2: #1c283c;
+  --bg: #0f141c;
+  --bar: #0f141c;
+  --panel: #19212d;
+  --panel-2: #202a38;
   --ink: #e8eef6;
   --dim: #b7c3d4;
-  --line: #2c3c54;
-  --chip: #243246;
-  --accent: #f08a24;
+  --line: #323e4f;
+  --chip: #283342;
+  --accent: #e38b3a;
   --accent-ink: #0c1b2e;
-  --link: #8eb4ea;
-  --blue: #1d69c6;
+  --link: #98b3d9;
+  --blue: #2d65ae;
   color-scheme: dark;
   background: var(--bg);
   color: var(--ink);
@@ -23,15 +23,15 @@
 
 @media (prefers-color-scheme: light) {
   .theme-field {
-    --bg: #e7eef6;
-    --bar: #f4f7fb;
+    --bg: #e9edf2;
+    --bar: #f5f7f9;
     --panel: #ffffff;
-    --panel-2: #f4f7fb;
+    --panel-2: #f5f7f9;
     --ink: #0c1b2e;
     --dim: #3e4e64;
-    --line: #d3dce8;
-    --chip: #e7eef6;
-    --link: #1d69c6;
+    --line: #d6dce4;
+    --chip: #e9edf2;
+    --link: #2d65ae;
     color-scheme: light;
   }
 }
@@ -213,7 +213,7 @@ html body.theme-field .site-header .wrap { max-width: 68rem; }
   padding: 0.7rem 1rem;
   border-radius: 4px;
 }
-.theme-field a.btn:hover { background: #f4a04a; color: var(--accent-ink); }
+.theme-field a.btn:hover { background: #e9a062; color: var(--accent-ink); }
 .theme-field a.btn-quiet {
   background: transparent;
   color: var(--ink);
@@ -972,3 +972,6 @@ html body.theme-field .site-header .wrap { max-width: 68rem; }
   font-size: 0.75rem;
   opacity: 0.75;
 }
+
+.theme-field .join-shot { margin: 0 0 1rem; }
+.theme-field .join-shot img { display: block; width: 100%; height: auto; border-radius: 10px; }
