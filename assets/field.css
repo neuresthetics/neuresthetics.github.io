@@ -624,103 +624,133 @@ html body.theme-field .site-header .wrap { max-width: 68rem; }
 
 .theme-field .bot-tree {
   margin: 1rem 0 0;
-  padding: 1.15rem 1rem 1.25rem;
+  padding: 1.15rem 1rem 1.35rem;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
   text-align: center;
+  color-scheme: dark;
 }
 .theme-field .bot-tree .tree-caption {
-  margin: 0 0 0.95rem;
+  margin: 0 0 1rem;
   color: var(--dim);
   font-size: 0.95rem;
 }
-.theme-field .bot-tree .tree-owner {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.35rem;
-  margin: 0 auto 0.35rem;
-  padding: 0.65rem 1.1rem;
-  background: var(--navy-deep);
-  border: 1px solid var(--amber);
-  border-radius: 8px;
-  min-width: 11rem;
-}
-.theme-field .bot-tree .tree-owner .role {
-  font-weight: 700;
-  color: var(--white);
-  font-size: 1.02rem;
-}
-.theme-field .bot-tree .tree-owner .hint {
-  font-size: 0.82rem;
-  color: var(--dim);
-  max-width: 16rem;
-  line-height: 1.35;
-}
-.theme-field .bot-tree .tree-stem {
-  width: 2px;
-  height: 1.1rem;
-  background: var(--line);
+.theme-field .bot-tree .org-tree {
+  max-width: 40rem;
   margin: 0 auto;
 }
-.theme-field .bot-tree .tree-bar {
+.theme-field .bot-tree .org-level {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.theme-field .bot-tree .org-root { display: block; }
+.theme-field .bot-tree .org-stem {
+  width: 2px;
+  height: 1rem;
+  margin: 0 auto;
+  background: var(--line);
+}
+.theme-field .bot-tree .org-split {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem 1.25rem;
+  align-items: start;
+  padding-top: 0.85rem;
+}
+.theme-field .bot-tree .org-split::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 25%;
+  right: 25%;
   height: 2px;
   background: var(--line);
-  max-width: 28rem;
-  margin: 0 auto;
 }
-.theme-field .bot-tree .tree-row {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.75rem;
-  max-width: 36rem;
-  margin: 0 auto;
-  padding-top: 0;
-}
-.theme-field .bot-tree .tree-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.theme-field .bot-tree .tree-col .down {
+.theme-field .bot-tree .org-split::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
   width: 2px;
   height: 0.85rem;
   background: var(--line);
+  transform: translateX(-50%);
 }
-.theme-field .bot-tree .pair {
+.theme-field .bot-tree .org-branch {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.4rem;
+  min-width: 0;
+}
+.theme-field .bot-tree .org-branch::before {
+  content: "";
+  position: absolute;
+  top: -0.85rem;
+  left: 50%;
+  width: 2px;
+  height: 0.85rem;
+  background: var(--line);
+  transform: translateX(-50%);
+}
+.theme-field .bot-tree .org-branch-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  padding: 0.7rem 0.5rem 0.8rem;
+}
+.theme-field .bot-tree .tree-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  width: 100%;
+  max-width: 14.5rem;
+  padding: 0.7rem 0.65rem 0.8rem;
   background: var(--navy-deep);
   border: 1px solid var(--line);
   border-radius: 8px;
 }
-.theme-field .bot-tree .pair img {
-  width: 48px;
-  height: 48px;
+.theme-field .bot-tree .tree-node.is-owner {
+  border-color: var(--amber);
+  margin: 0 auto;
+  max-width: 16.5rem;
+}
+.theme-field .bot-tree .node-pair {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.theme-field .bot-tree .person-glyph {
+  color: var(--dim);
+  flex: 0 0 auto;
+}
+.theme-field .bot-tree .plus {
+  color: var(--amber);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1;
+}
+.theme-field .bot-tree .agent-icon {
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: #000;
   object-fit: cover;
 }
-.theme-field .bot-tree .pair .bot-label {
-  font-size: 0.78rem;
-  color: var(--blue-text);
-  font-weight: 650;
-}
-.theme-field .bot-tree .pair .person {
-  font-size: 0.92rem;
+.theme-field .bot-tree .node-label {
+  font-size: 0.95rem;
   color: var(--white);
   font-weight: 650;
 }
-.theme-field .bot-tree .pair .does {
+.theme-field .bot-tree .does {
   font-size: 0.8rem;
   color: var(--dim);
   line-height: 1.35;
-  max-width: 10rem;
+  max-width: 13rem;
 }
 .theme-field .bot-inline {
   display: inline-block;
@@ -732,14 +762,47 @@ html body.theme-field .site-header .wrap { max-width: 68rem; }
   background: #000;
 }
 
+@media (max-width: 640px) {
+  .theme-field .bot-tree .org-split {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    padding-top: 0;
+  }
+  .theme-field .bot-tree .org-split::before,
+  .theme-field .bot-tree .org-split::after,
+  .theme-field .bot-tree .org-branch::before { display: none; }
+  .theme-field .bot-tree .org-branch {
+    align-items: stretch;
+    padding-left: 0.85rem;
+    border-left: 2px solid var(--line);
+  }
+  .theme-field .bot-tree .org-branch-leaf {
+    margin-top: 0.15rem;
+  }
+  .theme-field .bot-tree .org-branch-inner {
+    align-items: stretch;
+    padding-left: 0.85rem;
+    border-left: 2px solid var(--line);
+    margin-left: 0.35rem;
+  }
+  .theme-field .bot-tree .tree-node,
+  .theme-field .bot-tree .tree-node.is-owner {
+    max-width: none;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .theme-field .bot-tree .does { max-width: none; }
+  .theme-field .bot-tree .org-stem {
+    display: none;
+  }
+  .theme-field .bot-tree .org-branch-inner > .org-stem { display: none; }
+}
+
 @media (max-width: 800px) {
   .theme-field .shop-grid,
   .theme-field .flow-compare { grid-template-columns: 1fr; }
-}
-@media (max-width: 640px) {
-  .theme-field .bot-tree .tree-row { grid-template-columns: 1fr; max-width: 14rem; }
-  .theme-field .bot-tree .tree-bar { display: none; }
-  .theme-field .bot-tree .tree-col .down { height: 0.55rem; }
 }
 
 .theme-field .party-triad {

@@ -26,7 +26,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/restokit/restokit_icon_on_dark_16.png?v=dark1" media="(prefers-color-scheme: dark)">
 <link rel="apple-touch-icon" href="../assets/img/restokit/restokit_icon_180.png?v=signal">
 <link rel="stylesheet" href="../assets/style.css">
-<link rel="stylesheet" href="../assets/field.css?v=join1">
+<link rel="stylesheet" href="../assets/field.css?v=tree2">
 <link rel="stylesheet" href="../assets/nav.css?v=2">
 </head>
 <body class="theme-field">
@@ -244,40 +244,65 @@
       <div class="measure">
         <p>Everyone is paired with an agent. The owner can query profit and loss anytime, or open a specific job down to the photos just taken — close enough to step onto the job site without leaving the office.</p>
       </div>
-      <div class="bot-tree" role="img" aria-label="Owner at the top, connected to PM, estimator, and tech agents, each paired with a person">
-        <p class="tree-caption">One owner view across every seat — P&amp;L on demand, or any job down to the latest photos.</p>
-        <div class="tree-owner">
-          <span class="role">Owner</span>
-          <span class="hint">Query P&amp;L · open any job · see photos just taken</span>
-        </div>
-        <div class="tree-stem" aria-hidden="true"></div>
-        <div class="tree-bar" aria-hidden="true"></div>
-        <div class="tree-row">
-          <div class="tree-col">
-            <div class="down" aria-hidden="true"></div>
-            <div class="pair">
-              <img src="../assets/img/restokit/restokit_icon_on_dark_512.png" width="48" height="48" alt="" loading="lazy">
-              <span class="bot-label">Agent</span>
-              <span class="person">PM</span>
+      <div class="bot-tree" role="img" aria-label="Org tree: Owner at top; under Owner, PM and Estimator; under PM, Lead; under Lead, Tech. Every seat is a person plus an agent.">
+        <p class="tree-caption">One owner view across every seat — P&amp;L on demand, or any job down to the latest photos. Every node is a person + agent.</p>
+        <div class="org-tree">
+          <div class="org-level org-root">
+            <div class="tree-node is-owner">
+              <div class="node-pair" aria-hidden="true">
+                <svg class="person-glyph" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="8" r="3.4" fill="currentColor"/><path fill="currentColor" d="M5.2 19.2c.4-3.6 3.2-5.7 6.8-5.7s6.4 2.1 6.8 5.7c.05.45-.3.8-.75.8H5.95c-.45 0-.8-.35-.75-.8z"/></svg>
+                <span class="plus">+</span>
+                <img class="agent-icon" src="../assets/img/restokit/restokit_icon_on_dark_512.png" width="32" height="32" alt="" loading="lazy">
+              </div>
+              <span class="node-label">Owner + agent</span>
+              <span class="does">Query P&amp;L · open any job · see photos just taken</span>
+            </div>
+          </div>
+          <div class="org-stem" aria-hidden="true"></div>
+          <div class="org-level org-split">
+            <div class="org-branch">
+              <div class="tree-node">
+              <div class="node-pair" aria-hidden="true">
+                <svg class="person-glyph" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="8" r="3.4" fill="currentColor"/><path fill="currentColor" d="M5.2 19.2c.4-3.6 3.2-5.7 6.8-5.7s6.4 2.1 6.8 5.7c.05.45-.3.8-.75.8H5.95c-.45 0-.8-.35-.75-.8z"/></svg>
+                <span class="plus">+</span>
+                <img class="agent-icon" src="../assets/img/restokit/restokit_icon_on_dark_512.png" width="32" height="32" alt="" loading="lazy">
+              </div>
+              <span class="node-label">PM + agent</span>
               <span class="does">Approves files · triage, not chase</span>
             </div>
-          </div>
-          <div class="tree-col">
-            <div class="down" aria-hidden="true"></div>
-            <div class="pair">
-              <img src="../assets/img/restokit/restokit_icon_on_dark_512.png" width="48" height="48" alt="" loading="lazy">
-              <span class="bot-label">Agent</span>
-              <span class="person">Estimator</span>
+              <div class="org-stem" aria-hidden="true"></div>
+              <div class="org-branch-inner">
+                <div class="tree-node">
+              <div class="node-pair" aria-hidden="true">
+                <svg class="person-glyph" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="8" r="3.4" fill="currentColor"/><path fill="currentColor" d="M5.2 19.2c.4-3.6 3.2-5.7 6.8-5.7s6.4 2.1 6.8 5.7c.05.45-.3.8-.75.8H5.95c-.45 0-.8-.35-.75-.8z"/></svg>
+                <span class="plus">+</span>
+                <img class="agent-icon" src="../assets/img/restokit/restokit_icon_on_dark_512.png" width="32" height="32" alt="" loading="lazy">
+              </div>
+              <span class="node-label">Lead + agent</span>
+              <span class="does">Runs the crew · approves field calls</span>
+            </div>
+                <div class="org-stem" aria-hidden="true"></div>
+                <div class="tree-node">
+              <div class="node-pair" aria-hidden="true">
+                <svg class="person-glyph" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="8" r="3.4" fill="currentColor"/><path fill="currentColor" d="M5.2 19.2c.4-3.6 3.2-5.7 6.8-5.7s6.4 2.1 6.8 5.7c.05.45-.3.8-.75.8H5.95c-.45 0-.8-.35-.75-.8z"/></svg>
+                <span class="plus">+</span>
+                <img class="agent-icon" src="../assets/img/restokit/restokit_icon_on_dark_512.png" width="32" height="32" alt="" loading="lazy">
+              </div>
+              <span class="node-label">Tech + agent</span>
+              <span class="does">Talks the job · scope drafts on site</span>
+            </div>
+              </div>
+            </div>
+            <div class="org-branch org-branch-leaf">
+              <div class="tree-node">
+              <div class="node-pair" aria-hidden="true">
+                <svg class="person-glyph" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="8" r="3.4" fill="currentColor"/><path fill="currentColor" d="M5.2 19.2c.4-3.6 3.2-5.7 6.8-5.7s6.4 2.1 6.8 5.7c.05.45-.3.8-.75.8H5.95c-.45 0-.8-.35-.75-.8z"/></svg>
+                <span class="plus">+</span>
+                <img class="agent-icon" src="../assets/img/restokit/restokit_icon_on_dark_512.png" width="32" height="32" alt="" loading="lazy">
+              </div>
+              <span class="node-label">Estimator + agent</span>
               <span class="does">Approves or edits the live draft</span>
             </div>
-          </div>
-          <div class="tree-col">
-            <div class="down" aria-hidden="true"></div>
-            <div class="pair">
-              <img src="../assets/img/restokit/restokit_icon_on_dark_512.png" width="48" height="48" alt="" loading="lazy">
-              <span class="bot-label">Agent</span>
-              <span class="person">Tech</span>
-              <span class="does">Talks the job · scope drafts on site</span>
             </div>
           </div>
         </div>
