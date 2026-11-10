@@ -551,7 +551,7 @@ html body.theme-field .site-header .wrap { max-width: 68rem; }
 }
 .theme-field .flow-lane.old .tag {
   background: #2a4366;
-  color: var(--dim);
+  color: #e8eef6;
 }
 .theme-field .flow-lane.new .tag {
   background: var(--amber);
@@ -594,7 +594,7 @@ html body.theme-field .site-header .wrap { max-width: 68rem; }
 }
 .theme-field .flow-lane.old ol li::before {
   background: #2a4366;
-  color: var(--dim);
+  color: #e8eef6;
 }
 .theme-field .flow-lane.new ol li::before {
   background: var(--amber);
