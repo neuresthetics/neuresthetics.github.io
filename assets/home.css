@@ -72,6 +72,14 @@
 }
 .theme-home .card .runs b { color: #cfc9bb; }
 .theme-home .card .links { display: flex; flex-wrap: wrap; gap: 0.3rem 1.25rem; font-size: 0.9rem; margin: 0; }
+.theme-home .card .now-at {
+  margin: 0 0 0.55rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+.theme-home .card .now-at a { color: var(--accent-soft); }
+.theme-home .card .now-at a:hover { color: var(--accent); text-decoration: underline; }
+
 
 /* Brand project: the map, then the three short cards */
 .theme-home .map { margin: 1.5rem auto 1.75rem; max-width: 45rem; }
