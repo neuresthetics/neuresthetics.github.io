@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RestoKit · Jason Burns · Neuresthetics</title>
-<meta name="description" content="A restoration kit for water, mold, and crawlspace work, from tech to lead, PM, and estimator. Grounded in IICRC S500 and S520 principles.">
+<meta name="description" content="A restoration kit for water, mold, and crawlspace work, from tech to lead, PM, and estimator. It aligns with the principles of IICRC S500 and S520.">
 <meta name="author" content="Jason Burns">
 <meta name="theme-color" content="#0b1220">
 <meta name="theme-color" content="#e7eef6" media="(prefers-color-scheme: light)">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://neuresthetics.github.io/restokit/">
 <meta property="og:title" content="RestoKit: a restoration kit for water, mold, and crawlspace work">
-<meta property="og:description" content="A restoration kit for water, mold, and crawlspace work, from tech to lead, PM, and estimator. Grounded in IICRC S500 and S520 principles.">
+<meta property="og:description" content="A restoration kit for water, mold, and crawlspace work, from tech to lead, PM, and estimator. It aligns with the principles of IICRC S500 and S520.">
 <meta property="og:image" content="https://neuresthetics.github.io/assets/img/restokit-banner.jpg">
 <meta property="og:image:width" content="1600">
 <meta property="og:image:height" content="533">
@@ -52,7 +52,7 @@
   <div class="app-bar">
     <div class="wrap">
       <h1 id="product-name" class="rk-logo"><picture><source srcset="../assets/img/restokit/restokit_logo_horizontal_light.svg" media="(prefers-color-scheme: light)"><img src="../assets/img/restokit/restokit_logo_horizontal_dark.svg" width="412" height="128" alt="RestoKit"></picture></h1>
-      <p class="kicker">Kit 1.0.0</p>
+      <p class="kicker">Kit <span data-rk-version>1.1.0</span></p>
     </div>
   </div>
   <div class="wrap">
@@ -62,6 +62,7 @@
         <p class="dek">From tech to lead, PM, and estimator. Aligned from science to scope to billing.</p>
         <p class="runs"><a href="#framework">RestoKit: the framework</a> · <a href="#for-the-shop">For the shop</a> · <a href="#tools">RestoKit tools</a> · <a href="#limitations">Limitations</a> · <a href="#join">Join</a></p>
         <p class="actions">
+          <a class="btn" href="https://resto-kit.com/get-the-kit">Get the kit at resto-kit.com</a>
           <a class="btn" href="https://github.com/neuresthetics/resto_kit_public">Public repo</a>
           <span class="btn btn-quiet email-plain">Request a demo: neuresthetics@gmail.com</span>
         </p>
@@ -200,7 +201,7 @@
         </li>
         <li>
           <h3>Ask when you need a second brain</h3>
-          <p>“Remove or dry this LVP?” “How many air movers for this room?” “Is the subfloor at dry standard?” You get a short, field-ready answer grounded in IICRC S500 and S520, with the why if you want it.</p>
+          <p>“Remove or dry this LVP?” “How many air movers for this room?” “Is the subfloor at dry standard?” You get a short, field-ready answer that aligns with the principles of IICRC S500 and S520, with the why if you want it.</p>
         </li>
         <li>
           <h3>Approve what it drafts</h3>
@@ -399,7 +400,7 @@
     <section class="block" aria-labelledby="what-it-is">
       <h2 id="what-it-is">What it is</h2>
       <div class="measure">
-        <p>RestoKit is a structured JSON kit for anyone running a restoration job. It’s grounded in IICRC S500 (water) and S520 (mold) principles, and written the way a senior tech talks a job through.</p>
+        <p>RestoKit is a structured JSON kit for anyone running a restoration job. It aligns with the principles of IICRC S500 and S520, and it’s written the way a senior tech talks a job through.</p>
         <p>It doesn’t replace years on the job. It carries lessons from people who’ve spent decades in the trade. Its main job is memory: the rare edge cases that don’t come up often enough to stay top of mind.</p>
         <h3 id="every-field">Where it’s headed: every restoration field</h3>
         <p>Water and mold make up most restoration jobs, and that’s where RestoKit’s field knowledge runs deepest. It already covers contents at a basic level, and fire jobs share most of the same structure. A fire job is largely a water and mold job with different cleaning and demo. The plan is to deepen each of those fields and grow the same standard across the whole trade, built from real jobs and through the same distributed, field-proven review. That way one company can run every kind of loss on one standard with one set of agents.</p>
@@ -408,7 +409,34 @@
 
 
     <section class="block" aria-labelledby="status">
-      <h2 id="status">The kit</h2>
+      <h2 id="status">The kit, the site, and the repo</h2>
+      <p class="lead">The kit lives at resto-kit.com. This page and the public repo explain it.</p>
+      <ul class="spec">
+        <li>
+          <strong><a href="https://resto-kit.com">resto-kit.com</a></strong>
+          Where you get the kit. <a href="https://resto-kit.com/get-the-kit">Sign up</a> and verify your email. Your dashboard then gives you a personal kit link for your agents, a list of kit changes, and your kit use.
+        </li>
+        <li>
+          <strong>Agent setup: <a href="https://resto-kit.com/kit/setup.md">setup.md</a></strong>
+          Tell your agent: “Fetch https://resto-kit.com/kit/setup.md and follow it.” The guide explains how to load the kit through your personal link and how to send kit submissions.
+        </li>
+        <li>
+          <strong>Current version: <a href="https://resto-kit.com/kit/latest.json">latest.json</a></strong>
+          Returns the current kit version, now <span data-rk-version>1.1.0</span>. The version at the top of this page is read from it.
+        </li>
+        <li>
+          <strong>What changed in 1.1.0: <a href="https://github.com/neuresthetics/resto_kit_public/blob/main/docs/releases/1.1.0.md">update record</a></strong>
+          Each topic now has one home, and other places point to it; agents and the signed-in book always show the home’s text. Every billable line lives in one ordered catalog: 117 lines (97 sheet lines plus the company gap lines G1 to G20) in 10 sections, each with the reason it’s billed and no prices. The kit doesn’t assume a state; it asks once. Neuresthetics LLC is the copyright holder and commercial licensor. Keep the license notice with any copy or excerpt.
+        </li>
+        <li>
+          <strong>For developers</strong>
+          The signed-in <a href="https://resto-kit.com/developers">Developers page</a> covers why the kit is JSON, how versions and updates work, the personal agent kit link, and how kit submissions are filtered before they are kept.
+        </li>
+        <li>
+          <strong><a href="https://github.com/neuresthetics/resto_kit_public">Public repo</a></strong>
+          Documentation, training materials, and the tools showroom. The kit itself is served from resto-kit.com, not from the repo.
+        </li>
+      </ul>
       <p class="status-more">Want to dig into what the kit covers and how it’s laid out? See the <a href="https://github.com/neuresthetics/resto_kit_public">full repo on GitHub</a>.</p>
     </section>
 
@@ -479,6 +507,7 @@
     <section class="block close" aria-labelledby="links">
       <h2 id="links">Links</h2>
       <div class="cta">
+        <a class="btn" href="https://resto-kit.com">The kit <span>resto-kit.com</span></a>
         <a class="btn" href="https://github.com/neuresthetics/resto_kit_public">Public repo <span>github.com/neuresthetics/resto_kit_public</span></a>
         <span class="btn btn-quiet email-plain">Request a demo: neuresthetics@gmail.com</span>
       </div>
@@ -494,6 +523,22 @@
   </div>
 </footer>
 
+<script>
+// Kit version: read https://resto-kit.com/kit/latest.json so this page follows each release.
+// The number in the HTML is the fallback if the fetch fails.
+(function () {
+  var nodes = document.querySelectorAll('[data-rk-version]');
+  if (!nodes.length || !window.fetch) return;
+  fetch('https://resto-kit.com/kit/latest.json', { cache: 'no-store' })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (j) {
+      var v = j && typeof j.version === 'string' ? j.version : '';
+      if (!/^\d+\.\d+\.\d+$/.test(v)) return;
+      for (var i = 0; i < nodes.length; i++) nodes[i].textContent = v;
+    })
+    .catch(function () {});
+})();
+</script>
 <script>
 (function () {
   var panel = document.getElementById('app');

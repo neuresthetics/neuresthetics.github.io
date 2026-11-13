@@ -96,6 +96,15 @@
 .theme-code .tag .k { background: var(--ink); color: var(--bg); }
 .theme-code .tag .v { background: transparent; color: var(--ink); }
 
+.theme-code .now-at {
+  margin: 0 0 1.25rem;
+  font-size: 1rem;
+  font-weight: 650;
+}
+.theme-code .now-at a { color: var(--ink); }
+.theme-code .now-at a:hover { color: var(--dim); }
+
+
 .theme-code .status {
   display: grid;
   gap: 0.35rem;
