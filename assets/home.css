@@ -30,6 +30,8 @@
 }
 .theme-home .who { color: var(--dim); margin-bottom: 0.9rem; }
 .theme-home .who b { color: var(--ink); }
+.theme-home .who a { color: var(--accent); }
+.theme-home .who a:hover { color: var(--accent-soft); text-decoration: underline; }
 .theme-home .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-bottom: 1.6rem; }
 .theme-home .chip {
   display: inline-block; padding: 0.3rem 0.75rem; border-radius: 999px;
